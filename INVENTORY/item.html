@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+ 
+  <style>
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bolder;
+      
+    }
+  	#nav a {
+  		color: #242A33;
+      font-family: 'Russo One', sans-serif;
+      font-size: 15px;
+	  }
+
+      
+    #nav a:hover {
+      color: white;
+    }
+    
+    #more_settings button {
+		 font-size: 11px;     
+     }
+
+     #small_fonts {
+		 font-size: 13px;     
+     }
+
+    .more_settings table {
+		 font-size: 11px;
+     }
+
+    #sidebar {
+     background-color: #242A33;
+    }
+
+    #sub_nav a {
+     font-size: 13px;
+    }
+
+    #sub_nav button {
+     font-size: 15px;
+     font-weight: bolder;
+    }
+
+   
+  </style>
+</head>
+<body>
+  <nav class="container-fluid" id="nav">
+    <div class="container-fluid py-2">
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu1x">INVENTORY</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu2">PROCUREMENT</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu3">CRM</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5">SERVICE</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu4">FINANCE</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5">ACCOUNTING</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu6">SALES</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu7">ADMIN</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu4">PAYROLL</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5">TOOLS</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5">BI</a>
+          
+          <div id="menu1x" class="collapse">
+            <div class="d-flex flex-row" id="sub_nav">
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="item.html">Item</a>
+                <a class="btn rounded-0 text-primary small" href="item_kit.html">Item Kit</a>
+                <a class="btn rounded-0 text-primary small" href="item_group.html">Item group</a>
+                <a class="btn rounded-0 text-primary small" href="item_prices.html">Item prices</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="item_settings.html">Item Settings</a>
+                <a class="btn rounded-0 text-primary small" href="location.html">Location</a>
+                <a class="btn rounded-0 text-primary small" href="variant.html">Variant</a>
+                <a class="btn rounded-0 text-primary small" href="quick_search.html">Quick search</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="stock_count.html">Stock Count</a>
+                <a class="btn rounded-0 text-primary small" href="stock_counts.html">Stock Counts</a>
+                <a class="btn rounded-0 text-primary small" href="stock_transfer_inward.html">Stock Transfer inward</a>
+                <a class="btn rounded-0 text-primary small" href="stock_transfer_outward.html">Stock Transfer Outward</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="batch.html">Batch</a>
+                <a class="btn rounded-0 text-primary small" href="stock_opening.html">Stock Opening</a>
+                <a class="btn rounded-0 text-primary small" href="stock_adjustment.html">Stock Adjustment</a>
+                <a class="btn rounded-0 text-primary small" href="stock_confirmation.html">Stock Confirmation</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="stock_transfer.html">Stock Transfer</a>
+                <a class="btn rounded-0 text-primary small" href="stock_ageing.html">Stock Ageing</a>
+                <a class="btn rounded-0 text-primary small" href="stock_ledger.html">Stock Ledger</a>
+                <a class="btn rounded-0 text-primary small" href="stock_valuation.html">Stock Valuation</a>
+                
+              </div>
+          </div>
+          </div>
+          <div id="menu2" class="collapse">
+          
+          </div>
+          <div id="menu3" class="collapse">
+            
+          </div>
+          <div id="menu4" class="collapse">
+          </div>
+          <div id="menu5" class="collapse">
+            
+          </div>
+          <div id="menu6" class="collapse">
+            
+          </div>
+          <div id="menu7" class="collapse">
+              
+          </div>
+    </div>
+</nav>
+<section class="container-fluid ">
+  <div class="row">
+    <div class="col-2 shadow h-75 py-2" id="sidebar">
+      
+        <h5 class="text-white text-center pt-3"><b>ITEM</b></h5>
+       <div class="border border-right-0 border-left-0 border-bottom-0  more_settings">
+         <h6 class="text-white py-2">Item</h6>
+          
+           <h6 class="text-white border border-right-0 border-left-0 border-bottom-0 pt-2">Record :</h6>
+           <table class="table table-bordered table-striped table-hover py-0">
+             <thead>
+               <tr>
+                 <th class="text-white"><b>Name</b></th>
+                 <th class="text-white"><b>Code</b></th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr>
+                 <td>
+                     <input type="text" class="form-control border-dark py-n3 mt-n2" id="email" name="email"> 
+                 </td>
+                 <td>
+                   <div class="input-group mt-n2 ">
+                     <input type="text" class="form-control border border-dark py-0">
+                     <div class="input-group-append">
+                       <button class="btn btn-light border border-dark" type="submit"><i class="fas fa-search"></i></button>
+                     </div>
+                   </div>
+                 </td>
+               </tr>
+             </tbody>
+           </table>
+         </div >
+         <div class="h-75"><br><br><br><br><br><br><br><br><br><br><br><br></div>
+    </div>
+    <div class="col-9 shadow py-2 border border-bottom-0 border-left-0 border-right-0 border-dark">
+        
+         <form >
+          <div class="form-row bg-light ml-4 pb-4 shadow">
+            <h5 class="col-12 text-white text-center py-3 bg-primary px-2"><b>ITEM DETAILS</b></h5>
+            <div class="col pr-3">
+              <h4>General Details</h4>
+              <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Code:</label>
+                    <input type="text" class="form-control w-75 border-primary py-n3" id="email" name="email"> 
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Name:</label>
+                    <input type="text" class="form-control w-75 border-primary py-n3" id="email" name="email"> 
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                  <label for="comment" class="">Description:</label>
+                  <textarea class="form-control  w-75 border border-primary"  rows="2" id="comment"></textarea>
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Type:</label>
+                    
+                    <div class="input-group w-75">
+                      <input type="text" class="form-control border border-primary ">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Group:</label>
+                    <div class="input-group w-75">
+                      <input type="text" class="form-control border border-primary ">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                </div>
+               <div class="row">
+                    <div class="col-3 mr-1"></div>
+                    <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
+                      <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" name="remember" required> Is Group.
+                      </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 mr-1"></div>
+                    <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
+                      <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" name="remember" required> Is Group.
+                      </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+            <h4>Price Details</h4>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Company:</label>
+                    <div class="input-group w-75 ">
+                      <input type="text" class="form-control border border-primary ">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Brand:</label>
+                    <div class="input-group w-75">
+                      <input type="text" class="form-control border border-primary ">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                </div>
+                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Model:</label>
+                    <div class="input-group w-75">
+                      <input type="text" class="form-control border border-primary ">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                </div>
+               <div class="row">
+                    <div class="col-3 mr-1"></div>
+                    <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
+                      <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" name="remember" required> Is Batch/Serial No. req.
+                      </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 mr-1"></div>
+                    <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
+                      <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" name="remember" required> Is Auto Serial No. req
+                      </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 mr-1"></div>
+                    <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
+                      <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" name="remember" required> Is Favourite item.
+                      </label>
+                    </div>
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Base UOM:</label>
+                    <div class="input-group w-50">
+                      <input type="text" class="form-control border border-primary ">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">HSN/SACCode:</label>
+                    <div class="input-group w-50">
+                      <input type="text" class="form-control border border-primary ">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+           <div class="col">
+            <h4>Additional Details</h4>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Standard Cost:</label>
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Sale Rate:</label>
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Purchase Rate:</label>
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Min Rate:</label>
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Max Rate:</label>
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Sale Rev%:</label>
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Purchase Rev%:</label>
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                </div>
+            </div>
+          
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+</section>
+
+
+<section>
+  <div class="container-fluid bg-light shadow mt-2" id="sub_nav"> 
+          <button type="button" class="btn btn-primary " data-toggle="collapse" data-target="#menu1">Configuration</button>
+          <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#menu2">Variation</button>
+          <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#menu3">Item Location</button>
+          <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#menu4">Add On</button>
+          <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#menu5">Alternate Items</button>
+          <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#menu6">Stock Levels</button>
+          <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#menu7">Sales Price</button>
+          <button type="button" class="btn btn-primary px-0" data-toggle="collapse" data-target="#menu6">Purchase Price</button>
+          <button type="button" class="btn btn-primary px-0" data-toggle="collapse" data-target="#menu7">Item Barcode</button>
+         
+          <div id="menu1" class="collapse">
+            <div class="container-fluid px-0">        
+              <table class="table table-primary table-bordered table-striped table-sm">
+                <thead>
+                  <tr>
+                    <th>Applicable UOM</th>
+                    <th>Conversion Rate</th>
+                    <th>Select</th>
+                    <th>Default Purchase</th>
+                    <th>Default Sale</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="text" class=""></td>
+                    <td><input type="text" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="menu2" class="collapse">
+            <div class="container-fluid px-0">        
+              <table class="table table-primary table-bordered table-striped table-sm">
+                <thead>
+                  <tr>
+                    <th>Applicable UOM</th>
+                    <th>Conversion Rate</th>
+                    <th>Select</th>
+                    <th>Default Purchase</th>
+                    <th>Default Sale</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="text" class=""></td>
+                    <td><input type="text" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="menu3" class="collapse">
+            <div class="container-fluid px-0">        
+              <table class="table table-primary table-bordered table-striped table-sm">
+                <thead>
+                  <tr>
+                    <th>Applicable UOM</th>
+                    <th>Conversion Rate</th>
+                    <th>Select</th>
+                    <th>Default Purchase</th>
+                    <th>Default Sale</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="text" class=""></td>
+                    <td><input type="text" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="menu4" class="collapse">
+            <div class="row">
+             <div class="col-5 pr-3">
+               <h6 class="text-center text-primary my-2">Other Details</h6>
+                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                     <label for="email" class="mr-2">Old Code:</label>
+                     <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                 </div>
+                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                   <label for="email" class="mr-2">Old Code:</label>
+                   <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+               </div>
+                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                     <label for="email" class="mr-2">OEM Code:</label>
+                     <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                 </div>
+                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                   <label for="email" class="mr-2">OEM Item Name:</label>
+                   <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                 </div>
+                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                   <label for="comment" class="">Description:</label>
+                   <textarea class="form-control  w-50 border border-primary"  rows="2" id="comment"></textarea>
+                 </div>
+                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                   <label for="email" class="mr-2">Supplier Code:</label>
+                   <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                 </div>
+                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                   <label for="email" class="mr-2">Supplier Name:</label>
+                   <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                 </div>
+                 <div class="" id="small_fonts">
+                     <div class="form-check-inline" >
+                       <label class="form-check-label">
+                         <input type="checkbox" class="form-check-input" value="">Allow Sales
+                       </label>
+                     </div>
+                     <div class="form-check-inline">
+                       <label class="form-check-label">
+                         <input type="checkbox" class="form-check-input" value="">Allow Sales Return
+                       </label>
+                     </div>
+                     <div class="form-check-inline">
+                       <label class="form-check-label">
+                         <input type="checkbox" class="form-check-input" value="" >Allow Purchase
+                       </label>
+                     </div>
+                     <div class="form-check-inline">
+                       <label class="form-check-label">
+                         <input type="checkbox" class="form-check-input" value="" >Allow Stock Transfer
+                       </label>
+                     </div>
+                 </div> 
+               </div>
+               <div class="col-5">
+                     <h6 class="text-center text-primary mt-4"></h6>
+                     <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                       <label for="email" class="mr-2">Payment Term:</label>
+                       <div class="input-group w-50">
+                         <input type="text" class="form-control border border-primary ">
+                         <div class="input-group-append">
+                           <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                         </div>
+                       </div>
+                   </div>
+                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                     <label for="email" class="mr-2">Shipping Term:</label>
+                     <div class="input-group w-50">
+                       <input type="text" class="form-control border border-primary ">
+                       <div class="input-group-append">
+                         <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                       </div>
+                     </div>
+                 </div>
+               </div>
+           </div>
+          </div>
+          <div id="menu5" class="collapse">
+            <div class="container-fluid px-0">        
+              <table class="table table-primary table-bordered table-striped table-sm">
+                <thead>
+                  <tr>
+                    <th>Applicable UOM</th>
+                    <th>Conversion Rate</th>
+                    <th>Select</th>
+                    <th>Default Purchase</th>
+                    <th>Default Sale</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="text" class=""></td>
+                    <td><input type="text" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="menu6" class="collapse">
+            <div class="container-fluid px-0">        
+              <table class="table table-primary table-bordered table-striped table-sm">
+                <thead>
+                  <tr>
+                    <th>Applicable UOM</th>
+                    <th>Conversion Rate</th>
+                    <th>Select</th>
+                    <th>Default Purchase</th>
+                    <th>Default Sale</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="text" class=""></td>
+                    <td><input type="text" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="menu7" class="collapse">
+            <div class="container-fluid px-0">        
+              <table class="table table-primary table-bordered table-striped table-sm">
+                <thead>
+                  <tr>
+                    <th>Applicable UOM</th>
+                    <th>Conversion Rate</th>
+                    <th>Select</th>
+                    <th>Default Purchase</th>
+                    <th>Default Sale</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="text" class=""></td>
+                    <td><input type="text" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                    <td><input type="checkbox" class=""></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+	  </div>
+</section>
+
+<footer>
+  <br><br><br>
+  
+</footer>
+
+
+</body>
+</html>
