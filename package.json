@@ -1,0 +1,26 @@
+{
+  "name": "erp",
+  "version": "1.0.0",
+  "description": "ERP desktop client",
+  "main": "main.js",
+  "scripts": {
+    "start": "env-cmd -e development electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KossySteve/Axespirerp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KossySteve/Axespirerp/issues"
+  },
+  "homepage": "https://github.com/KossySteve/Axespirerp#readme",
+  "dependencies": {
+    "electron": "^10.1.1",
+    "env-cmd": "^10.1.0",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.5",
+    "sqlite3": "^5.0.0"
+  }
+}
