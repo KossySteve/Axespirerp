@@ -1,14 +1,16 @@
-const {Sequelize} = require('sequelize') ; 
+const {Sequelize} = require('sequelize') ;
+const {app} = require('electron')
 
 let db ;
 
 //create database instance 
 module.exports.connectDB = async () => {
-    db = new Sequelize(process.env.DB_NAME,process.env.DB_USERNAME, process.env.DB_PASSWORD, {
-        host: process.env.DB_HOST, 
-        dialect: 'mysql',
+      db = new Sequelize({
+        dialect: 'sqlite',
+        storage: `${app.getPath('userData')}/database.sqlite`,
         logging: true
-    })
+      });
+
 
     // check if properly connected to database, if not  throw error message 
     try {

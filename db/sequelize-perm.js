@@ -4,11 +4,12 @@ let db ;
 
 //create database instance 
 module.exports.connectDB = async () => {
-    db = new Sequelize(process.env.DB_PERM_NAME,process.env.DB_PERM_USERNAME, process.env.DB_PERM_PASSWORD, {
-        host: process.env.DB_PERM_HOST, 
-        dialect: 'mysql',
+    
+    const db = new Sequelize({
+        dialect: 'sqlite',
+        storage: '../database.sqlite',
         logging: true
-    })
+      });
 
     // check if properly connected to database, if not  throw error message 
     try {

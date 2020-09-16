@@ -1,6 +1,6 @@
 const db = require("../../db/sequelize");
 const notificationService = require("../notification");
-const item_model = require("../../models/item_model");
+
 
 // start the core service (i.e that related to sending to db )
 module.exports.start = () => {
@@ -15,6 +15,7 @@ module.exports.start = () => {
     });
 
   const sequelizeInstance = db.getDB();
+
   (async () => await sequelizeInstance.sync())()
     .then(() => {
       notificationService.notify("db successfully connected", {
@@ -28,12 +29,10 @@ module.exports.start = () => {
         error: true,
       });
     });
-
-  // initialize the models
-  const Item = item_model(sequelizeInstance);
+  const {item_model} = require("../../models")(sequelizeInstance);
   // const Item_kit = item_kit_model(sequelizeInstance);
   return{
-    Item,
+    Item: item_model
     // ItemKit
   }
 };
