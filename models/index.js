@@ -1,4 +1,4 @@
-const item_model = require('./item_model') ;
+const item_model = require('./item_model');
 
 
 module.exports = (sequelize) => {

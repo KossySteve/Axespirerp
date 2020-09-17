@@ -4,7 +4,7 @@ const path = require("path");
 const coreService = require("./services/core");
 const notification = require("./services/notification");
 
-const { app, BrowserWindow } = electron;
+const { app, BrowserWindow, screen } = electron;
 
 let win;
 // create initial window
@@ -15,10 +15,10 @@ const startApp = () => {
   // simple test
   (async () => {
     await Item.create({
-code: 123456789,
-    description: "Best product",
-    type: "Shoe",
-    group:"FootWare",
+    code: 373938747,
+    description: "000 Best product",
+    type: "000 Shoe",
+    group:"000 FootWare",
     isGroup: true,
     company: "Finnacle",
     brand: "Nike",
@@ -33,12 +33,16 @@ code: 123456789,
 
   // TODO
   // 1. start the worker
-
+  const {width, height} = screen.getPrimaryDisplay().size;
   win = new BrowserWindow({
     webPreferences: {
-      nodeIntegration: true,
+      // nodeIntegration: true,
     },
+    width: width,
+    height: height
   });
+
+  win.loadFile('./ui_modules/inventory/item.html')
 
   // start notification service
   // notification.start(win);
