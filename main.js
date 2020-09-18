@@ -36,7 +36,7 @@ const startApp = () => {
   const {width, height} = screen.getPrimaryDisplay().size;
   win = new BrowserWindow({
     webPreferences: {
-      // nodeIntegration: true,
+      nodeIntegration: true,
     },
     width: width,
     height: height
