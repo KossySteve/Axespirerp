@@ -1,14 +1,10 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-  const ItemKit = sequelize.define("ItemKit", {
+  const Item = sequelize.define("Item", {
     code: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
-    },
-    name: {
-      type: DataTypes.STRING,
     },
     description: {
       type: DataTypes.STRING,
@@ -16,6 +12,12 @@ module.exports = (sequelize) => {
     },
     type: {
       type: DataTypes.STRING,
+    },
+    group: {
+      type: DataTypes.STRING,
+    },
+    isGroup: {
+      type: DataTypes.BOOLEAN,
     },
     company: {
       type: DataTypes.STRING,
@@ -44,5 +46,5 @@ module.exports = (sequelize) => {
     },
   });
 
-  return ItemKit;
+  return Item;
 };
