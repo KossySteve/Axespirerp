@@ -5,7 +5,7 @@ const coreService = require("./services/core");
 const notification = require("./services/notification");
 const worker = require("./worker");
 
-const { app, BrowserWindow } = electron;
+const { app, BrowserWindow, screen } = electron;
 
 let win;
 // create initial window
@@ -40,9 +40,13 @@ const startApp = () => {
 
   win = new BrowserWindow({
     webPreferences: {
-      nodeIntegration: true,
+      // nodeIntegration: true,
     },
+    width: width,
+    height: height,
   });
+
+  win.loadFile("./ui_modules/inventory/item.html");
 
   // start notification service
   notification.start(win);
