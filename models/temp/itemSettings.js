@@ -17,6 +17,10 @@ module.exports = (sequelize) => {
     type: {
       type: DataTypes.STRING,
     },
+    company: {
+      type: DataTypes.STRING
+    }
   });
-  return itemSettings;
+  return itemSettings ;
 };
+ 

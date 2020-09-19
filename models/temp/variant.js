@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-    const location = sequelize.define("location", {
+    const variant = sequelize.define("variant", {
         code: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -14,33 +14,18 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        color: {
+        variantType: {
             type: DataTypes.STRING,
+        },
+        color: {
+            type: DataTypes.STRING
+        },
+        thirdVariant: {
+            type: DataTypes.BOOLEAN
         },
         refCode: {
             type: DataTypes.STRING
         },
-        isGroup: {
-            type: DataTypes.BOOLEAN
-        },
-        additionalCode: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            unique: true,
-        },
-        additionalName: {
-            type: DataTypes.STRING,
-        },
-        additionalDescription: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        group: {
-            type: DataTypes.STRING
-        },
-        otherRefCode: {
-            type: DataTypes.STRING
-        }
     });
-    return location ;
+    return variant ;
 };
