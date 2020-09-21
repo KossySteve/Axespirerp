@@ -17,7 +17,7 @@ const startApp = () => {
 
     const { Item } = tables;
 
-      worker.start(tables);
+      // worker.start(tables);
 
     // simple test
     (async () => {
