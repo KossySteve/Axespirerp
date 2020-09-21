@@ -5,7 +5,7 @@ const coreService = require("./services/core");
 const notification = require("./services/notification");
 const worker = require("./worker");
 
-const { app, BrowserWindow, screen } = electron;
+const { app, BrowserWindow, screen, ipcMain, globalShortcut } = electron;
 
 let win;
 // create initial window
@@ -41,6 +41,9 @@ const startApp = () => {
 
   // 1. start the worker
 
+  globalShortcut.register('CommandOrControl+S', ()=>{
+    console.log("hello")
+  })
 
   win = new BrowserWindow({
     webPreferences: {
@@ -66,6 +69,9 @@ const startApp = () => {
   //   })
 
   // win.loadURL("http://omine.herokuapp.com/");
+  ipcMain.on('test-event', (event, data) => {
+    console.log(data)
+  })
 };
 
 app.whenReady().then(startApp);
