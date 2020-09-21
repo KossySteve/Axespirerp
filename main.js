@@ -11,40 +11,46 @@ let win;
 // create initial window
 const startApp = () => {
   // connect to db
-  const tables = coreService.start();
 
-  const { Item } = tables;
-
-  // simple test
   (async () => {
-    await Item.create({
-      code: 123456789,
-      description: "Best product",
-      type: "Shoe",
-      group: "FootWare",
-      isGroup: true,
-      company: "Finnacle",
-      brand: "Nike",
-      model: "N567",
-      standardCost: 465742.67,
-      saleRate: 26447112,
-      purchaseRate: 64465127,
-      minRate: 623752,
-      maxRate: 642641,
-    });
+    const tables = await coreService.start();
+
+    const { Item } = tables;
+
+      worker.start(tables);
+
+    // simple test
+    (async () => {
+      await Item.create({
+        code: 123456789,
+        description: "Best product",
+        type: "Shoe",
+        group: "FootWare",
+        isGroup: true,
+        company: "Finnacle",
+        brand: "Nike",
+        model: "N567",
+        standardCost: 465742.67,
+        saleRate: 26447112,
+        purchaseRate: 64465127,
+        minRate: 623752,
+        maxRate: 642641,
+      });
+    })();
   })();
 
-  // TODO
   // 1. start the worker
-  worker.start(tables);
+
 
   win = new BrowserWindow({
     webPreferences: {
-      // nodeIntegration: true,
+      nodeIntegration: true,
     },
-    width: width,
-    height: height,
+    // width: width,
+    // height: height,
   });
+
+  console.log("Tried running main.js");
 
   win.loadFile("./ui_modules/inventory/item.html");
 

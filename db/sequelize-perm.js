@@ -1,14 +1,18 @@
 const { Sequelize } = require("sequelize");
+const { app } = require("electron");
 
 let db;
 
 //create database instance
 module.exports.connectDB = async () => {
-  const db = new Sequelize({
+  console.log("Connect Db was just called");
+  db = new Sequelize({
     dialect: "sqlite",
     storage: `${app.getPath("userData")}/database_perm.sqlite`,
     logging: true,
   });
+
+  console.log(db);
 
   // check if properly connected to database, if not  throw error message
   try {

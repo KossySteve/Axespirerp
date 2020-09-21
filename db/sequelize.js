@@ -1,6 +1,5 @@
 const { Sequelize } = require("sequelize");
 const { app } = require("electron");
-
 let db;
 
 //create database instance
