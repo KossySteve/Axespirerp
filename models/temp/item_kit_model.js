@@ -20,28 +20,19 @@ module.exports = (sequelize) => {
     company: {
       type: DataTypes.STRING,
     },
-    brand: {
-      type: DataTypes.STRING,
+    kitPricingMethod: {
+      type: DataTypes.STRING
     },
-    model: {
-      type: DataTypes.STRING,
+    minAddonCount: {
+      type: DataTypes.NUMBER
     },
-    standardCost: {
-      type: DataTypes.DECIMAL,
-      allowNull: false,
+    minComponentCount: {
+      type: DataTypes.STRING
     },
-    saleRate: {
-      type: DataTypes.DECIMAL,
-    },
-    purchaseRate: {
-      type: DataTypes.DECIMAL,
-    },
-    minRate: {
-      type: DataTypes.DECIMAL,
-    },
-    maxRate: {
-      type: DataTypes.DECIMAL,
-    },
+    isKit: {
+      type: DataTypes.BOOLEAN
+    }
+    
   });
 
   return ItemKit;
