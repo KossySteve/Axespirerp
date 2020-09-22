@@ -56,17 +56,6 @@ const startApp = () => {
   notification.start(win);
 
   console.log(process.env.DB_NAME);
-
-  // url.format({
-  //     pathname: path.join(__dirname, "ui", "modules", "item", "index.html"),
-  //     protocol: "file",
-  //     slashes: true,
-  //   })
-
-  // win.loadURL("http://omine.herokuapp.com/");
-  ipcMain.on('save-form', (event, data) => {
-    console.log(data)
-  })
 };
 
 app.whenReady().then(startApp);
