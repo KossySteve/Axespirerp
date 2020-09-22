@@ -41,9 +41,9 @@ const startApp = () => {
 
   // 1. start the worker
 
-  globalShortcut.register('CommandOrControl+S', ()=>{
-    console.log("hello")
-  })
+  // globalShortcut.register('CommandOrControl+S', ()=>{
+  //   console.log("ctrl s is pressed")
+  // })
 
   win = new BrowserWindow({
     webPreferences: {
@@ -69,7 +69,7 @@ const startApp = () => {
   //   })
 
   // win.loadURL("http://omine.herokuapp.com/");
-  ipcMain.on('test-event', (event, data) => {
+  ipcMain.on('save-form', (event, data) => {
     console.log(data)
   })
 };
