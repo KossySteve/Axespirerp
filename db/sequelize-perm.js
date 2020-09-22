@@ -8,7 +8,7 @@ module.exports.connectDB = async () => {
   console.log("Connect Db was just called");
   db = new Sequelize({
     dialect: "sqlite",
-    storage: `${app.getPath("userData")}/database_perm.sqlite`,
+    storage: `${app.getPath("userData")}/database_perm.sqlite3`,
     logging: true,
   });
 

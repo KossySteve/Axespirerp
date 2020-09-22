@@ -3,10 +3,10 @@ const { app } = require("electron");
 let db;
 
 //create database instance
-module.exports.connectDB = async () => {
+module.exports.connectDB = async () => {  
   db = new Sequelize({
     dialect: "sqlite",
-    storage: `${app.getPath("userData")}/database.sqlite`,
+    storage: `${app.getPath("userData")}/database.sqlite3`,
     logging: true,
   });
 

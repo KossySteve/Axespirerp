@@ -5,6 +5,8 @@ const coreService = require("./services/core");
 const notification = require("./services/notification");
 const worker = require("./worker");
 const controllers = require("./controllers");
+const { table } = require("console");
+const util =require('util')
 
 const { app, BrowserWindow, screen, ipcMain, globalShortcut } = electron;
 
@@ -13,11 +15,13 @@ let win;
 const startApp = () => {
   // connect to db
 
+  console.log("program start");
+
   (async () => {
     const tables = await coreService.start();
-
+    console.log({"tables": tables});
     const { Item, ItemPerm } = tables;
-    console.log(ItemPerm);
+    console.log(ItemPerm, util.inspect(Item) );
 
     // 1. start the worker
     // worker.start(tables);
@@ -25,6 +29,7 @@ const startApp = () => {
     // simple
     controllers.add(Item, {
       code: 123456789,
+      name: "test name",
       description: "Best product",
       type: "Shoe",
       group: "FootWare",
@@ -32,11 +37,18 @@ const startApp = () => {
       company: "Finnacle",
       brand: "Nike",
       model: "N567",
+      isGroup: true,
+      isAuto: true,
+      isFavorite: true,
+      base: "hello",
+      hsn: "hello",
       standardCost: 465742.67,
       saleRate: 26447112,
       purchaseRate: 64465127,
       minRate: 623752,
       maxRate: 642641,
+      saleRev: 10,
+      purchaseRev: 10
     });
   })();
 

@@ -6,6 +6,9 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    name: {
+      type: DataTypes.STRING
+    },
     description: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -28,6 +31,21 @@ module.exports = (sequelize) => {
     model: {
       type: DataTypes.STRING,
     },
+    isBatch: {
+      type: DataTypes.BOOLEAN
+    },
+    isAuto: {
+      type: DataTypes.BOOLEAN
+    },
+    isFavorite: {
+      type: DataTypes.BOOLEAN
+    },
+    base: {
+      type: DataTypes.STRING
+    },
+    hsn: {
+      type: DataTypes.STRING
+    },
     standardCost: {
       type: DataTypes.DECIMAL,
       allowNull: false,
@@ -44,6 +62,12 @@ module.exports = (sequelize) => {
     maxRate: {
       type: DataTypes.DECIMAL,
     },
+    saleRev: {
+      type: DataTypes.INTEGER
+    },
+    purchaseRev: {
+      type: DataTypes.INTEGER
+    }
   });
 
   return Item;
