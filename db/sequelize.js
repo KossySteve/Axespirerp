@@ -12,7 +12,9 @@ module.exports.connectDB = async () => {
 
   // check if properly connected to database, if not  throw error message
   try {
-    await db.authenticate();
+    await db.authenticate().then((data) => {
+      console.log("sequelize authentication successful");
+    });
   } catch (e) {
     throw new Error("An error occured while trying to connect to database");
   }

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+  <link rel="stylesheet" href="./css/all.css" 
       crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
  
@@ -128,21 +128,22 @@
       <div class="col py-2 shadow border border-bottom-0 border-left-0 border-right-0 border-dark">
               <h5 class="col-12 text-white text-center py-2 px-n5 bg-primary shadow"><b>STOCK COUNT</b></h5>
               <form>
+                <input type="hidden" name="StockCount" id="model_name">
                   <div class="form-row mt-3 shadow-lg p-4 mb-4 bg-white rounded-lg">
               <div class="col">
                 <h5><b>TRANSACTION DETAILS</b></h5>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="">No:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email" disabled> 
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email"  disabled> 
                 </div>
                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="">Date:</label>
-                    <input type="text" class="form-control w-50 border-primary" id="email" name="email" disabled> 
+                    <input type="text" class="form-control w-50 border-primary" id="email"  disabled> 
                 </div>
                 <h5><b>INVENTORY DETAILS</b></h5>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="">Cycle count By:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email" disabled> 
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email"  disabled> 
                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="comment" class="">Remarks:</label>
@@ -172,11 +173,11 @@
             </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="mr-2">Item Like:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" > 
                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="mr-2">No of items:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" > 
                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="mr-2">Location:</label>
@@ -229,17 +230,17 @@
                 <h4>Item Stock Parameters</h4>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="mr-2">From Stock Qty:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" > 
                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="mr-2">To Stock Qty:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" > 
                 </div>
                 <div class="row">
                     <div class="col-6 mr-2"></div>
                     <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
                       <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" name="remember" required> Include Zero/Negative Stock
+                          <input class="form-check-input" type="checkbox"  required> Include Zero/Negative Stock
                       </label>
                     </div>
                 </div>
@@ -247,18 +248,18 @@
                     <div class="col-6 mr-2"></div>
                     <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
                       <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" name="remember" required> Show only Zero stock item.
+                          <input class="form-check-input" type="checkbox"  required> Show only Zero stock item.
                       </label>
                     </div>
                 </div>
                 <h4>Item Attributes</h4>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="mr-2">ABC Category:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" > 
                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="mr-2">FSN Category:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" > 
                 </div>
             </div>
           </div>

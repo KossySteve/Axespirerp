@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+  <link rel="stylesheet" href="./css/all.css" 
       crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
  
@@ -144,7 +144,7 @@
              <tbody>
                <tr>
                  <td>
-                     <input type="text" class="form-control border-dark py-n3 mt-n2" id="email"> 
+                     <input type="text" class="form-control border-dark py-n3 mt-n2"> 
                  </td>
                  <td>
                    <div class="input-group mt-n2 ">
@@ -162,18 +162,19 @@
     </div>
     <div class="col-9 shadow py-2 border border-bottom-0 border-left-0 border-right-0 border-dark">
         
-         <form id="model">
+         <form>
+           <input type="hidden" name="Item" id="model_name">
           <div class="form-row bg-light ml-4 pb-4 shadow">
             <h5 class="col-12 text-white text-center py-3 bg-primary px-2"><b>ITEM DETAILS</b></h5>
             <div class="col pr-3">
               <h4>General Details</h4>
               <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="code" class="mr-2">Code:</label>
-                    <input type="text" class="form-control w-75 border-primary py-n3" id="email" name="code"> 
+                    <input type="text" class="form-control w-75 border-primary py-n3" name="code"> 
                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="name" class="mr-2">Name:</label>
-                    <input type="text" class="form-control w-75 border-primary py-n3" id="email" name="name"> 
+                    <input type="text" class="form-control w-75 border-primary py-n3"  name="name"> 
                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                   <label for="description" class="">Description:</label>
@@ -183,7 +184,7 @@
                     <label for="email" class="mr-2">Type:</label>
                     
                     <div class="input-group w-75">
-                      <input type="text" class="form-control border border-primary ">
+                      <input type="text" name="type" class="form-control border border-primary ">
                       <div class="input-group-append">
                         <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
                       </div>
@@ -202,7 +203,7 @@
                     <div class="col-3 mr-1"></div>
                     <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
                       <label class="form-check-label">
-                          <input name="isGroup" class="form-check-input" type="checkbox" required> Is Group.
+                          <input name="isGroup" class="form-check-input" type="checkbox" j required> Is Group.
                       </label>
                     </div>
                 </div>
@@ -210,7 +211,7 @@
                     <div class="col-3 mr-1"></div>
                     <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
                       <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" name="remember" required> Is Group.
+                          <input class="form-check-input" type="checkbox"  required> Is Group.
                       </label>
                     </div>
                 </div> -->
@@ -291,31 +292,31 @@
             <h4>Additional Details</h4>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="mr-2">Standard Cost:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="standardCost"> 
+                    <input type="text" class="form-control w-50 border-primary py-n3"  name="standardCost"> 
                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="mr-2">Sale Rate:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="saleRate"> 
+                    <input type="text" class="form-control w-50 border-primary py-n3"  name="saleRate"> 
                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="mr-2">Purchase Rate:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="purchaseRate"> 
+                    <input type="text" class="form-control w-50 border-primary py-n3"  name="purchaseRate"> 
                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="mr-2">Min Rate:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="minRate"> 
+                    <input type="text" class="form-control w-50 border-primary py-n3" name="minRate"> 
                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="mr-2">Max Rate:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="maxRate"> 
+                    <input type="text" class="form-control w-50 border-primary py-n3"  name="maxRate"> 
                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="mr-2">Sale Rev%:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="saleRev"> 
+                    <input type="text" class="form-control w-50 border-primary py-n3" name="saleRev"> 
                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="mr-2">Purchase Rev%:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="purchaseRev"> 
+                    <input type="text" class="form-control w-50 border-primary py-n3" name="purchaseRev"> 
                 </div>
             </div>
           

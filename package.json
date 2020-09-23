@@ -4,7 +4,8 @@
   "description": "ERP desktop client",
   "main": "main.js",
   "scripts": {
-    "start": "env-cmd -e development electron ."
+    "start": "env-cmd -e development electron .",
+    "build": "electron-packager . AxespireERP --platform=win32 --arch=x64"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
     "node-cron": "^2.0.3",
     "sequelize": "^6.3.5",
     "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^15.1.0"
   }
 }

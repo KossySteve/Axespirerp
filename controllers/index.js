@@ -2,7 +2,7 @@ const notificationService = require("../services/notification");
 
 
 
-module.exports.add = async (model, data) => {
+module.exports.add = async (model, data, win) => {
   try {
     await model.sync();
     await model.create(data);
@@ -11,13 +11,15 @@ module.exports.add = async (model, data) => {
     notificationService.notify("Data Successfully updpated to db", {
       keyword: "data_creation_successful",
       error: false,
+      window: win
     });
   }
   catch(err){
       console.log(err)
       notificationService.notify("Data Creation Error", {
           keyword: "data_creation_error", 
-          error: true
+          error: true,
+          window: win
       })
   }
 };

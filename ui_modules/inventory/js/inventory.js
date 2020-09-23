@@ -1,14 +1,34 @@
 // Swal.fire('hello', 'world', 'error');
-const {ipcRenderer} = require('electron')
+const {ipcRenderer, app} = require('electron')
+const path = require('path');
+const {Sequelize} = require('sequelize');
+
+const db = new Sequelize('sqlite::memory');
+
+const model = document.querySelector('#model_name').getAttribute('name');
+const fields = require(path.resolve('ui_modules/inventory/js/fields.js'))[model];
+let data = {};
+data.model = model;
+data.data={};
 
 document.addEventListener('keydown', (event)=>{
     // if ctrl + s is pressed
     if(event.code === "KeyS" && event.ctrlKey){
-        let form = document.getElementById('model').elements
-        console.log(form)
-        // form.ForEach((index, item)=>{
-        //     console.log(index)
-        // })
-        ipcRenderer.send('save-form', {data: "data"})
+        fields.forEach((item, index) => {
+            console.log(item);
+            let itemVal = document.getElementsByName(item)[0].value;
+            data.data[item] = itemVal;
+        });
+        console.log(data);
+        ipcRenderer.send('model-save', data);   
     }
 })
+
+//if a notification is recieved
+ipcRenderer.on('data-added', (event, data) => {
+    console.log('data-has been added');
+    fields.forEach((item, index) => {
+        document.getElementsByName(item)[0].value = "";
+    });
+    Swal.fire('Success','Item added successfully','success');
+});

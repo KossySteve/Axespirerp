@@ -6,7 +6,7 @@ const notification = require("./services/notification");
 const worker = require("./worker");
 const controllers = require("./controllers");
 const { table } = require("console");
-const util =require('util')
+const util =require('util');
 
 const { app, BrowserWindow, screen, ipcMain, globalShortcut } = electron;
 
@@ -17,47 +17,13 @@ const startApp = () => {
 
   console.log("program start");
 
-  (async () => {
-    const tables = await coreService.start();
-    console.log({"tables": tables});
-    const { Item, ItemPerm } = tables;
-    console.log(ItemPerm, util.inspect(Item) );
-
-    // 1. start the worker
-    // worker.start(tables);
-
-    // simple
-    controllers.add(Item, {
-      code: 123456789,
-      name: "test name",
-      description: "Best product",
-      type: "Shoe",
-      group: "FootWare",
-      isGroup: true,
-      company: "Finnacle",
-      brand: "Nike",
-      model: "N567",
-      isGroup: true,
-      isAuto: true,
-      isFavorite: true,
-      base: "hello",
-      hsn: "hello",
-      standardCost: 465742.67,
-      saleRate: 26447112,
-      purchaseRate: 64465127,
-      minRate: 623752,
-      maxRate: 642641,
-      saleRev: 10,
-      purchaseRev: 10
-    });
-  })();
-
+  const {width, height} = screen.getPrimaryDisplay().size;
   win = new BrowserWindow({
     webPreferences: {
       nodeIntegration: true,
     },
-    // width: width,
-    // height: height,
+    width: width,
+    height: height,
   });
 
   console.log("Tried running main.js");
@@ -67,7 +33,18 @@ const startApp = () => {
   // start notification service
   notification.start(win);
 
-  console.log(process.env.DB_NAME);
+  (async () => {
+    const tables = await coreService.start();
+     
+    ipcMain.on('model-save', (event, data) => {
+      const model = tables[data.model];
+      controllers.add(model, data.data, win);
+    });
+  
+  })();
+
+
+  // console.log(process.env.DB_NAME);
 };
 
 app.whenReady().then(startApp);
