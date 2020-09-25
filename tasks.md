@@ -10,3 +10,9 @@
 * build the application to executable format
 
 ## 22-09-2020
+
+# 25-09-2020
+
+* complete frontend inventory integration
+* fix the app build bug
+* add app icon
