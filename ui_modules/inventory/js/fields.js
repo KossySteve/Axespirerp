@@ -116,8 +116,9 @@ module.exports = {
     'fromBranch', 
     'lorryNo', 
     'expectedDeliveryDate', 
-    'headerCharges', 
-    'distributeCharges'],
+    // 'headerCharges', 
+    // 'distributeCharges'
+    ],
 
     StockTransferOutward:  ['no', 
     'date', 
@@ -129,7 +130,7 @@ module.exports = {
     'transporterName', 
     'shipmentType', 
     'transferRemarks', 
-    'deliveryToBranch'],
+    'toBranch'],
 
     Variant: ['code', 
     'name', 
@@ -137,5 +138,23 @@ module.exports = {
     'variantType', 
     'color', 
     'thirdVariant', 
-    'refCode']
+    'refCode'],
+
+    Batch: ['code',
+    'serialNo',
+    'mfgDate',
+    'expiryDate',
+    'sellByDate',
+    'mrp',
+    'item',
+    'colorVariant',
+    'variant2',
+    'variant3',
+    'batchNo1',
+    'batchNo2',
+    'refCode',
+    'dimension1',
+    'dimension2',
+    'dimension3',
+    'isAllowNegativeSale']
 }

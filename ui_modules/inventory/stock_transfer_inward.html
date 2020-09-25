@@ -119,7 +119,7 @@
           </div>
     </div>
 </nav>
-<section class="container-fluid ">
+<section class="container-fluid">
   <div class="row">
     <div class="col py-2 shadow border border-bottom-0 border-left-0 border-right-0 border-dark">
             <h5 class="col-12 text-white text-center py-2 px-n2 bg-primary shadow"><b>STOCK TRANSFER INWARD</b></h5>
@@ -159,7 +159,7 @@
                            <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                                <label for="email" class="mr-2">Inwarded By:</label>
                                <div class="input-group w-50">
-                                 <input type="text" class="form-control border border-primary ">
+                                 <input name="inwardedBy" type="text" class="form-control border border-primary ">
                                  <div class="input-group-append">
                                    <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
                                  </div>
@@ -171,7 +171,7 @@
                             <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                                <label for="email" class="mr-2">To Branch:</label>
                                <div class="input-group w-50">
-                                 <input type="text" class="form-control border border-primary ">
+                                 <input name="toBranch" type="text" class="form-control border border-primary ">
                                  <div class="input-group-append">
                                    <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
                                  </div>
@@ -180,7 +180,7 @@
                             <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                                <label for="email" class="mr-2">From Branch:</label>
                                <div class="input-group w-50">
-                                 <input type="text" class="form-control border border-primary ">
+                                 <input name="fromBranch" type="text" class="form-control border border-primary ">
                                  <div class="input-group-append">
                                    <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
                                  </div>
@@ -189,12 +189,12 @@
                            <h5><b>DELIVERY DETAILS</b></h5>
                           <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                               <label for="email" class="mr-2">Lorry No.:</label>
-                              <input type="text" class="form-control w-50 border-primary py-n3" id="email" > 
+                              <input name="lorryNo" type="text" class="form-control w-50 border-primary py-n3" id="email" > 
                           </div>
                           <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                                <label for="email" class="mr-2">Exp. Delivery Date:</label>
                                <div class="input-group w-50">
-                                 <input type="text" class="form-control border border-primary ">
+                                 <input name="expectedDeliveryDate" type="text" class="form-control border border-primary ">
                                  <div class="input-group-append">
                                    <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown"></button>
                                  </div>
@@ -208,7 +208,6 @@
                             <ul class="dropdown-menu">
                               <li><a href="#"></a><br></li>
                               <li><a href="#"></a><br></li>
-                              
                             </ul>
                           </div>
                           <div class="dropdown col">

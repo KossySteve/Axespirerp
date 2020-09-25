@@ -124,23 +124,24 @@
       <div class="col py-2 shadow border border-bottom-0 border-left-0 border-right-0 border-dark">
               <h5 class="col-12 text-white text-center py-2 px-n5 bg-primary shadow"><b>STOCK OPENING</b></h5>
               <form>
+
                 <input type="hidden" name="StockOpening" id="model_name">
                   <div class="form-row mt-3 shadow-lg p-4 mb-4 bg-white rounded-lg">
                     <div class="col">
                    <h5><b>TRANSACTION DETAILS</b></h5>
                      <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                          <label for="email" class="">No:</label>
-                         <input type="text" class="form-control w-50 border-primary py-n3" id="email"  disabled> 
+                         <input name="no" type="text" class="form-control w-50 border-primary py-n3" id="email"  disabled> 
                      </div>
                       <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                          <label for="email" class="">Date:</label>
-                         <input type="text" class="form-control w-50 border-primary" id="email"  disabled> 
+                         <input name="date" type="text" class="form-control w-50 border-primary" id="email"  disabled> 
                      </div>
                    
                        <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                           <label for="email" class="mr-2">Branch:</label>
                           <div class="input-group w-50">
-                            <input type="text" class="form-control border border-primary ">
+                            <input name="branch" type="text" class="form-control border border-primary ">
                             <div class="input-group-append">
                               <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
                             </div>
@@ -150,7 +151,7 @@
                        <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                           <label for="email" class="mr-2">Adjusted By:</label>
                           <div class="input-group w-50">
-                            <input type="text" class="form-control border border-primary ">
+                            <input name="adjustedBy" type="text" class="form-control border border-primary ">
                             <div class="input-group-append">
                               <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
                             </div>
@@ -158,7 +159,7 @@
                       </div>
                       <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                           <label for="comment" class="">Remark:</label>
-                          <textarea class="form-control  w-50 border border-primary"  rows="2" id="comment"></textarea>
+                          <textarea name="remark" class="form-control  w-50 border border-primary"  rows="2" id="comment"></textarea>
                       </div>
                  </div>
                  <div class="col ml-3">

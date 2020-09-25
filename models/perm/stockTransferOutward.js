@@ -34,7 +34,7 @@ module.exports = (sequelize) => {
         transferRemarks: {
             type: DataTypes.STRING
         },
-        deliveryToBranch: {
+        toBranch: {
             type: DataTypes.STRING
         },
     });

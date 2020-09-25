@@ -36,9 +36,11 @@ const startApp = () => {
   (async () => {
     const tables = await coreService.start();
      
+    // when a model is trying to save
     ipcMain.on('model-save', (event, data) => {
       const model = tables[data.model];
       controllers.add(model, data.data, win);
+      console.log({message: "model is tring to save", data: data});
     });
   
   })();

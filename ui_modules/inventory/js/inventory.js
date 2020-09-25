@@ -1,11 +1,9 @@
 // Swal.fire('hello', 'world', 'error');
-const {ipcRenderer, app} = require('electron')
+const {ipcRenderer} = require('electron');
 const path = require('path');
-const {Sequelize} = require('sequelize');
-
-const db = new Sequelize('sqlite::memory');
-
-const model = document.querySelector('#model_name').getAttribute('name');
+const modelElement = document.querySelector('#model_name');
+console.log(modelElement);
+const model = modelElement.getAttribute('name');
 const fields = require(path.resolve('ui_modules/inventory/js/fields.js'))[model];
 let data = {};
 data.model = model;

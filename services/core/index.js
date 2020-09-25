@@ -30,8 +30,9 @@ module.exports.start = async () => {
             stock_transfer_inward_model,
             stock_transfer_outward_model,
             variant_model,
+            batch,
           } = require("../../models/temp")(sequelizeInstance);
-          console.log(item_model);
+          // console.log(item_model);
 
           models.Item = item_model;
           models.ItemKit = item_kit_model;
@@ -46,6 +47,7 @@ module.exports.start = async () => {
           models.StockTransferInward = stock_transfer_inward_model;
           models.StockTransferOutward = stock_transfer_outward_model;
           models.Variant = variant_model;
+          models.Batch = batch;
 
           notificationService.notify("Temporary db successfully connected", {
             keyword: "db_connected",

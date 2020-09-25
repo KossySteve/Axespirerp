@@ -11,6 +11,7 @@ const stock_opening_model = require("./stockOpening");
 const stock_transfer_inward_model = require("./stockTransferInward");
 const stock_transfer_outward_model = require("./stockTransferOutward");
 const variant_model = require("./variant");
+const batch = require("./batch");
 
 module.exports = (sequelize) => {
   return {
@@ -27,5 +28,6 @@ module.exports = (sequelize) => {
     stock_transfer_inward_model: stock_transfer_inward_model(sequelize),
     stock_transfer_outward_model: stock_transfer_outward_model(sequelize),
     variant_model: variant_model(sequelize),
+    batch: batch(sequelize),
   };
 };

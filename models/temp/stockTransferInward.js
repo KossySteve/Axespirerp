@@ -31,12 +31,12 @@ module.exports = (sequelize) => {
         expectedDeliveryDate: {
             type: DataTypes.DATE
         },
-        headerCharges: {
-            type: DataTypes.STRING
-        },
-        distributeCharges: {
-            type: DataTypes.STRING
-        },
+        // headerCharges: {
+        //     type: DataTypes.STRING
+        // },
+        // distributeCharges: {
+        //     type: DataTypes.STRING
+        // },
     });
     return stockTransferInward ;
 };
