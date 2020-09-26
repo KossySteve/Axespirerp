@@ -13,18 +13,15 @@ document.addEventListener('keydown', (event)=>{
     // if ctrl + s is pressed
     if(event.code === "KeyS" && event.ctrlKey){
         fields.forEach((item, index) => {
-            console.log(item);
             let itemVal = document.getElementsByName(item)[0].value;
             data.data[item] = itemVal;
         });
-        console.log(data);
         ipcRenderer.send('model-save', data);   
     }
 })
 
 //if a notification is recieved
 ipcRenderer.on('data-added', (event, data) => {
-    console.log('data-has been added');
     fields.forEach((item, index) => {
         document.getElementsByName(item)[0].value = "";
     });

@@ -15,7 +15,6 @@ module.exports.add = async (model, data, win) => {
     });
   }
   catch(err){
-      console.log(err)
       notificationService.notify("Data Creation Error", {
           keyword: "data_creation_error", 
           error: true,

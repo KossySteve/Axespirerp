@@ -15,7 +15,6 @@ let win;
 const startApp = () => {
   // connect to db
 
-  console.log("program start");
 
   const {width, height} = screen.getPrimaryDisplay().size;
   win = new BrowserWindow({
@@ -26,7 +25,6 @@ const startApp = () => {
     height: height,
   });
 
-  console.log("Tried running main.js");
 
   win.loadFile("./ui_modules/inventory/item.html");
 
@@ -40,13 +38,11 @@ const startApp = () => {
     ipcMain.on('model-save', (event, data) => {
       const model = tables[data.model];
       controllers.add(model, data.data, win);
-      console.log({message: "model is tring to save", data: data});
     });
   
   })();
 
 
-  // console.log(process.env.DB_NAME);
 };
 
 app.whenReady().then(startApp);

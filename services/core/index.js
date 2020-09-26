@@ -107,7 +107,6 @@ module.exports.start = async () => {
           models.StockTransferOutwardPerm = stock_transfer_outward_model_perm;
           models.VariantPerm = variant_model_perm;
 
-          console.log(models);
 
           notificationService.notify("Permanent db successfully connected", {
             keyword: "db_connected",
