@@ -1,24 +1,36 @@
 {
-  "name": "erp",
+  "name": "app",
   "version": "1.0.0",
   "description": "ERP desktop client",
   "main": "main.js",
+  "build": {
+    "appId": "your.id",
+    "mac": {
+      "category": "your.app.category.type"
+    },
+    "win": {
+      "target": "portable"
+    }
+  },
+
   "scripts": {
     "start": "env-cmd -e development electron .",
-    "build": "electron-packager . AxespireERP --platform=win32 --arch=x64"
+    "build": "electron-packager . app --platform win32 --arch x64 --out dist/",
+    "setup": "electron-installer-windows --src dist/app-win32-x64/ --dest dist/installers/",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KossySteve/Axespirerp.git"
   },
-  "author": "",
+  "author": "Tobecci and Blazing Kevin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KossySteve/Axespirerp/issues"
   },
   "homepage": "https://github.com/KossySteve/Axespirerp#readme",
   "dependencies": {
-    "electron": "^10.1.1",
     "env-cmd": "^10.1.0",
     "mysql2": "^2.1.0",
     "node-cron": "^2.0.3",
@@ -27,6 +39,9 @@
   },
   "devDependencies": {
     "electron-builder": "^22.8.1",
-    "electron-packager": "^15.1.0"
+    "electron-packager": "^15.1.0",
+    "electron-winstaller": "^4.0.1",
+    "electron": "^10.1.1",
+    "electron-installer-windows": "^3.0.0"
   }
 }

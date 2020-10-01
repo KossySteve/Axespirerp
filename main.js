@@ -7,6 +7,7 @@ const worker = require("./worker");
 const controllers = require("./controllers");
 const { table } = require("console");
 const util =require('util');
+const { webContents } = require("electron");
 
 const { app, BrowserWindow, screen, ipcMain, globalShortcut } = electron;
 
@@ -27,7 +28,7 @@ const startApp = () => {
 
 
   win.loadFile("./ui_modules/inventory/item.html");
-
+  // win.webContents.openDevTools();
   // start notification service
   notification.start(win);
 

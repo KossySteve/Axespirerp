@@ -1,4 +1,4 @@
-module.exports = {
+let fields = {
     Item: ['code', 
     'name', 
     'description', 

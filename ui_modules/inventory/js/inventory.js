@@ -1,10 +1,9 @@
 // Swal.fire('hello', 'world', 'error');
 const {ipcRenderer} = require('electron');
-const path = require('path');
 const modelElement = document.querySelector('#model_name');
 console.log(modelElement);
 const model = modelElement.getAttribute('name');
-const fields = require(path.resolve('ui_modules/inventory/js/fields.js'))[model];
+fields = fields[model];
 let data = {};
 data.model = model;
 data.data={};
