@@ -11,38 +11,98 @@ module.exports = (sequelize) => {
         },
         cycleCountBy: {
             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      },
             allowNull: false,
         },
         remarks: {
             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      },
         },
         group: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         item: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         itemLike: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         noOfItems: {
             type: DataTypes.INTEGER
         },
         location: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         variant1: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         variant2: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         variant3: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         make: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         fromStockQuantity:{
             type: DataTypes.INTEGER
         },
@@ -56,11 +116,23 @@ module.exports = (sequelize) => {
             type: DataTypes.BOOLEAN
         },
         abcCategory: {
-            type: DataTypes.STRING
-        },
-        fsnCategory: {
-            type: DataTypes.STRING
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
         }
+      }
+},
+        fsnCategory: {
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+}
     });
     return stockCount ;
 };

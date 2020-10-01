@@ -1,7 +1,7 @@
 const db = require("../../db/sequelize");
 const db_perm = require("../../db/sequelize-perm");
 const notificationService = require("../notification");
-
+const { notifications } = require('../../constants/notifications.js');
 let models = {};
 
 // start the core service (i.e the service related to sending data to db )
@@ -50,13 +50,13 @@ module.exports.start = async () => {
           models.Batch = batch;
 
           notificationService.notify("Temporary db successfully connected", {
-            keyword: "db_connected",
+            keyword: notifications.DB_CONNECTION_SUCCESSFUL,
             error: false,
           });
         })
         .catch((err) => {
           notificationService.notify("Temporary db connection error", {
-            keyword: "db_connection_error",
+            keyword: notifications.DB_CONNECTION_ERROR,
             error: true,
           });
         });
@@ -109,14 +109,14 @@ module.exports.start = async () => {
 
 
           notificationService.notify("Permanent db successfully connected", {
-            keyword: "db_connected",
+            keyword: notifications.DB_CONNECTION_SUCCESSFUL,
             error: false,
           });
         })
         .catch((err) => {
           console.log(err);
           notificationService.notify("Permanent db connection error", {
-            keyword: "db_connection_error",
+            keyword: notifications.DB_CONNECTION_ERROR,
             error: true,
           });
         });

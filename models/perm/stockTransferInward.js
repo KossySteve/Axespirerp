@@ -11,20 +11,50 @@ module.exports = (sequelize) => {
         },
         outward: {
             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      },
             allowNull: false,
         },
         tax: {
             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      },
         },
         inwardedBy: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         toBranch: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         fromBranch: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         lorryNo: {
             type: DataTypes.INTEGER
         },
@@ -32,11 +62,23 @@ module.exports = (sequelize) => {
             type: DataTypes.DATE
         },
         headerCharges: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         distributeCharges: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
     });
     return stockTransferInward ;
 };

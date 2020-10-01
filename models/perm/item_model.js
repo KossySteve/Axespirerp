@@ -6,6 +6,12 @@ module.exports = (sequelize) => {
     code: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      },
+      allowNull: false,
     },
     name: {
       type: DataTypes.STRING
@@ -13,24 +19,60 @@ module.exports = (sequelize) => {
     description: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      },
+      allowNull: false,
     },
     type: {
       type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      },
     },
     group: {
       type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      },
     },
     isGroup: {
       type: DataTypes.BOOLEAN,
     },
     company: {
       type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      },
     },
     brand: {
       type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      },
     },
     model: {
       type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      },
     },
     isBatch: {
       type: DataTypes.BOOLEAN

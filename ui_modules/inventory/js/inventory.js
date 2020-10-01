@@ -7,6 +7,7 @@ fields = fields[model];
 let data = {};
 data.model = model;
 data.data={};
+console.log(notifications);
 
 document.addEventListener('keydown', (event)=>{
     // if ctrl + s is pressed
@@ -15,14 +16,24 @@ document.addEventListener('keydown', (event)=>{
             let itemVal = document.getElementsByName(item)[0].value;
             data.data[item] = itemVal;
         });
-        ipcRenderer.send('model-save', data);   
+        ipcRenderer.send(notifications.MODEL_SAVE, data); 
+        console.log("model-save event emitted");  
     }
 })
 
 //if a notification is recieved
-ipcRenderer.on('data-added', (event, data) => {
+ipcRenderer.on(notifications.DATA_CREATION_SUCCESSFUL, (event, data) => {
+    console.log("data added event");
     fields.forEach((item, index) => {
         document.getElementsByName(item)[0].value = "";
     });
-    Swal.fire('Success','Item added successfully','success');
+    Swal.fire('Success',data,'success');
+});
+
+ipcRenderer.on(notifications.DATA_CREATION_ERROR, (event, data) => {
+    // fields.forEach((item, index) => {
+    //     document.getElementsByName(item)[0].value = "";
+    // });
+    console.log(data);
+    Swal.fire('Input Error',data,'error');
 });

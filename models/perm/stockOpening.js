@@ -11,13 +11,31 @@ module.exports = (sequelize) => {
         },
         branch: {
             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      },
         },
         adjustedBy: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         remark: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
     });
     return stockOpening ;
 };

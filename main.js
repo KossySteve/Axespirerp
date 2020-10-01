@@ -8,6 +8,7 @@ const controllers = require("./controllers");
 const { table } = require("console");
 const util =require('util');
 const { webContents } = require("electron");
+const { notifications } = require('./constants/notifications.js');
 
 const { app, BrowserWindow, screen, ipcMain, globalShortcut } = electron;
 
@@ -36,9 +37,10 @@ const startApp = () => {
     const tables = await coreService.start();
      
     // when a model is trying to save
-    ipcMain.on('model-save', (event, data) => {
+    ipcMain.on(notifications.MODEL_SAVE, (event, data) => {
       const model = tables[data.model];
-      controllers.add(model, data.data, win);
+      console.log(`model-save received ${model} ${JSON.stringify(tables)} ${data.model}`);
+      controllers.add(model, data.data);
     });
   
   })();

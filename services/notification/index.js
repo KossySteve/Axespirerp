@@ -1,21 +1,18 @@
 let win;
 
-module.exports.start = (win) => {
-  win = win;
+module.exports.start = (winInstance) => {
+  win = winInstance;
 };
 
 module.exports.notify = (detail, type) => {
   if(type.error){
-    // notify user of the error using ipc
-    console.log(detail, "- failed operation")
+    win.webContents.send(type.keyword, detail);
+    console.log(`sent notification with keyword: ${type.keyword}`);
   }
   else {
     // notify user of the success using ipc
     console.log(detail, " -succes operation")
-    if(type.window){
-      type.window.webContents.send('data-added');
-    } else{
-
-    }
+    win.webContents.send(type.keyword, detail);
+    console.log(`sent notification with keyword: ${type.keyword} and ${detail}`);
   }
 };

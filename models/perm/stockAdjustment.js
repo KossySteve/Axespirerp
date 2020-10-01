@@ -11,16 +11,40 @@ module.exports = (sequelize) => {
         },
         branch: {
             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      },
         },
         purchaseRequest:{
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         adjustedBy: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         remarks: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         refNo: {
             type: DataTypes.INTEGER
         }

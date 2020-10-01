@@ -11,32 +11,86 @@ module.exports = (sequelize) => {
         },
         purchaseRequest: {
             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      },
             allowNull: false,
         },
         tax: {
             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      },
         },
         issuedBy: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         fromBranch: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         toBranch: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         transporterName: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         shipmentType: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         transferRemarks: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
         toBranch: {
-            type: DataTypes.STRING
-        },
+             type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: ' should not be empty'
+        }
+      }
+},
     });
     return stockTransferOutward ;
 };

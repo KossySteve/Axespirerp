@@ -1,25 +1,23 @@
 const notificationService = require("../services/notification");
+const {notifications} = require('../constants/notifications.js');
 
 
-
-module.exports.add = async (model, data, win) => {
+module.exports.add = async (model, data) => {
   try {
     await model.sync();
     await model.create(data);
-
     //   if data addition is successful
-    notificationService.notify("Data Successfully updpated to db", {
-      keyword: "data_creation_successful",
+    notificationService.notify("Data Successfully added to db", {
+      keyword: notifications.DATA_CREATION_SUCCESSFUL,
       error: false,
-      window: win
     });
   }
   catch(err){
-      notificationService.notify("Data Creation Error", {
-          keyword: "data_creation_error", 
-          error: true,
-          window: win
-      })
+      console.log(`DATA ADDITION ERROR: ${err}`);
+      notificationService.notify(err.message.replaceAll('Validation error:', ''), {
+        keyword: notifications.DATA_CREATION_ERROR, 
+        error: true,
+    });
   }
 };
 
@@ -27,13 +25,13 @@ module.exports.delete = async (model, data) => {
     try{
         await model.findOne({where:{...data}})
         notificationService.notify("Data deletion successful", {
-            keyword: "data_deletion_successful", 
+            keyword: notifications.DATA_DELETION_SUCCESSFUL, 
             error: false
         })
     }
     catch(err){
         notificationService.notify("Data deletion error", {
-            keyword: "data_deletion_error",
+            keyword: notifications.DATA_DELETION_ERROR,
             error: true
         })
     }
@@ -47,13 +45,13 @@ module.exports.update = async(model,data, attributes) => {
         })
 
         notificationService.notify("Data update successful", {
-            keyword: "data_updata_successful", 
+            keyword: notifications.DATA_UPDATED_SUCCESSFULLY, 
             error: false 
         })
     }
     catch(err){
-        notificationService.notify("Data updata error", {
-            keyword: "data_update_error" , 
+        notificationService.notify("Data update error", {
+            keyword: notifications.DATA_UPDATE_ERROR , 
             error: true
         })
     }
@@ -67,7 +65,7 @@ module.exports.get = async(model, data) => {
 
         if(!data_from_db){
             notificationService.notify("No match found", {
-                keyword: "data_not_found",
+                keyword: notifications.DATA_NOT_FOUND,
                 error: false 
             })
             return null
@@ -78,7 +76,7 @@ module.exports.get = async(model, data) => {
     }
     catch(err){
         notificationService.notify("Error while trying to get data", {
-            keyword: "data_fetching_error", 
+            keyword: notifications.DATA_FETCH_ERROR, 
             error: true 
         })
     }
