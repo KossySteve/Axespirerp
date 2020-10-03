@@ -145,11 +145,11 @@
              <tbody>
                <tr>
                  <td>
-                     <input type="text" class="form-control border-dark py-n3 mt-n2"> 
+                     <input type="text" id="searchByName" class="form-control border-dark py-n3 mt-n2"> 
                  </td>
                  <td>
                    <div class="input-group mt-n2 ">
-                     <input type="text" class="form-control border border-dark py-0">
+                     <input type="text" id="searchByCode" class="form-control border border-dark py-0">
                      <div class="input-group-append">
                        <button class="btn btn-light border border-dark" type="submit"><i class="fas fa-search"></i></button>
                      </div>
@@ -159,6 +159,18 @@
              </tbody>
            </table>
          </div >
+
+         <style>
+           #search-result{
+             background-color: white;
+             padding: 10px;
+             display: none;
+           }
+         </style>
+         <div id="search-result">
+           
+         </div>
+         
          <div class="h-75"><br><br><br><br><br><br><br><br><br><br><br><br></div>
     </div>
     <div class="col-9 shadow py-2 border border-bottom-0 border-left-0 border-right-0 border-dark">

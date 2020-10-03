@@ -10,7 +10,7 @@ module.exports.start = async () => {
     await db.connectDB();
   })()
     .then(() => {
-      console.log("Temporary DB successfully connected");
+      // console.log("Temporary DB successfully connected");
 
       const sequelizeInstance = db.getDB();
       (async () => await sequelizeInstance.sync())()
@@ -67,11 +67,11 @@ module.exports.start = async () => {
 
   // startup permanent db
   await (async () => {
-    console.log("tried to connect to permanent db ");
+    // console.log("tried to connect to permanent db ");
     await db_perm.connectDB();
   })()
     .then(() => {
-      console.log("Permanent db successfully connected");
+      // console.log("Permanent db successfully connected");
 
       const sequelizeInstance_perm = db_perm.getDB();
       (async () => await sequelizeInstance_perm.sync())()
@@ -122,7 +122,7 @@ module.exports.start = async () => {
         });
     })
     .catch((err) => {
-      console.log("An error occured while trying connect to permanent db");
+      // console.log("An error occured while trying connect to permanent db");
       console.log(err);
     });
 
