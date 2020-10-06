@@ -47,7 +47,7 @@ const startApp = () => {
     ipcMain.on(notifications.MODEL_SEARCH_NAME, (event, data) => {
       const { searchKey } = data;
       const model = tables[data.model];
-      controllers.get(model, searchKey).then((data) => {
+      controllers.search(model, searchKey).then((data) => {
         if(data !== null){
           win.webContents.send(notifications.MODEL_SEARCH_NAME_SUCCESSFUL, data);
         }
