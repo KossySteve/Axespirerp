@@ -6,7 +6,6 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
       unique: {
-        args: 'code',
         msg: "code already exists"
       },
       validate: {

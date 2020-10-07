@@ -7,7 +7,7 @@ module.exports.connectDB = async () => {
   db = new Sequelize({
     dialect: "sqlite",
     storage: `${app.getPath("userData")}/database.sqlite3`,
-    logging: true,
+    logging: false,
   });
 
   // check if properly connected to database, if not  throw error message

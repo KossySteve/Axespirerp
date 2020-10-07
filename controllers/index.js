@@ -6,11 +6,37 @@ const seq = require('sequelize');
 module.exports.add = async (model, data) => {
   try {
     await model.sync();
-    await model.create(data);
-    //   if data addition is successful
-    notificationService.notify("Data Successfully added to db", {
-      keyword: notifications.DATA_CREATION_SUCCESSFUL,
-      error: false,
+
+    // console.log({data: data});
+
+    //check if the data exists
+    await model.findOne({
+        where : {
+            code: data.code
+        }
+    }).then((result) => {
+        if(result){
+            console.log("it exists", result.name);
+           
+            for(let key in data){
+                result[key] = data[key];
+            }
+            (async () => {
+                await result.save();
+            })().then(() => {
+                notificationService.notify("Data Updated Successfully", {
+                    keyword: notifications.DATA_CREATION_SUCCESSFUL,
+                    error: false});
+            })
+        
+        } else{
+            //if model does not exists create a new one
+            model.create(data);
+            //   if data addition is successful
+            notificationService.notify("Data Successfully added to db", {
+            keyword: notifications.DATA_CREATION_SUCCESSFUL,
+            error: false});
+        }
     });
   }
   catch(err){
@@ -24,7 +50,8 @@ module.exports.add = async (model, data) => {
 
 module.exports.delete = async (model, data) => {
     try{
-        await model.findOne({where:{...data}})
+        await model.findOne({where:{...data}});
+
         notificationService.notify("Data deletion successful", {
             keyword: notifications.DATA_DELETION_SUCCESSFUL, 
             error: false
