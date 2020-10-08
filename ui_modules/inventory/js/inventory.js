@@ -13,6 +13,27 @@ data.searchKey = "";
 let searchStore = [];
 loader = document.querySelector('#loader-overlay');
 
+const autoGenerate = () => {
+    let values = {};
+    values.uuid = `${model}-${uuidv4()}`;
+    values.date = new Date().toLocaleDateString();
+    let codeField = document.getElementsByName('code')[0];
+    let dateField = document.getElementsByName('date')[0];
+
+    if(codeField){
+        codeField.value = values.uuid;
+        codeField.setAttribute('disabled', true);
+    }
+
+    if(dateField){
+        dateField.value = values.date;
+        codeField.setAttribute('disabled', true);
+    }
+    console.log(values, codeField, dateField);
+};
+
+autoGenerate();
+
 const clearSearchField = () => {
     searchDisplay.innerHTML='';
     searchDisplay.style.display = "none";
@@ -51,6 +72,7 @@ ipcRenderer.on(notifications.DATA_CREATION_SUCCESSFUL, (event, data) => {
         document.getElementsByName(item)[0].value = "";
     });
     Swal.fire('Success',data,'success');
+    autoGenerate();
 });
 
 ipcRenderer.on(notifications.DATA_CREATION_ERROR, (event, data) => {
@@ -113,3 +135,4 @@ ipcRenderer.on(notifications.MODEL_SEARCH_NAME_SUCCESSFUL, (event, data) => {
         searchDisplay.style.display= 'none';
     }
 });
+

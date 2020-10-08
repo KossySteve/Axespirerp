@@ -15,6 +15,7 @@ module.exports.add = async (model, data) => {
             code: data.code
         }
     }).then((result) => {
+        console.log("exists, proceeding to update");
         if(result){
             console.log("it exists", result.name);
            
