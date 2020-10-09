@@ -11,7 +11,9 @@ const notifications = {
     DB_CONNECTION_ERROR: "db_connection_error",
     MODEL_SAVE: "model-save",
     MODEL_SEARCH_NAME: 'model_search',
-    MODEL_SEARCH_NAME_SUCCESSFUL: 'model_search_name_successful'
+    MODEL_SEARCH_CODE: 'model_search_code',
+    MODEL_SEARCH_NAME_SUCCESSFUL: 'model_search_name_successful',
+    MODEL_SEARCH_CODE_SUCCESSFUL: 'model_search_code_successful'
 };
 
 module.exports.notifications = notifications;

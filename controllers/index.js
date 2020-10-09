@@ -5,7 +5,7 @@ const seq = require('sequelize');
 
 module.exports.add = async (model, data) => {
     console.log("******DATA ADD START*******");
-    await model.sync({force:true})
+    await model.sync()
     .then((data) => {
         console.log("model sync successful");
     })

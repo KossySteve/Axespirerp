@@ -6,6 +6,7 @@ const prepareData = () => {
     window.model = modelElement.getAttribute('name');
     window.searchDisplay = document.getElementById("search-result");
     window.searchByName = document.getElementById("searchByName");
+    window.searchByCode = document.getElementById("searchByCode");
     window.loader = document.querySelector('#loader-overlay');
     fields = fields[model];
     window.data = {};
@@ -65,6 +66,31 @@ const displaySearchItem = (id) => {
 
 
 /**
+ * Displays search results to the user
+ * @param {array} data 
+ */
+const displaySearchResults = (data) => {
+    data.forEach((result) => {
+        result = result.dataValues;
+        searchStore[result.id] = result;
+        let searchChild = document.createElement('div');
+        let button = document.createElement("button");
+        button.setAttribute('onclick', `displaySearchItem("${result.id}")`);
+        let buttonText = document.createTextNode(`name: ${result.name} code: ${result.code}`);
+        button.appendChild(buttonText);
+        searchChild.appendChild(button);
+        searchDisplay.appendChild(searchChild);
+    })
+    searchDisplay.style.display = "block";
+
+    console.log(searchStore);
+    if (data.length === 0) {
+        searchDisplay.style.display = 'none';
+    }
+}
+
+
+/**
  * End of functions being defined
  */
 
@@ -89,27 +115,18 @@ const listenForNotifications = () => {
         Swal.fire('Input Error', data, 'error');
     });
 
-    //when a search is successful
+    //when a search by name is successful
     ipcRenderer.on(notifications.MODEL_SEARCH_NAME_SUCCESSFUL, (event, data) => {
         toggleLoaderOff();
         console.log({ msg: "model search complete", data: data });
-        data.forEach((result) => {
-            result = result.dataValues;
-            searchStore[result.id] = result;
-            let searchChild = document.createElement('div');
-            let button = document.createElement("button");
-            button.setAttribute('onclick', `displaySearchItem("${result.id}")`);
-            let buttonText = document.createTextNode(`name: ${result.name} code: ${result.code}`);
-            button.appendChild(buttonText);
-            searchChild.appendChild(button);
-            searchDisplay.appendChild(searchChild);
-        })
-        searchDisplay.style.display = "block";
+        displaySearchResults(data);
+    });
 
-        console.log(searchStore);
-        if (data.length === 0) {
-            searchDisplay.style.display = 'none';
-        }
+     //when a search by code is successful
+     ipcRenderer.on(notifications.MODEL_SEARCH_CODE_SUCCESSFUL, (event, data) => {
+        toggleLoaderOff();
+        console.log({ msg: "**CODE SEARCH SUCCESS**", data: data });
+        displaySearchResults(data);
     });
 }
 
@@ -159,6 +176,24 @@ const startEventListeners = () => {
             clearSearchField();
             if (value !== "") {
                 ipcRenderer.send(notifications.MODEL_SEARCH_NAME, data);
+            }
+        });
+    }
+
+    //searching by code
+    if (searchByCode) {
+        // add event listener to the input code field
+        searchByCode.addEventListener("keyup", (e) => {
+            e.preventDefault();
+            // toggleLoaderOn();
+            console.log("***DATA CONTENT***", data);
+            let value = searchByCode.value;
+            console.log("***SEARCH BY CODE VALUE***", value);
+            data.searchKey = { "code": value };
+            console.log(data.searchKey);
+            clearSearchField();
+            if (value !== "") {
+                ipcRenderer.send(notifications.MODEL_SEARCH_CODE, data);
             }
         });
     }
