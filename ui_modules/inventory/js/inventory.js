@@ -1,107 +1,56 @@
 // Swal.fire('hello', 'world', 'error');
-const {ipcRenderer} = require('electron');
-const modelElement = document.querySelector('#model_name');
-console.log(modelElement);
-const model = modelElement.getAttribute('name');
-const searchDisplay = document.getElementById("search-result");
-fields = fields[model];
-let data = {};
-data.model = model;
-data.data={};
-console.log(notifications);
-data.searchKey = "";
-let searchStore = [];
-loader = document.querySelector('#loader-overlay');
+const { ipcRenderer } = require('electron');
 
-const autoGenerate = () => {
-    let values = {};
-    values.uuid = `${model}-${uuidv4()}`;
-    values.date = new Date().toLocaleDateString();
-    let codeField = document.getElementsByName('code')[0];
-    let dateField = document.getElementsByName('date')[0];
+const prepareData = () => {
+    const modelElement = document.querySelector('#model_name');
+    window.model = modelElement.getAttribute('name');
+    window.searchDisplay = document.getElementById("search-result");
+    window.searchByName = document.getElementById("searchByName");
+    window.loader = document.querySelector('#loader-overlay');
+    fields = fields[model];
+    window.data = {};
+    data.model = model;
+    data.data = {};
+    data.searchKey = "";
+    window.searchStore = [];
+}
 
-    if(codeField){
-        codeField.value = values.uuid;
-        codeField.setAttribute('disabled', true);
-    }
 
-    if(dateField){
-        dateField.value = values.date;
-        codeField.setAttribute('disabled', true);
-    }
-    console.log(values, codeField, dateField);
-};
-
-autoGenerate();
+/**
+ * Start of functions being defined
+ */
 
 const clearSearchField = () => {
-    searchDisplay.innerHTML='';
-    searchDisplay.style.display = "none";
+    if (searchDisplay) {
+        console.log('*********SEARCH FIELD BEING CLEARED**********');
+        searchDisplay.innerHTML = '';
+        searchDisplay.style.display = "none";
+    }
 };
 
-const toggleLoaderOn = () => {   
-    if(!loader.classList.contains('is-active')){
-        loader.classList.add('is-active');
-    }
-} 
-
-const toggleLoaderOff = () => {
-    if(loader.classList.contains('is-active')){
-        loader.classList.remove('is-active');
+const toggleLoaderOn = () => {
+    console.log('*********LOADER BEING TOGGLED ON**********');
+    if(loader){
+        if (!loader.classList.contains('is-active')) {
+            loader.classList.add('is-active');
+        }
     }
 }
 
-document.addEventListener('keydown', (event)=>{
-    // if ctrl + s is pressed
-    if(event.code === "KeyS" && event.ctrlKey){
-        toggleLoaderOn();
-        fields.forEach((item, index) => {
-            let itemVal = document.getElementsByName(item)[0].value;
-            data.data[item] = itemVal;
-        });
-        ipcRenderer.send(notifications.MODEL_SAVE, data); 
-        console.log("model-save event emitted");  
+const toggleLoaderOff = () => {
+    console.log('*********LOADER BEING TOGGLED OFF**********');
+    if(loader){
+        if (loader.classList.contains('is-active')) {
+            loader.classList.remove('is-active');
+        }
     }
-})
-
-//if a notification is recieved
-ipcRenderer.on(notifications.DATA_CREATION_SUCCESSFUL, (event, data) => {
-    toggleLoaderOff();
-    console.log("data added event");
-    fields.forEach((item, index) => {
-        document.getElementsByName(item)[0].value = "";
-    });
-    Swal.fire('Success',data,'success');
-    autoGenerate();
-});
-
-ipcRenderer.on(notifications.DATA_CREATION_ERROR, (event, data) => {
-    toggleLoaderOff();
-    console.log(data);
-    Swal.fire('Input Error',data,'error');
-});
-
-const searchByName = document.getElementById("searchByName");
-
-// add event listener to the input name field
-searchByName.addEventListener("keyup", (e) => {
-    e.preventDefault();
-    // toggleLoaderOn();
-    let value = searchByName.value;
-    console.log("val changed", value);
-    data.searchKey = {"name": value};
-    console.log(data.searchKey);
-    clearSearchField();
-    if( value !== "" ){
-        ipcRenderer.send(notifications.MODEL_SEARCH_NAME, data);
-    }
-}); 
+}
 
 const displaySearchItem = (id) => {
     clearSearchField();
     let item = searchStore[id];
     let keys = Object.keys(item);
-    for(let i = 0; i < keys.length; i++){
+    for (let i = 0; i < keys.length; i++) {
         console.log(keys[i]);
         try {
             let field = document.getElementsByName(keys[i])[0];
@@ -111,28 +60,118 @@ const displaySearchItem = (id) => {
             console.log(error);
         }
     }
-    console.log(item.length, item,keys);
+    console.log(item.length, item, keys);
 }
 
-ipcRenderer.on(notifications.MODEL_SEARCH_NAME_SUCCESSFUL, (event, data) => {
-    toggleLoaderOff();
-    console.log({msg:"model search complete", data: data});
-    data.forEach((result) => {
-        result = result.dataValues;
-        searchStore[result.id] = result;
-        let searchChild = document.createElement('div'); 
-        let button = document.createElement("button");
-        button.setAttribute('onclick', `displaySearchItem("${result.id}")`);
-        let buttonText = document.createTextNode(`name: ${result.name} code: ${result.code}`);
-        button.appendChild(buttonText);
-        searchChild.appendChild(button);
-        searchDisplay.appendChild(searchChild);
-    })
-    searchDisplay.style.display = "block";
 
-    console.log(searchStore);
-    if(data.length === 0 ){
-        searchDisplay.style.display= 'none';
+/**
+ * End of functions being defined
+ */
+
+
+//function that starts all the notification listeners
+const listenForNotifications = () => {
+
+    //if dtat is created successfully
+    ipcRenderer.on(notifications.DATA_CREATION_SUCCESSFUL, (event, data) => {
+        toggleLoaderOff();
+        console.log("data added event");
+        fields.forEach((item, index) => {
+            document.getElementsByName(item)[0].value = "";
+        });
+        Swal.fire('Success', data, 'success');
+    });
+
+    //if there is an error when creating data
+    ipcRenderer.on(notifications.DATA_CREATION_ERROR, (event, data) => {
+        toggleLoaderOff();
+        console.log(data);
+        Swal.fire('Input Error', data, 'error');
+    });
+
+    //when a search is successful
+    ipcRenderer.on(notifications.MODEL_SEARCH_NAME_SUCCESSFUL, (event, data) => {
+        toggleLoaderOff();
+        console.log({ msg: "model search complete", data: data });
+        data.forEach((result) => {
+            result = result.dataValues;
+            searchStore[result.id] = result;
+            let searchChild = document.createElement('div');
+            let button = document.createElement("button");
+            button.setAttribute('onclick', `displaySearchItem("${result.id}")`);
+            let buttonText = document.createTextNode(`name: ${result.name} code: ${result.code}`);
+            button.appendChild(buttonText);
+            searchChild.appendChild(button);
+            searchDisplay.appendChild(searchChild);
+        })
+        searchDisplay.style.display = "block";
+
+        console.log(searchStore);
+        if (data.length === 0) {
+            searchDisplay.style.display = 'none';
+        }
+    });
+}
+
+const autoGenerate = () => {
+    let values = {};
+    values.uuid = `${model}-${uuidv4()}`;
+    values.date = new Date().toLocaleDateString();
+    let codeField = document.getElementsByName('code')[0];
+    let dateField = document.getElementsByName('date')[0];
+
+    if (codeField) {
+        codeField.value = values.uuid;
+        codeField.setAttribute('disabled', true);
     }
-});
 
+    if (dateField) {
+        dateField.value = values.date;
+        dateField.setAttribute('disabled', true);
+    }
+    // console.log(values, codeField, dateField);
+};
+
+const startEventListeners = () => {
+    //listen for crtl + s keypress
+    document.addEventListener('keydown', (event) => {
+        // if ctrl + s is pressed
+        if (event.code === "KeyS" && event.ctrlKey) {
+            toggleLoaderOn();
+            fields.forEach((item, index) => {
+                let itemVal = document.getElementsByName(item)[0].value;
+                data.data[item] = itemVal;
+            });
+            ipcRenderer.send(notifications.MODEL_SAVE, data);
+            console.log("model-save event emitted");
+        }
+    });
+
+    if (searchByName) {
+        // add event listener to the input name field
+        searchByName.addEventListener("keyup", (e) => {
+            e.preventDefault();
+            // toggleLoaderOn();
+            let value = searchByName.value;
+            console.log("val changed", value);
+            data.searchKey = { "name": value };
+            console.log(data.searchKey);
+            clearSearchField();
+            if (value !== "") {
+                ipcRenderer.send(notifications.MODEL_SEARCH_NAME, data);
+            }
+        });
+    }
+
+};
+
+//initialize the inventory
+const init = () => {
+    prepareData();
+    startEventListeners();
+    autoGenerate();
+    listenForNotifications();
+}
+
+init();
+console.log(`*******${fields}  ${loader}*******`);

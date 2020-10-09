@@ -4,8 +4,14 @@ const seq = require('sequelize');
 
 
 module.exports.add = async (model, data) => {
-  try {
-    await model.sync();
+    console.log("******DATA ADD START*******");
+    await model.sync({force:true})
+    .then((data) => {
+        console.log("model sync successful");
+    })
+    .catch((error) => {
+        console.log("model syc error");
+    });
 
     // console.log({data: data});
 
@@ -15,7 +21,7 @@ module.exports.add = async (model, data) => {
             code: data.code
         }
     }).then((result) => {
-        console.log("exists, proceeding to update");
+        console.log("******THEN EXECUTED*******");
         if(result){
             console.log("it exists", result.name);
            
@@ -31,22 +37,34 @@ module.exports.add = async (model, data) => {
             })
         
         } else{
+            console.log("******DATA DOES NOT EXIST CREATING NEW*******");
             //if model does not exists create a new one
-            model.create(data);
+            model.create(data)
+            .then((data) => {
+                console.log("******MODEL.CREATE THEN BLOCK*******");
+                notificationService.notify("Data Successfully added to db", {
+                    keyword: notifications.DATA_CREATION_SUCCESSFUL,
+                    error: false});
+            })
+            .catch((error) => {
+                console.log("******MODEL.CREATE CATCH BLOCK*******", error.message);
+                // err.message.replaceAll('Validation error:', '')
+                notificationService.notify(error.message.replaceAll('Validation error:', ''), {
+                    keyword: notifications.DATA_CREATION_ERROR, 
+                    error: true,
+                   });
+            })
             //   if data addition is successful
-            notificationService.notify("Data Successfully added to db", {
-            keyword: notifications.DATA_CREATION_SUCCESSFUL,
-            error: false});
+            
         }
-    });
-  }
-  catch(err){
-      console.log(`DATA ADDITION ERROR: ${err}`);
-      notificationService.notify(err.message.replaceAll('Validation error:', ''), {
+    }).catch((error) => {
+        console.log("******CATCH BLOCK*******");
+        console.log(`DATA ADDITION ERROR: ${error}`);
+      notificationService.notify(error.message.replaceAll('Validation error:', ''), {
         keyword: notifications.DATA_CREATION_ERROR, 
         error: true,
+       });
     });
-  }
 };
 
 module.exports.delete = async (model, data) => {

@@ -39,6 +39,7 @@ const startApp = () => {
      
     // when a model is trying to save
     ipcMain.on(notifications.MODEL_SAVE, (event, data) => {
+      console.log("*****MODEL SAVE TRIGGERED*****")
       const model = tables[data.model];
       console.log(`model-save received ${model} ${JSON.stringify(tables)} ${data.model}`);
       controllers.add(model, data.data);

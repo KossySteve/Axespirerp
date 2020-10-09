@@ -6,6 +6,13 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    code: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: {
+        msg: "Code has to be unique"
+      }
+    },
     date: {
       type: DataTypes.DATE,
     },
