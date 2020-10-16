@@ -30,7 +30,7 @@ const startApp = () => {
 
   win.loadFile("./ui_modules/inventory/item.html");
   //open dev tools
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools();
   // start notification service
   notification.start(win);
 
