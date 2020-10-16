@@ -31,6 +31,14 @@ module.exports.start = async () => {
             stock_transfer_outward_model,
             variant_model,
             batch,
+            carrierModel,
+            purchaseOrderModel,
+            purchaseReturnModel,
+            supplierModel,
+            purchaseRequisitionModel,
+            purchaseReturnRequestModel,
+            purchaseReceiptModel,
+            purchaseInvoiceModel,
           } = require("../../models/temp")(sequelizeInstance);
           // console.log(item_model);
 
@@ -48,6 +56,14 @@ module.exports.start = async () => {
           models.StockTransferOutward = stock_transfer_outward_model;
           models.Variant = variant_model;
           models.Batch = batch;
+          models.carrierModel = carrierModel;
+          models.purchaseOrderModel = purchaseOrderModel;
+          models.purchaseReturnModel = purchaseReturnModel;
+          models.supplierModel = supplierModel;
+          models.purchaseRequisitionModel = purchaseRequisitionModel;
+          models.purchaseReturnRequestModel = purchaseReturnRequestModel;
+          models.purchaseReceiptModel = purchaseReceiptModel;
+          models.purchaseInvoiceModel = purchaseInvoiceModel;
 
           notificationService.notify("Temporary db successfully connected", {
             keyword: notifications.DB_CONNECTION_SUCCESSFUL,

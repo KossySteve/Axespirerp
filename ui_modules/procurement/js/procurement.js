@@ -15,8 +15,8 @@ const prepareData = () => {
     data.searchKey = "";
     window.searchStore = [];
 }
-console.log(fields, window.model);
 
+console.log(fields, window.model);
 /**
  * Start of functions being defined
  */
@@ -154,6 +154,7 @@ const startEventListeners = () => {
     document.addEventListener('keydown', (event) => {
         // if ctrl + s is pressed
         if (event.code === "KeyS" && event.ctrlKey) {
+            console.log("save is invoked")
             toggleLoaderOn();
             fields.forEach((item, index) => {
                 let itemVal = document.getElementsByName(item)[0].value;

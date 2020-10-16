@@ -12,6 +12,15 @@ const stock_transfer_inward_model = require("./stockTransferInward");
 const stock_transfer_outward_model = require("./stockTransferOutward");
 const variant_model = require("./variant");
 const batch = require("./batch");
+const carrierModel = require("./carrier_model");
+const purchaseOrderModel = require("./purchaseOrderModel");
+const purchaseReturnModel = require("./purchaseReturnModel");
+const supplierModel = require("./supplierModel");
+const purchaseRequisitionModel = require("./purchaseRequisitionModel");
+const purchaseReturnRequestModel = require("./purchaseReturnRequestModel");
+const purchaseReceiptModel = require("./purchaseReceiptModel");
+const purchaseInvoiceModel = require("./purchaseInvoiceModel");
+
 
 module.exports = (sequelize) => {
   return {
@@ -29,5 +38,14 @@ module.exports = (sequelize) => {
     stock_transfer_outward_model: stock_transfer_outward_model(sequelize),
     variant_model: variant_model(sequelize),
     batch: batch(sequelize),
+    carrierModel: carrierModel(sequelize),
+    purchaseOrderModel: purchaseOrderModel(sequelize),
+    purchaseReturnModel: purchaseReturnModel(sequelize),
+    supplierModel: supplierModel(sequelize),
+    purchaseRequisitionModel: purchaseRequisitionModel(sequelize),
+    purchaseReturnRequestModel: purchaseReturnRequestModel(sequelize),
+    purchaseReceiptModel: purchaseReceiptModel(sequelize),
+    purchaseInvoiceModel: purchaseInvoiceModel(sequelize),
+
   };
 };
