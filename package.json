@@ -5,19 +5,14 @@
   "main": "main.js",
   "build": {
     "appId": "your.id",
-    "mac": {
-      "category": "your.app.category.type"
-    },
     "win": {
-      "target": "portable"
+      "target": "portable",
+      "icon": "build/icon.png"
     }
   },
   "scripts": {
     "start": "env-cmd -e development electron .",
-    "build": "electron-packager . app --platform win32 --arch x64 --out dist/",
-    "setup": "electron-installer-windows --src dist/app-win32-x64/ --dest dist/installers/",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "build": "electron-builder"
   },
   "repository": {
     "type": "git",
@@ -30,6 +25,7 @@
   },
   "homepage": "https://github.com/KossySteve/Axespirerp#readme",
   "dependencies": {
+    "electron-builder-squirrel-windows": "^22.9.1",
     "env-cmd": "^10.1.0",
     "mysql2": "^2.1.0",
     "node-cron": "^2.0.3",
