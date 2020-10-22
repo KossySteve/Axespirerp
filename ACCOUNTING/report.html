@@ -108,7 +108,7 @@
                     <a class="btn rounded-0 text-primary small" href="stock_valuation.html">Stock Valuation</a>
                     
                   </div>
-              </div>
+                </div>
               </div>
               <div id="menu2" class="collapse">
               
@@ -119,7 +119,25 @@
               <div id="menu4" class="collapse">
               </div>
               <div id="menu5" class="collapse">
-                
+                <div class="d-flex flex-row" id="sub_nav">
+                  <div class="dropdown-item d-flex flex-column px-0">
+                    <a class="btn rounded-0 text-primary small" href="assets.html">assets</a>
+                    <a class="btn rounded-0 text-primary small" href="bank.html">bank</a>
+                  </div>
+                  <div class="dropdown-item d-flex flex-column px-0">
+                    <a class="btn rounded-0 text-primary small" href="income.html">income</a>
+                    <a class="btn rounded-0 text-primary small" href="expense.html">expenses</a>
+                  </div>
+    
+                  <div class="dropdown-item d-flex flex-column px-0">
+                    <a class="btn rounded-0 text-primary small" href="loan.html">loan</a>
+                    <a class="btn rounded-0 text-primary small" href="equity.html">equity</a>
+                  </div>
+                  <div class="dropdown-item d-flex flex-column px-0">
+                    <a class="btn rounded-0 text-primary small" href="chart_of_account.html">chart of account</a>
+                    <a class="btn rounded-0 text-primary small" href="report.html">report</a>
+                  </div>
+                </div>
               </div>
               <div id="menu6" class="collapse">
                 
@@ -166,7 +184,7 @@
                                 </div>
                             </div>
                             <div class="form-group d-flex flex-column text-nowrap">
-                                <label for="email" class="mr-2 text-white">Item :</label>
+                                <label for="email" class="mr-2 text-white">Type:</label>
                                 <div class="input-group w-75">
                                   <input type="text" class="form-control border border-primary ">
                                   <div class="input-group-append">
@@ -174,12 +192,30 @@
                                   </div>
                                 </div>
                             </div>
+                            
                             <div class="form-group d-flex flex-column text-nowrap">
                                 <label for="email" class="mr-2 text-white text-wrap">Location</label>
                                 <input type="text" class="form-control w-75 border-primary py-n3" id="email" name="email"> 
                             </div> 
-
-                             
+                            <div class="form-group d-flex flex-column text-nowrap">
+                                <label for="email" class="mr-2 text-white">Sort By :</label>
+                                <div class="input-group w-75">
+                                <input type="text" class="form-control border border-primary ">
+                                <div class="input-group-append">
+                                    <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                                </div>
+                                </div>
+                            </div> 
+                            <div class="form-group d-flex flex-column text-nowrap">
+                                <label for="email" class="mr-2 text-white">Sub Category :</label>
+                                <div class="input-group w-75">
+                                  <input type="text" class="form-control border border-primary ">
+                                  <div class="input-group-append">
+                                    <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown"></button>
+                                  </div>
+                                </div>
+                            </div>
+                           
                          </div>
                        </div>           
                   
@@ -189,38 +225,38 @@
     </div>
     <div class="col-9 shadow py-2 border border-bottom-0 border-left-0 border-right-0 border-dark">
           <div class="form-row bg-light ml-4 pb-4 shadow border">
-            <h5 class="col-12 text-white text-center py-3 bg-primary px-2"><b>STOCK LEDGER</b></h5>
+            <h5 class="col-12 text-white text-center py-3 bg-primary px-2"><b>FINANCIAL REPORT</b></h5>
            <div class="col-12">
-               <div class="ml-auto ">
-                <div class="d-flex flex-row">
+            <div class="my-3 d-flex flex-row">
                                 
-                    <div class="form-check">
-                      <label class="form-check-label text-dark">
-                        <input type="radio" class="form-check-input" name="optradio">By Branch
-                    </div>
-                    <div class="form-check mx-3">
-                      <label class="form-check-label text-dark">
-                        <input type="radio" class="form-check-input" name="optradio">For FIFO
-                      </label>
-                    </div>
-                    <div class="form-check ">
-                      <label class="form-check-label text-dark">
-                        <input type="radio" class="form-check-input" name="optradio" >For FIFO-Branch
-                      </label>
-                    </div> 
-                    <div class="form-check mx-3">
-                      <label class="form-check-label text-dark">
-                        <input type="radio" class="form-check-input" name="optradio" >Normal
-                      </label>
-                    </div> 
-
-                </div>
-                <a class="btn btn-outline-primary" href="#print">Charts</a>
+              <div class="form-check">
+                <label class="form-check-label text-dark">
+                  <input type="radio" class="form-check-input" name="optradio"> Balance Sheet
+              </div>
+              <div class="form-check mx-3">
+                <label class="form-check-label text-dark">
+                  <input type="radio" class="form-check-input" name="optradio"> Profit or Loss
+                </label>
+              </div>
+              <div class="form-check mx-3">
+                <label class="form-check-label text-dark">
+                  <input type="radio" class="form-check-input" name="optradio"> Cash flow
+                </label>
+              </div>
+              <div class="form-check mx-3">
+                <label class="form-check-label text-dark">
+                  <input type="radio" class="form-check-input" name="optradio"> Other reports
+                </label>
+              </div>
+               
+            </div>
+               <div class="ml-auto">
+                <a class="btn btn-outline-primary" href="#print" >Charts</a>
                 <a class="btn btn-outline-primary" href="#print">Print</a>
                 <a class="btn btn-outline-primary" href="#print">Data</a>
                </div>
                <div class="mt-5 border border-info border-lg bg-white" id="print">
-                <br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br> <br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br><br><br><br> <br><br><br>
                </div>
            </div>
           </div>
