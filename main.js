@@ -48,6 +48,8 @@ const startApp = () => {
     // search by name
     ipcMain.on(notifications.MODEL_SEARCH_NAME, (event, data) => {
       const { searchKey } = data;
+      console.log("data check in event listener below")
+      console.log(searchKey);
       const model = tables[data.model];
       controllers.search(model, searchKey).then((data) => {
         if(data !== null){

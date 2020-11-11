@@ -5,7 +5,7 @@ const prepareData = () => {
     const modelElement = document.querySelector('#model_name');
     window.model = modelElement.getAttribute('name');
     window.searchDisplay = document.getElementById("search-result");
-    window.searchByName = document.getElementById("searchByName");
+    window.searchByNameOrCode = document.getElementById("searchByNameOrCode");
     window.searchByCode = document.getElementById("searchByCode");
     window.loader = document.querySelector('#loader-overlay');
     fields = fields[model];
@@ -132,7 +132,14 @@ const listenForNotifications = () => {
 
 const autoGenerate = () => {
     let values = {};
-    values.uuid = `${model}-${uuidv4()}`;
+
+    // experimental unique code generation strategy
+    const generateUniqueId = () => {
+        return Math.random().toString(36).substr(2,9) ;
+    }
+
+    // values.uuid = `${model}-${uuidv4()}`;
+    values.uuid = `${SubmoduleShorthand["Item"]}-${generateUniqueId()}`
     values.date = new Date().toLocaleDateString();
     let codeField = document.getElementsByName('code')[0];
     let dateField = document.getElementsByName('date')[0];
@@ -164,14 +171,14 @@ const startEventListeners = () => {
         }
     });
 
-    if (searchByName) {
+    if (searchByNameOrCode) {
         // add event listener to the input name field
-        searchByName.addEventListener("keyup", (e) => {
+        searchByNameOrCode.addEventListener("keyup", (e) => {
             e.preventDefault();
             // toggleLoaderOn();
-            let value = searchByName.value;
+            let value = searchByNameOrCode.value;
             console.log("val changed", value);
-            data.searchKey = { "name": value };
+            data.searchKey = { "value": value, fields:["name", "code"]  };
             console.log(data.searchKey);
             clearSearchField();
             if (value !== "") {

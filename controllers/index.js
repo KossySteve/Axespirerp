@@ -1,7 +1,6 @@
 const notificationService = require("../services/notification");
 const {notifications} = require('../constants/notifications.js');
-const seq = require('sequelize');
-
+const {Op} = require('sequelize');
 
 module.exports.add = async (model, data) => {
     console.log("******DATA ADD START*******");
@@ -141,11 +140,24 @@ module.exports.search = async(model, data) => {
     try{
         const data_from_db = await model.findAll({
             where : {
-                [Object.keys(data)[0]]: {
-                    [seq.Op.like]: `%${data[Object.keys(data)[0]]}%`
-                }
+                [Op.or]:[
+                    {
+                        [data["fields"][0]]: {
+                            [Op.like]: `%${data["value"]}%`
+                        }
+                    },
+                    {
+                        [data["fields"][1]]: {
+                            [Op.like]: `%${data["code"]}%`
+                        }
+                    }  
+                ]
+                
             }
         });
+
+        console.log("stored data below")
+        console.log(data_from_db);
 
         if(!data_from_db){
             notificationService.notify("No match found", {
@@ -157,11 +169,14 @@ module.exports.search = async(model, data) => {
             return data_from_db ;
         }
        
+        
     }
     catch(err){
         notificationService.notify("Error while trying to get data", {
             keyword: notifications.DATA_FETCH_ERROR, 
             error: true 
         })
+
+        console.log(err);
     }
 }
