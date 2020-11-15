@@ -13,7 +13,9 @@ const notifications = {
     MODEL_SEARCH_NAME: 'model_search',
     MODEL_SEARCH_CODE: 'model_search_code',
     MODEL_SEARCH_NAME_SUCCESSFUL: 'model_search_name_successful',
-    MODEL_SEARCH_CODE_SUCCESSFUL: 'model_search_code_successful'
+    MODEL_SEARCH_CODE_SUCCESSFUL: 'model_search_code_successful',
+    GROUP_SEARCH: 'group_search',
+    GROUP_SEARCH_SUCCESSFUL: 'group_search_successful'
 };
 
 module.exports.notifications = notifications;

@@ -70,6 +70,17 @@ const startApp = () => {
       })
     });
 
+    // suggest groups
+    ipcMain.on(notifications.GROUP_SEARCH, (event, data)=> {
+      const model = tables[data.model]; 
+      controllers.search(model, data).then(data => {
+        if(data !== null){
+          win.webContents.send(notifications.GROUP_SEARCH_SUCCESSFUL, data);
+        }
+      })
+      
+    })
+
   })();
 
 

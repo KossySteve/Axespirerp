@@ -4,7 +4,6 @@ let fields = {
     'description',
     'type',
     'group',
-    'isGroup',
     'company',
     'brand',
     'model',
@@ -18,8 +17,8 @@ let fields = {
     'purchaseRate',
     'minRate',
     'maxRate',
-    'saleRev',
-    'purchaseRev'],
+    'markup',
+    'account'],
 
     ItemKit: ['code',
     'name',

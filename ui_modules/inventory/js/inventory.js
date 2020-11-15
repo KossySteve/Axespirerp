@@ -1,13 +1,22 @@
 // Swal.fire('hello', 'world', 'error');
 const { ipcRenderer } = require('electron');
+// const { notifications } = require('../../../constants/notifications');
 
 const prepareData = () => {
     const modelElement = document.querySelector('#model_name');
     window.model = modelElement.getAttribute('name');
     window.searchDisplay = document.getElementById("search-result");
     window.searchByNameOrCode = document.getElementById("searchByNameOrCode");
-    window.searchByCode = document.getElementById("searchByCode");
+    window.group = document.getElementById('group');
+    window.markup = document.getElementById('markup'); 
     window.loader = document.querySelector('#loader-overlay');
+
+    window.purchase_rate_option = document.getElementById('purchase_rate_option'); 
+    window.standard_cost = document.getElementById('standard_cost');
+
+    window.group_suggestions = document.getElementById('group_suggestions');
+    window.group_container = document.getElementById('group_container');
+
     fields = fields[model];
     window.data = {};
     data.model = model;
@@ -31,7 +40,7 @@ const clearSearchField = () => {
 
 const toggleLoaderOn = () => {
     console.log('*********LOADER BEING TOGGLED ON**********');
-    if(loader){
+    if (loader) {
         if (!loader.classList.contains('is-active')) {
             loader.classList.add('is-active');
         }
@@ -40,7 +49,7 @@ const toggleLoaderOn = () => {
 
 const toggleLoaderOff = () => {
     console.log('*********LOADER BEING TOGGLED OFF**********');
-    if(loader){
+    if (loader) {
         if (loader.classList.contains('is-active')) {
             loader.classList.remove('is-active');
         }
@@ -98,7 +107,7 @@ const displaySearchResults = (data) => {
 //function that starts all the notification listeners
 const listenForNotifications = () => {
 
-    //if dtat is created successfully
+    //if data is created successfully
     ipcRenderer.on(notifications.DATA_CREATION_SUCCESSFUL, (event, data) => {
         toggleLoaderOff();
         console.log("data added event");
@@ -122,11 +131,54 @@ const listenForNotifications = () => {
         displaySearchResults(data);
     });
 
-     //when a search by code is successful
-     ipcRenderer.on(notifications.MODEL_SEARCH_CODE_SUCCESSFUL, (event, data) => {
+    //when a search by code is successful
+    ipcRenderer.on(notifications.MODEL_SEARCH_CODE_SUCCESSFUL, (event, data) => {
         toggleLoaderOff();
         console.log({ msg: "**CODE SEARCH SUCCESS**", data: data });
         displaySearchResults(data);
+    });
+
+    // when a group search/suggestion is successful
+    ipcRenderer.on(notifications.GROUP_SEARCH_SUCCESSFUL, (event, data) => {
+        console.log({ msg: "**GROUP SUGGESTION SUCCESS**", data: data })
+
+        // listen for the click event on group suggestion items and pass the selection to the input field
+        const listenForClickToGetData = (element) => {
+            element.addEventListener('click', function () {
+                // get name from the group data
+                const name = this.firstElementChild.innerHTML.replace('Name : ', '').trim();
+                console.log('Name after click: ', name);
+
+                // add name to input field
+                group.value = name;
+
+                // clear the results
+                group_container.classList.remove('show');
+                group_suggestions.classList.remove('show');
+            })
+        }
+
+        // clears the previous results appended to the DOM
+        group_suggestions.innerHTML = '';
+
+        if (data.length !== 0) {
+            group_container.classList.add('show');
+            group_suggestions.classList.add('show');
+            data.forEach((data, index) => {
+                group_suggestions.insertAdjacentHTML('beforeend',
+                    `<div id="group_suggestion_item_${index}" class="dropdown-item bg-info text-white" href="#"><div>Name : ${data.dataValues.name} </div><div> Code : ${data.dataValues.code}</div></div>
+                    <div role="separator" class="dropdown-divider"></div>
+                    `
+                )
+
+                //  add listener to the dom element that was just created
+                listenForClickToGetData(document.getElementById(`group_suggestion_item_${index}`));
+            })
+        }
+        else {
+            group_container.classList.remove('show');
+            group_suggestions.classList.remove('show');
+        }
     });
 }
 
@@ -135,7 +187,7 @@ const autoGenerate = () => {
 
     // experimental unique code generation strategy
     const generateUniqueId = () => {
-        return Math.random().toString(36).substr(2,9) ;
+        return Math.random().toString(36).substr(2, 9);
     }
 
     // values.uuid = `${model}-${uuidv4()}`;
@@ -163,6 +215,7 @@ const startEventListeners = () => {
         if (event.code === "KeyS" && event.ctrlKey) {
             toggleLoaderOn();
             fields.forEach((item, index) => {
+                console.log(document.getElementsByName(item)[0].value, ":", index);
                 let itemVal = document.getElementsByName(item)[0].value;
                 data.data[item] = itemVal;
             });
@@ -178,7 +231,7 @@ const startEventListeners = () => {
             // toggleLoaderOn();
             let value = searchByNameOrCode.value;
             console.log("val changed", value);
-            data.searchKey = { "value": value, fields:["name", "code"]  };
+            data.searchKey = { "value": value, fields: ["name", "code"] };
             console.log(data.searchKey);
             clearSearchField();
             if (value !== "") {
@@ -187,23 +240,29 @@ const startEventListeners = () => {
         });
     }
 
-    //searching by code
-    if (searchByCode) {
-        // add event listener to the input code field
-        searchByCode.addEventListener("keyup", (e) => {
+    if (group) {
+        // listen for the key up event and suggest group from db
+        group.addEventListener("keyup", (e) => {
             e.preventDefault();
-            // toggleLoaderOn();
-            console.log("***DATA CONTENT***", data);
-            let value = searchByCode.value;
-            console.log("***SEARCH BY CODE VALUE***", value);
-            data.searchKey = { "code": value };
-            console.log(data.searchKey);
-            clearSearchField();
+
+            let value = group.value;
+            console.log("group value:", value);
+
+            let data = { model: "ItemGroup", value: value, fields: ["name", "code"] };
+
             if (value !== "") {
-                ipcRenderer.send(notifications.MODEL_SEARCH_CODE, data);
+                ipcRenderer.send(notifications.GROUP_SEARCH, data);
             }
-        });
+            else {
+                // fix for removing the displayed group suggestions when the group field is empty
+                group_suggestions.innerHTML = "";
+                group_suggestions.classList.remove('show');
+                group_container.classList.remove('show');
+            }
+        })
     }
+
+    // 
 
 };
 

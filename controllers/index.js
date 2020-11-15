@@ -148,7 +148,7 @@ module.exports.search = async(model, data) => {
                     },
                     {
                         [data["fields"][1]]: {
-                            [Op.like]: `%${data["code"]}%`
+                            [Op.like]: `%${data["value"]}%`
                         }
                     }  
                 ]

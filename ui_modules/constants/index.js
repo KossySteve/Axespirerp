@@ -1,4 +1,5 @@
 const SubmoduleShorthand = {
     Item: "ITM",
-    ItemKit: "ITK"
+    ItemKit: "ITK",
+    ItemGroup: "ITG"
 }

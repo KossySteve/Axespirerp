@@ -10,11 +10,24 @@ module.exports = async(model, data) => {
     try{
         const data_from_db = await model.findAll({
             where : {
-                [Object.keys(data)[0]]: {
-                    [seq.Op.like]: `%${data[Object.keys(data)[0]]}%`
-                }
+                [Op.or]:[
+                    {
+                        [data["fields"][0]]: {
+                            [Op.like]: `%${data["value"]}%`
+                        }
+                    },
+                    {
+                        [data["fields"][1]]: {
+                            [Op.like]: `%${data["value"]}%`
+                        }
+                    }  
+                ]
+                
             }
         });
+
+        console.log("stored data below")
+        console.log(data_from_db);
 
         if(!data_from_db){
             notificationService.notify("No match found", {
@@ -26,11 +39,14 @@ module.exports = async(model, data) => {
             return data_from_db ;
         }
        
+        
     }
     catch(err){
         notificationService.notify("Error while trying to get data", {
             keyword: notifications.DATA_FETCH_ERROR, 
             error: true 
         })
+
+        console.log(err);
     }
 }
