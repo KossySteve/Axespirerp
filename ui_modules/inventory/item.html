@@ -370,16 +370,16 @@
               <h4>Additional Details</h4>
               <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                 <label for="email" class="mr-2">Sale Rate:</label>
-                <input type="text" class="form-control w-50 border-primary py-n3" name="saleRate">
+                <input id="saleRate" type="text" class="form-control w-50 border-primary py-n3" name="saleRate">
               </div>
               <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                <label for="email" class="mr-2">Standard Cost:</label>
-                <input type="text" class="form-control w-50 border-primary py-n3" name="standardCost">
+                <label  for="email" class="mr-2">Standard Cost:</label>
+                <input id="option-1-value" type="text" class="form-control w-50 border-primary py-n3" name="standardCost">
               </div>
 
               <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                 <label for="email" class="mr-2">Purchase Rate:</label>
-                <input type="text" class="form-control w-50 border-primary py-n3" name="purchaseRate">
+                <input id="option-0-value" type="text" class="form-control w-50 border-primary py-n3" name="purchaseRate">
               </div>
               <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                 <label for="email" class="mr-2">Min Rate:</label>
@@ -401,12 +401,12 @@
                 <label for="email" class="mr-2">Mark Up:</label>
                 <!-- <input name="markup" type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> -->
                 <div class="input-group">
-                  <input type="text" id="markup" class="form-control w-50 border-primary py-n3" aria-label="Text input with dropdown button">
+                  <input type="number" id="markup" name="markup" class="form-control w-50 border-primary py-n3" aria-label="Text input with dropdown button">
                   <div class="input-group-append">
                     <button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div class="dropdown-menu">
-                      <a id="purchase_rate_option" class="dropdown-item" href="#">Based on purchase rate</a>
-                      <a id="standard_cost" class="dropdown-item" href="#">Based on standard cost</a>
+                    <div id="calc_options" class="dropdown-menu">
+                      <a id="option-0" class="dropdown-item markup_option" href="#">By purchase rate</a>
+                      <a id="option-1" class="dropdown-item markup_option" href="#">By standard cost</a>
                     </div>
                   </div>
                 </div>

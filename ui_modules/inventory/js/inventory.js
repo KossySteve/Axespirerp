@@ -8,7 +8,16 @@ const prepareData = () => {
     window.searchDisplay = document.getElementById("search-result");
     window.searchByNameOrCode = document.getElementById("searchByNameOrCode");
     window.group = document.getElementById('group');
-    window.markup = document.getElementById('markup'); 
+
+    //markup 
+    window.markup = document.getElementById('markup');
+    window.MarkupOptions = {
+        'BY_PURCHASE_RATE': 0,
+        'BY_STANDARD_COST': 1
+    } 
+    window.markup_option_state = MarkupOptions.BY_PURCHASE_RATE;
+
+
     window.loader = document.querySelector('#loader-overlay');
 
     window.purchase_rate_option = document.getElementById('purchase_rate_option'); 
@@ -262,7 +271,110 @@ const startEventListeners = () => {
         })
     }
 
-    // 
+    if(markup){
+        // Ultimately, calculate sales rate based on markup option
+
+        // sets markup option
+        const setOption = (option, input_placeholder_text) => {
+            // set the markup input placteholder
+            markup.setAttribute('placeholder', input_placeholder_text);
+            if(option == MarkupOptions.BY_STANDARD_COST){
+                // apply the appropriate style to the options and reset the global markup option state
+                document.getElementById(`option-${option}`).style.backgroundColor ='#242A33' ; 
+                document.getElementById(`option-${option}`).style.color ='white' ; 
+                document.getElementById(`option-${MarkupOptions.BY_PURCHASE_RATE}`).style.backgroundColor = 'white';
+                document.getElementById(`option-${MarkupOptions.BY_PURCHASE_RATE}`).style.color = '#212529';
+                
+                window.markup_option_state = MarkupOptions.BY_STANDARD_COST ;
+            }
+            else{
+                document.getElementById(`option-${option}`).style.backgroundColor ='#242A33' ; 
+                document.getElementById(`option-${option}`).style.color ='white' ;  
+                document.getElementById(`option-${MarkupOptions.BY_STANDARD_COST}`).style.backgroundColor = 'white'; 
+                document.getElementById(`option-${MarkupOptions.BY_STANDARD_COST}`).style.color = '#212529'; 
+
+                window.markup_option_state = MarkupOptions.BY_PURCHASE_RATE ;
+            }
+        }
+
+        //  by default, set markup rate calculation based on purchase rate
+        setOption(MarkupOptions.BY_PURCHASE_RATE, 'By purchase rate');
+
+
+        // add click listeners to the options
+        Array.prototype.forEach.call(document.getElementsByClassName('markup_option'), child=>{
+            child.addEventListener('click', function(){
+                //check which of the child element it is and set global state
+                if(this.getAttribute('id') == `option-${MarkupOptions.BY_STANDARD_COST}`){
+                   setOption(MarkupOptions.BY_STANDARD_COST, "By standard cost") ; 
+                }else{
+                    setOption(MarkupOptions.BY_PURCHASE_RATE, "By purchase rate")
+                }
+
+                // (re-)calculate sale rate based on selection
+                calculate_sale_or_markup_rate(dependent_variable="Sale rate");
+            })
+        } ) ;
+
+        // calculates sale rate
+        const calculate_sale_or_markup_rate = (dependent_variable='') => {
+            // check to know the dependent variable for the calculation and consequently, update the field for the dependent variable
+
+            if(dependent_variable === 'markup'){
+                let rawSaleRate = document.getElementById('saleRate').value;
+                let saleRate = Number.isNaN(Number(rawSaleRate)) ? 0 : Number(rawSaleRate) ; 
+
+                console.log("********", "- Global option: ", window.markup_option_state)
+                let rawCost = document.getElementById(`option-${window.markup_option_state}-value`).value;
+                console.log('raw cost is',rawCost)
+                let cost = Number.isNaN(Number(rawCost)) ? 0 : Number(rawCost);
+
+                // calculate the markup rate and set the value appropriately
+                let markupRate = ((saleRate - cost) * 100)/cost ;
+                markup.value = markupRate.toFixed(2) ;
+
+            }
+            else{
+                let rawCost = document.getElementById(`option-${window.markup_option_state}-value`).value;
+                let cost = Number.isNaN(Number(rawCost)) ? 0 : Number(rawCost);
+    
+                let rawMarkupRate = markup.value; 
+                let markupRate = Number.isNaN(Number(rawMarkupRate)) ? 0 : Number(rawMarkupRate); 
+    
+                // calculate the sale rate and set the value appropriately
+                let sale_rate = cost + (markupRate/100) * cost
+                document.getElementById('saleRate').value = sale_rate.toFixed(2);  
+            }
+        }
+
+
+        // listen to for the changes in the appropriate input fields and compute sales rate
+        document.getElementById(`option-${MarkupOptions.BY_PURCHASE_RATE}-value`).addEventListener('keyup', ()=> {
+            // check to see that the global markup option state is set to this field. If so, compute markup.
+            if(window.markup_option_state === MarkupOptions.BY_PURCHASE_RATE){
+                // compute markup value
+                calculate_sale_or_markup_rate(dependent_variable='markup');
+            }
+        })
+
+        document.getElementById(`option-${MarkupOptions.BY_STANDARD_COST}-value`).addEventListener('keyup', ()=> {
+            // check to see that the global markup option state is set to this field. If so, compute markup.
+            if(window.markup_option_state === MarkupOptions.BY_STANDARD_COST){
+                // compute markup value
+                calculate_sale_or_markup_rate(dependent_variable='markup');
+            }
+        })
+
+        document.getElementById('saleRate').addEventListener('keyup', ()=> {
+            calculate_sale_or_markup_rate(dependent_variable="markup");
+        })
+
+        markup.addEventListener('keyup', ()=>{
+            // the dependent variable arguement passed to the function is just a "descriptive dummy" so to say
+            console.log("mark up changed");
+            calculate_sale_or_markup_rate(dependent_variable='Sale rate');
+        })
+    }
 
 };
 
@@ -276,3 +388,5 @@ const init = () => {
 
 init();
 console.log(`*******${fields}  ${loader}*******`);
+
+
