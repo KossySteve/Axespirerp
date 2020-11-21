@@ -178,6 +178,7 @@
        </div>
          
     </div>
+
     <div class="col shadow pt-2 border  border-left-0 border-right-0 border-dark">
         
       <form id="hover_effect" >
@@ -284,10 +285,13 @@
                <!------clicking this saves all the details also after editing it is also saved here too----------->
               <button class="btn px-5 py-0 text-dark mx-auto mb-0 bg-primary border border-dark"  ><b>SUBMIT</b></button>
             </div>
-         </div>  
+
+          </form>
+         </div> 
+
         </div>
        
-      </form>
+      
       
 
     </div>
@@ -366,7 +370,8 @@
           </div>
          
           <div id="menuII" class="collapse">
-             <!--------here from the different types of taxes already saved in Taxes submodule, you choose a particular tax that involves this carrier--------->
+             <!--------here from the different types of taxes already saved in Taxes submodule, you choose a particular tax that involves this carrier
+              Also you can create another table row to input another entry--------->
              <div class="container mt-3 smaller_fonts ">
               <table class="table table-bordered  table-sm table-hover">
                 <thead class="bg-primary text-white ">
@@ -382,6 +387,7 @@
                   <tr class="py-2 px-1">
                     <td class="">
                       <select class="form-control  border border-primary smaller_fonts " id="sel1">
+                        <!-------shows different taxes created in Tax submodule which you can choose from --------->
                         <option><b>State Tax</b></option>
                         <option><b>Land Tax</b></option>
                       </select>
@@ -397,7 +403,13 @@
                     <td class="">
                         <input type="text" class="form-control border border-primary" placeholder="yyyy-mm-dd">
                     </td>
-                    <td class="text-center"><button class="btn btn-primary smaller_fonts">delete</button></td>
+                    <td class="text-center">
+                           <!--------deletes this row --------->
+                           <button class="btn btn-sm btn-danger border border-dark smaller_fonts">delete</button>
+                           <!--------creates new row --------->
+                          <button class="btn btn-sm btn-primary border border-dark smaller_fonts">new</button>
+                    </td>
+                  
                 </tbody>
               </table> 
 
@@ -432,7 +444,7 @@
               <div class="col-4 pr-3">
                 <h6 class="text-center text-primary my-2">Terms Details</h6>
                
-                  <!--------Terms & condition of business with Carrier, so these terms are already save in the terms submodule here you choose as many of these saved terms as possible and it autofills in the textarea --------->
+                  <!--------Terms & conditions of business with Carrier, so these terms are many & will be already saved in the Terms submodule here you choose as many of these saved terms as possible and it autofills in the textarea --------->
              
                 <div class="row form-group ">
                     <label for="email" class="col">Terms:</label>
