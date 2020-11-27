@@ -121,8 +121,8 @@
               <div id="menu5" class="collapse">
                 <div class="d-flex flex-row" id="sub_nav">
                   <div class="dropdown-item d-flex flex-column px-0">
-                    <a class="btn rounded-0 text-primary small" href="assets.html">assets</a>
-                    <a class="btn rounded-0 text-primary small" href="bank.html">bank</a>
+                    <a class="btn rounded-0 text-primary small" href="account_types.html">account type</a>
+                    <a class="btn rounded-0 text-primary small" href="accounts.html">accounts</a>
                   </div>
                   <div class="dropdown-item d-flex flex-column px-0">
                     <a class="btn rounded-0 text-primary small" href="income.html">income</a>
@@ -149,107 +149,101 @@
     </nav>
 <section class="container-fluid ">
   <div class="row">
-    <div class="col-2 shadow h-50 py-2" id="sidebar">
+    <div class="col-2 shadow  py-2" id="sidebar">
       
-        <h5 class="text-white text-center pt-3"><b>ACCOUNT</b></h5>
+        <h5 class="text-white text-center pt-3">Find Staff</h5>
        <div class="border border-right-0 border-left-0 border-bottom-0  more_settings">
-         <h6 class="text-white py-2">Find Entry</h6>
+        <div class="input-group my-3 ">
+            <input type="text" class="form-control-sm border border-dark py-0" placeholder="employee name">
+            <div class="input-group-append">
+              <button class="btn btn-sm btn-light border border-dark" type="submit"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
           
-           <h6 class="text-white border border-right-0 border-left-0 border-bottom-0 pt-2">Record :</h6>
-           <table class="table table-bordered table-striped table-hover py-0">
-             <thead>
-               <tr>
-                 <th class="text-white"><b>Acc Name</b></th>
-                 <th class="text-white"><b>Date</b></th>
-               </tr>
-             </thead>
-             <tbody>
-               <tr>
-                 <td>
-                     <input type="text" class="form-control border-dark py-n3 mt-n2" id="email" name="email"> 
-                 </td>
-                 <td>
-                   <div class="input-group mt-n2 ">
-                     <input type="text" class="form-control border border-dark py-0">
-                     <div class="input-group-append">
-                       <button class="btn btn-light border border-dark" type="submit"><i class="fas fa-search"></i></button>
-                     </div>
-                   </div>
-                 </td>
-               </tr>
-             </tbody>
-           </table>
+           
          </div >
-         <div class="h-50"><br><br><br><br><br><br><br><br><br></div>
+         
     </div>
-    <div class="col-9 shadow py-2 border border-bottom-0 border-left-0 border-right-0 border-dark">
+    <div class="col shadow py-2 border border-bottom-0 border-left-0 border-right-0 border-dark">
         
         <form>
            <div class="form-row bg-light ml-4 pb-4 shadow">
-            <h5 class="col-12 text-white text-center py-3 bg-primary px-2"><b>CHART OF ACCOUNT</b></h5>
-            <div class="container">
-                           
-                <table class="table table-bordered table-hover">
-                  <thead>
-                    <tr>
-                      <th>ACC NAME</th>
-                      <th>TYPE</th>
-                      <th>BALANCE(N)</th>
-                      <th>DATE</th>
-                      <th>ATTACH</th>
-                    </tr>
-                  </thead>
-                  <tbody class="bg-white">
-                    <tr>
-                      <td>Machine 2000</td>
-                      <td>Expense</td>
-                      <td>100,000</td>
-                      <td>2020-11-02</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>Tractor 2000</td>
-                      <td>Expense</td>
-                      <td>10,000</td>
-                      <td>2020-11-02</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>Daily Sales</td>
-                      <td>Income</td>
-                      <td>100,000</td>
-                      <td>2020-11-02</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                        <td>Machine 2000</td>
-                        <td>Expense</td>
-                        <td>100,000</td>
-                        <td>2020-11-02</td>
-                        <td></td>
+            <h5 class="col-12 text-white text-center py-3 bg-primary px-2"><b>ATTENDANCE </b></h5>
+            <div class="container-fluid">
+                       
+                   <table class="table table-bordered border-primary table-hover table-hover-primary my-3" id="small_fonts">
+                     <thead >
+                       <tr class="text-center border-primary">
+                         <th class="px-5">Staff</th>
+                         <th class="px-3">Dept</th>
+                         <th class="px-3">Branch</th>
+                         <th class="px-3">Date</th>
+                         <th class="px-3">Sign in</th>
+                         <th class="px-4">Sign Out</th>
+                       </tr>
+                     </thead>
+                     <tbody class="bg-white">
+                       <tr>
+                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                       </tr>
+                       <tr>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                       </tr>
                       <tr>
-                        <td>Tractor 2000</td>
-                        <td>Expense</td>
-                        <td>10,000</td>
-                        <td>2020-11-02</td>
-                        <td></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                       </tr>
                       <tr>
-                        <td>Daily Sales</td>
-                        <td>Income</td>
-                        <td>100,000</td>
-                        <td>2020-11-02</td>
-                        <td></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                      
                       </tr>
-                  </tbody>
-                </table>
-              </div>
-              
-           </div>
-        
+                      <tr>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        
+                      </tr>
+                      <tr>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td> 
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                     
+                      </tr>
+                   
+                       
+                     </tbody>
+                   </table>
+                 
+   
+            </div>
+            <br>
         </form>
-
+        
     </div>
   </div>
 
@@ -257,29 +251,67 @@
 
 
 <section>
-  <div class="container-fluid bg-light shadow mt-2" id="sub_nav"> 
-          <button type="button" class="btn btn-primary " data-toggle="collapse" data-target="#menu1">More settings</button>
-          
-  
-          <div id="menu1" class="collapse">
-            <div class="container-fluid px-0">        
-              <table class="table table-primary table-bordered table-striped table-sm">
-                <thead>
-                  <tr></tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><input type="text" class=""></td>
-                    <td><input type="text" class=""></td>
-                    <td><input type="text" class=""></td>
-                    <td><input type="text" class=""></td>
-                    
-                  </tr>
-                </tbody>
-              </table>
+  <div class="container-fluid bg-light shadow " id="sub_nav">
+    <button type="button" class="btn btn-primary py-1 " data-toggle="collapse" data-target="#home">History</button>
+    
+    <div id="home" class="collapse">
+      <div class="container-fluid px-0">
+        <div class="row py-2 ">
+          <br>
+          <div class="col-3 text-center form-group d-flex flex-row text-nowrap align-items-center">
+            <label for="email" class="mx-3 pt-1">Date:</label>
+            <div class="input-group input-group-sm w-50">
+              <input type="text" class="form-control border border-primary ">
+              <div class="input-group-append">
+                <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-calendar-alt"></i></button>
+              </div>
             </div>
-          </div>
-	  </div>
+          </div>  
+          <div class="col-3 text-center form-group d-flex flex-row text-nowrap align-items-center">
+            <label for="email" class="mx-3 pt-1">Employee Name:</label>
+            <div class="input-group input-group-sm w-50">
+              <input type="text" class="form-control border border-primary ">
+              <div class="input-group-append">
+                <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+          </div>   
+        </div>
+             
+        <table class="table table-primary table-bordered table-striped table-sm" id="small_fonts">
+          <thead>
+            <tr>
+              <th class="py-0 px-0 text-center">Employee Name</th>
+              <th class="py-0 px-0 text-center">Date</th>
+              <th class="py-0 px-0 text-center">Branch</th>
+              <th class="py-0 px-0 text-center">Department</th>
+              <th class="py-0 px-0 text-center">Expected Time in</th>
+              <th class="py-0 px-0 text-center">Time in</th>
+              <th class="py-0 px-0 text-center">Expected Time out</th>
+              <th class="py-0 px-0 text-center">Time Out</th>
+              <th class="py-0 px-0 text-center"></th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="py-3"></td>
+              <td class="py-3"></td>
+              <td class="py-3"></td>
+              <td class="py-3"></td>
+              <td class="py-3"></td>
+              <td class="py-3"></td>
+              <td class="py-3"></td>
+              <td class="py-3"></td>
+              <td class="py-3"></td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+</div>
 </section>
 
 <footer>

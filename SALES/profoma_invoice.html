@@ -1,3 +1,6 @@
+
+Customer/contact field with checkbox for contacts
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -181,7 +184,7 @@
                     <div class="col">
                  <h5><b>TRANSACTION DETAILS</b></h5>
                    <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                       <label for="email" class="">No:</label>
+                       <label for="email" class="">Code:</label>
                        <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
                    </div>
                     <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
@@ -190,7 +193,7 @@
                    </div>
                  
                      <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                        <label for="email" class="mr-2"> sale Order:</label>
+                        <label for="email" class="mr-2"> Branch:</label>
                         <div class="input-group w-50">
                           <input type="text" class="form-control border border-primary ">
                           <div class="input-group-append">
@@ -198,9 +201,16 @@
                           </div>
                         </div>
                      </div>
-                     
-                    
                      <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                        <label for="email" class="mr-2">Sales Order:</label>
+                        <div class="input-group w-50">
+                          <input type="text" class="form-control border border-primary ">
+                          <div class="input-group-append">
+                            <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                         <label for="email" class="mr-2">Tax:</label>
                         <div class="input-group w-50">
                           <input type="text" class="form-control border border-primary ">
@@ -209,127 +219,176 @@
                           </div>
                         </div>
                     </div>
-                    <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                        <label for="email" class="mr-2">Bank Account:</label>
-                        <div class="input-group w-50">
-                          <input type="text" class="form-control border border-primary ">
-                          <div class="input-group-append">
-                            <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                          </div>
-                        </div>
-                    </div>
+                    
                </div>
                <div class="col ml-3">
                <h5><b>CUSTOMER DETAILS</b></h5>
                      <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                        <label for="email" class="mr-2">Customer:</label>
+                        <label for="email" class="mr-2">Customer Code:</label>
                         <div class="input-group w-50">
                           <input type="text" class="form-control border border-primary" disabled>
                           <div class="input-group-append">
                             <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
                           </div>
                         </div>
+                    </div>
+                     <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                        <label for="email" class="mr-2">Customer Name:</label>
+                        <div class="input-group w-50">
+                          <input type="text" class="form-control border border-primary " >
+                          <div class="input-group-append">
+                            <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                          </div>
+                        </div>
+                    </div>
+                  
+                    <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between ">
+                      <label for="comment" class="">Billing Address:</label>
+                      <textarea class="form-control w-50 border border-primary" rows="2" id="comment"></textarea>
                      </div>
-                   <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                       <label for="email" class="mr-2">Billing Address:</label>
-                       <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
-                   </div>
                    
-                   <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                     <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                         <label for="email" class="mr-2">Sales Executive:</label>
                         <div class="input-group w-50">
-                          <input type="text" class="form-control border border-primary " disabled>
+                          <input type="text" class="form-control border border-primary " >
                           <div class="input-group-append">
-                            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown"></button>
+                            <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
                           </div>
                         </div>
                     </div>
                     
-                    <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                        <label for="email" class="mr-2">Client PO/Date:</label>
-                        <div class="input-group w-50">
-                          <input type="text" class="form-control border border-primary " disabled>
-                          <div class="input-group-append">
-                            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown"></button>
-                          </div>
-                        </div>
-                    </div>
-               </div>
-               <div class="col px-5 pt-2 ">
-                <ul class="nav nav-tabs">
-                    
-                    <li><a data-toggle="tab" href="#menu1" class="px-3 btn btn-primary ">Header Charges</a></li>
-                    <li><a data-toggle="tab" href="#menu2" class="px-3 btn btn-primary mx-2">Distribute Charge</a></li>
-                  </ul>
+                  
 
-                  <div class="tab-content">
-                    
-                    <div id="menu1" class="tab-pane fade">
-                      <div class="h-75 w-50 px-5 border border-info">
-                          <br>
-                        <br>
+                    <div class="row" >
+                        <div class="col"></div>
+                        <div class="form-check col">
+                          <label class="form-check-label" for="myCheck">
+                            <input type="checkbox" class="form-check-input" id="myCheck" onclick="check()" value="">Header charges
+                          </label>
+                          <div id="text" style="display:none" class="row">
+                            <input type="text" class="col border border-primary" placeholder="amount">
+                            <input type="text" class="col border border-primary" placeholder="purpose">
+                        </div>
+                        </div>
+                        
                       </div>
-                    </div>
-                    <div id="menu2" class="tab-pane fade">
-                      <div class="h-75 w-50 px-5 border border-info">
-                          <br>
-                        <br>
-                      </div>
-                    </div>
+                   
+               </div>
+               <div class="col">
+                <div class="row form-group ">
+                  <div class="col-3"></div>
+                  <div class="col-9">
+                      <select class="form-control  border border-primary text-white bg-primary " id="sel1">
+                          
+                          <option><b>Status</b></option>
+                          <option><b>Approved By</b></option>
+                          <option><b>Pending</b></option>
+                          
+                        </select>
                   </div>
-               
-            </div>
+                </div>
+                <div class="row form-group mt-n4">
+                  <div class="col-3"></div>
+                  <div class="col-9 border border-left-0 border-right-0 border-white">
+                      <select class="form-control  border border-primary text-white bg-primary " id="sel1">
+                          
+                          <option><b>Order Info</b></option>
+                          <option><b>Income</b></option>
+                          <option><b>Expense</b></option>
+                          <option><b></b></option>
+                        </select>
+                  </div>
+                </div>
+                <div class="row form-group mt-n3">
+                  <div class="col-3"></div>
+                  <div class="col-9">
+                      <select class="form-control  border border-primary text-white bg-primary " id="sel1">
+                          
+                          <option><b>Last Order</b></option>
+                          <option><b>Income</b></option>
+                          <option><b>Expense</b></option>
+                          <option><b></b></option>
+                        </select>
+                  </div>
+                </div>
+             </div>
              </div>
            </form>
     </div>
 </section>
 <section>
-    <div class="container-fluid bg-light shadow" id="sub_nav">
-      <button type="button" class="btn btn-primary " data-toggle="collapse" data-target="#home">Item Details</button>
-      <button type="button" class="btn btn-primary " data-toggle="collapse" data-target="#menu2x">Terms</button>
-      <button type="button" class="btn btn-primary " data-toggle="collapse" data-target="#menu1">Add On</button>
+    <div class="container-fluid bg-light shadow row" id="sub_nav">
+     <div class="col-10">
+      <button type="button" class="btn btn-primary " onclick="sideBarDisplay()" data-toggle="collapse" data-target="#home">Item Details</button>
+      <button type="button" class="btn btn-primary "  data-toggle="collapse" data-target="#menuI">Terms</button>
+      
       
       <div id="home" class="collapse">
         <div class="container-fluid px-0">        
           <table class="table table-primary table-bordered table-striped table-sm" id="small_fonts">
             <thead>
               <tr>
-                <th class="py-0 px-0 text-center">X</th>
-                <th class="py-0 px-0 text-center">Item code</th>
-                <th class="py-0 px-0 text-center">Item Name</th>
-                <th class="py-0 px-0 text-center">Variant</th>
-                <th class="py-0 px-0 text-center">Location</th>
-                <th class="py-0 px-0 text-center">Serial/Batch No.</th>
-                <th class="py-0 px-0 text-center">Serial/Batch Name</th>
-                <th class="py-0 px-0 text-center">Engine No</th>
-                <th class="py-0 px-0 text-center">Quantity</th>
-                <th class="py-0 px-0 text-center">UOM</th>
-                <th class="py-0 px-0 text-center">Amount</th>
+                
+                <th class="  text-center">Item Name</th>
+                <th class="  text-center">Plan Delivery Date</th>
+                <th class="  text-center">Quantity</th>
+                <th class="  text-center">UOM</th>
+                <th class="  text-center">Rate</th>
+                <th class="  text-center">Discount %</th>
+                <th class="  text-center">Discount N</th>
+                <th class="  text-center">VAT 5%</th>               
+                <th class="  text-center">Amount</th>
+                
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><input type="text" class="w-75 mx-auto"></td>
-                <td><input type="text" class="w-75 mx-auto"></td>
-                <td><input type="text" class="w-75 mx-auto"></td>
-                <td><input type="text" class="w-75 mx-auto"></td>
-                <td><input type="text" class="w-75 mx-auto"></td>
-                <td><input type="text" class="w-75 mx-auto"></td>
-                <td><input type="text" class="w-75 mx-auto"></td>
-                <td><input type="text" class="w-75 mx-auto"></td>
-                <td><input type="text" class="w-75 mx-auto"></td>
-                <td><input type="text" class="w-75 mx-auto"></td>
+                
+                <td><input type="text" class="w-100 mx-1"></td>
+                <td><input type="text" class="w-100 mx-1"></td>
+                <td><input type="text" class="w-100 mx-1"></td>
+                <td><input type="text" class="w-100 mx-1"></td>
+                <td><input type="text" class="w-100 mx-1"></td>
+                <td><input type="text" class="w-100 mx-1"></td>
+                <td><input type="text" class="w-100 mx-1"></td>
+                <td><input type="text" class="w-100 mx-1"></td>
+                <td><input type="text" class="w-100 mx-1"></td>
               </tr>
             </tbody>
           </table>
+          
+          <!-- SIDEBAR FOR Advance, Credit balance-->
         </div>
       </div>
+      <div id="menuI" class="collapse">
+        <div class="form-row bg-light mt-3 ">
+            <div class="col-5 pr-3">
+              <h6>Term Details</h6>
+              <div class="row form-group ">
+                <label for="email" class="col">Terms:</label>
+                <div class="col-7 input-group w-100 ">
+                    <div class="input-group w-100 mb-2">
+                        <input type="text" class="form-control-sm border border-primary" placeholder="find terms">
+                        <div class="input-group-append">
+                          <button class="btn btn-sm btn-light border border-primary" ><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <br>
+                   <textarea class="form-control  w-75 border border-primary"  rows="2" id="comment"></textarea>
+                </div>
+            </div>
 
-
-
-      <div id="menu2x" class="collapse"></div>
-        
-</div>
+            </div>
+            <div class="col-4 pr-3 mt-2"></div>
+            <div class="col-4 pr-3 mt-5"></div>
+        </div>
+      </div>
+     
+   </div>
+    
+  
+  
+  </div>
 </section>
 
 <footer>
@@ -337,6 +396,18 @@
   
 </footer>
 
+<script>
+  function sideBarDisplay() { document.getElementById('sidebar').style.display='block' };
+  function check() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>

@@ -116,14 +116,14 @@
           <div id="menu3" class="collapse">
             <div class="d-flex flex-row" id="sub_nav">
               <div class="dropdown-item d-flex flex-column px-0">
-                <a class="btn rounded-0 text-primary small" href="lead_attribute.html">Lead attribute</a>
+                <a class="btn rounded-0 text-primary small" href="contact.html">Contact</a>
               </div>
               <div class="dropdown-item d-flex flex-column px-0">
                 <a class="btn rounded-0 text-primary small" href="lead_contact.html">Lead contact</a>
                 
               </div>
               <div class="dropdown-item d-flex flex-column px-0">
-                <a class="btn rounded-0 text-primary small" href="lead_recording.html">Lead recording</a>
+                <a class="btn rounded-0 text-primary small" href="lead_conversion.html">Lead Conversion</a>
                
               </div>
               <div class="dropdown-item d-flex flex-column px-0">
@@ -151,30 +151,24 @@
   <div class="row">
     <div class="col-2 shadow h-75 py-2" id="sidebar">
       
-        <h5 class="text-white text-center pt-3"><b>LEAD CONTACTS</b></h5>
+        <h5 class="text-white text-center pt-3"><b>CONTACTS</b></h5>
        <div class="border border-right-0 border-left-0 border-bottom-0  more_settings">
-         <h6 class="text-white py-2">Item</h6>
-          
-           <h6 class="text-white border border-right-0 border-left-0 border-bottom-0 pt-2">Record :</h6>
+           <h6 class="text-white border border-right-0 border-left-0 border-bottom-0 pt-2">Find :</h6>
            <table class="table table-bordered table-striped table-hover py-0">
              <thead>
                <tr>
-                 <th class="text-white"><b>Name</b></th>
-                 <th class="text-white"><b>Code</b></th>
+                 <th class="text-white"><b>Name</b></th> 
                </tr>
              </thead>
              <tbody>
                <tr>
                  <td>
-                     <input type="text" class="form-control border-dark py-n3 mt-n2" id="email" name="email"> 
-                 </td>
-                 <td>
-                   <div class="input-group mt-n2 ">
-                     <input type="text" class="form-control border border-dark py-0">
-                     <div class="input-group-append">
-                       <button class="btn btn-light border border-dark" type="submit"><i class="fas fa-search"></i></button>
-                     </div>
-                   </div>
+                  <div class="input-group">
+                    <input type="text" class="form-control border border-primary ">
+                    <div class="input-group-append">
+                      <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div> 
                  </td>
                </tr>
              </tbody>
@@ -182,81 +176,96 @@
          </div >
          <div class="h-75"><br><br><br><br><br><br><br><br><br><br><br><br></div>
     </div>
-    <div class="col-9 shadow py-2 border border-bottom-0 border-left-0 border-right-0 border-dark">
+    <div class="col shadow py-2 border border-bottom-0 border-left-0 border-right-0 border-dark">
         
          <form >
           <div class="form-row bg-light ml-4 pb-4 shadow">
             <h5 class="col-12 text-white text-center py-3 bg-primary px-2"><b>LEAD CONTACT DETAILS</b></h5>
             <div class="col pr-3">
               <h4>General Details</h4>
-              <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Code:</label>
-                    <input type="text" class="form-control w-75 border-primary py-n3" id="email" name="email"> 
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="autocode" class="mr-2">Code:</label>
+                    <input type="text" class="form-control w-75 border-primary py-n3" id="autocode" name="code" disabled> 
                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Salutation:</label>
-                    <input type="text" class="form-control w-75 border-primary py-n3" id="email" name="email"> 
+                    <label for="salutation" class="mr-2">Salutation:</label>
+                    <input type="text" class="form-control w-75 border-primary py-n3" id="salutation" name="salutation"> 
                 </div>
                 
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">First Name:</label>
-                    
-                    <div class="input-group w-75">
-                      <input type="text" class="form-control border border-primary ">
-                      <div class="input-group-append">
-                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                      </div>
-                    </div>
+                    <label for="salutation" class="mr-2">First Name:</label>
+                    <input type="text" class="form-control w-75 border-primary py-n3" id="salutation" name="salutation"> 
                 </div>
+                
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                     <label for="email" class="mr-2">Last Name:</label>
-                    <div class="input-group w-75">
-                      <input type="text" class="form-control border border-primary ">
-                      <div class="input-group-append">
-                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                      </div>
-                    </div>
+                    <input type="text" class="form-control w-75 border-primary py-n3" id="email" name="email"> 
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="no." class="mr-2">Phone no.:</label>
+                    <input type="text" class="form-control w-75 border-primary py-n3" id="no." name="phone no."> 
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Email:</label>
+                    <input type="text" class="form-control w-75 border-primary py-n3" id="email" name="email"> 
                 </div>
                 
             </div>
             <div class="col">
             <h4>Additional Details</h4>
-                
+                <div class="form-group d-flex flex-row text-nowrap align-items-center ">
+                  <label for="email" class="mr-5">Company:</label>
+                  <input type="text" class="form-control w-75 border-primary py-n3 ml-1" id="email" name="email"> 
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center ">
+                  <label for="comment" class="mr-5">Address:</label>
+                  <textarea class="form-control w-75 border border-primary ml-3" rows="2" id="comment"></textarea>
+                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Contact Type:</label>
+                    <label for="email" class="mr-4">Contact Type:</label>
                     <div class="input-group w-75">
                       <input type="text" class="form-control border border-primary ">
                       <div class="input-group-append">
-                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                        <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
                       </div>
                     </div>
                 </div>
                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Default Executive:</label>
+                    <label for="email" class="mr-2">Sales Executive:</label>
                     <div class="input-group w-75">
                       <input type="text" class="form-control border border-primary ">
                       <div class="input-group-append">
-                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                        <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
                       </div>
                     </div>
                 </div>
-                <div class="" id="small_fonts">
-                    <div>
-                       <div class="form-check-inline" >
-                         <label class="form-check-label">
-                           <input type="checkbox" class="form-check-input" value="">Is E-mail allowed
-                         </label>
-                       </div>
-                       <div class="form-check-inline">
-                         <label class="form-check-label">
-                           <input type="checkbox" class="form-check-input" value="">Is SMS allowed
-                         </label>
-                       </div>
-                       <div class="form-check-inline">
-                         <label class="form-check-label">
-                           <input type="checkbox" class="form-check-input" value="" >Is credit allowed
-                         </label>
-                       </div>
+                <div class="row" id="small_fonts">
+                    <div class="col-2 mr-3"></div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
+                              <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" name="remember" required> Is Email Allowed.
+                              </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
+                              <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" name="remember" required> Is SMS Allowed.
+                              </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
+                              <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" name="remember" required> Is Credit Allowed.
+                              </label>
+                            </div>
+                        </div>
                      
                     </div>
                     
@@ -274,194 +283,11 @@
 
 </section>
 
-
 <section>
   <div class="container-fluid bg-light shadow mt-2" id="sub_nav"> 
-          <button type="button" class="btn btn-primary " data-toggle="collapse" data-target="#menu1">Address</button>
-          <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#menu2">Relations</button>
-          <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#menu3">Contact Executuive</button><button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#menu4">Other details</button>
-          <div id="menu1" class="collapse">
-            <div class="container-fluid px-0">        
-              <table class="table table-primary table-bordered table-striped table-sm">
-                <thead>
-                  <tr>
-                    <th>Applicable UOM</th>
-                    <th>Conversion Rate</th>
-                    <th>Select</th>
-                    <th>Default Purchase</th>
-                    <th>Default Sale</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><input type="text" class=""></td>
-                    <td><input type="text" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div id="menu2" class="collapse">
-            <div class="container-fluid px-0">        
-              <table class="table table-primary table-bordered table-striped table-sm">
-                <thead>
-                  <tr>
-                    <th>Applicable UOM</th>
-                    <th>Conversion Rate</th>
-                    <th>Select</th>
-                    <th>Default Purchase</th>
-                    <th>Default Sale</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><input type="text" class=""></td>
-                    <td><input type="text" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div id="menu3" class="collapse">
-            <div class="container-fluid px-0">        
-              <table class="table table-primary table-bordered table-striped table-sm">
-                <thead>
-                  <tr>
-                    <th>Applicable UOM</th>
-                    <th>Conversion Rate</th>
-                    <th>Select</th>
-                    <th>Default Purchase</th>
-                    <th>Default Sale</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><input type="text" class=""></td>
-                    <td><input type="text" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div id="menu4" class="collapse">
-            <div class="row">
-             <div class="col-5 pr-3">
-                 <h6 class="text-center text-primary mt-4"></h6>
-                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                   <label for="email" class="mr-2">Supplier Code:</label>
-                   <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
-                 </div>
-                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                   <label for="email" class="mr-2">Supplier Name:</label>
-                   <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
-                 </div>
-               
-               </div>
-               <div class="col-5">
-                     <h6 class="text-center text-primary mt-4"></h6>
-                     <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                       <label for="email" class="mr-2">Contact Type:</label>
-                       <div class="input-group w-50">
-                         <input type="text" class="form-control border border-primary ">
-                         <div class="input-group-append">
-                           <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                         </div>
-                       </div>
-                   </div>
-                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                     <label for="email" class="mr-2">Default Executive:</label>
-                     <div class="input-group w-50">
-                       <input type="text" class="form-control border border-primary ">
-                       <div class="input-group-append">
-                         <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                       </div>
-                     </div>
-                 </div>
-              
-               </div>
-           </div>
-          </div>
-          <div id="menu5" class="collapse">
-            <div class="container-fluid px-0">        
-              <table class="table table-primary table-bordered table-striped table-sm">
-                <thead>
-                  <tr>
-                    <th>Applicable UOM</th>
-                    <th>Conversion Rate</th>
-                    <th>Select</th>
-                    <th>Default Purchase</th>
-                    <th>Default Sale</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><input type="text" class=""></td>
-                    <td><input type="text" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div id="menu6" class="collapse">
-            <div class="container-fluid px-0">        
-              <table class="table table-primary table-bordered table-striped table-sm">
-                <thead>
-                  <tr>
-                    <th>Applicable UOM</th>
-                    <th>Conversion Rate</th>
-                    <th>Select</th>
-                    <th>Default Purchase</th>
-                    <th>Default Sale</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><input type="text" class=""></td>
-                    <td><input type="text" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div id="menu7" class="collapse">
-            <div class="container-fluid px-0">        
-              <table class="table table-primary table-bordered table-striped table-sm">
-                <thead>
-                  <tr>
-                    <th>Applicable UOM</th>
-                    <th>Conversion Rate</th>
-                    <th>Select</th>
-                    <th>Default Purchase</th>
-                    <th>Default Sale</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><input type="text" class=""></td>
-                    <td><input type="text" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                    <td><input type="checkbox" class=""></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-        </div>
+          <button type="button" class="btn btn-primary " data-toggle="collapse" data-target="#menu1">more settings</button>
+          <div id="menu1" class="collapse"></div>
+
 	  </div>
 </section>
 

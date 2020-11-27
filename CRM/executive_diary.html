@@ -57,9 +57,73 @@
      font-weight: bolder;
     }
 
-    input {
-      font-size: 5px ;
-    }
+    * {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #242A33;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
 
    
   </style>
@@ -118,7 +182,25 @@
           
           </div>
           <div id="menu3" class="collapse">
-            
+            <div class="d-flex flex-row" id="sub_nav">
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="contact.html">Contact</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="lead_contact.html">Lead contact</a>
+                
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="lead_conversion.html">Lead Conversion</a>
+               
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                
+                <a class="btn rounded-0 text-primary small" href="quotation.html">Quotation</a>
+              </div>
+      
+              
+          </div>
           </div>
           <div id="menu4" class="collapse">
           </div>
@@ -135,71 +217,110 @@
 </nav>
 <section class="container-fluid ">
   <div class="row">
-    <div class="col-2 shadow h-50 py-2" id="sidebar">
+    <div class="col-2 shadow h-75 py-2" id="sidebar">
       
-        <h5 class="text-white text-center pt-3"><b>ITEM PRICES</b></h5>
+        <h5 class="text-white text-center pt-3"><b>SET APPOINTMENT</b></h5>
        <div class="border border-right-0 border-left-0 border-bottom-0  more_settings">
-         <h6 class="text-white py-2">Item</h6>
-          
-           <h6 class="text-white border border-right-0 border-left-0 border-bottom-0 pt-2">Record :</h6>
+           
            <table class="table table-bordered table-striped table-hover py-0">
              <thead>
                <tr>
-                 <th class="text-white"><b>Name</b></th>
-                 <th class="text-white"><b>Code</b></th>
+                 <th class="text-white"><b> Choose date</b></th> 
                </tr>
+               
              </thead>
              <tbody>
                <tr>
                  <td>
-                     <input type="text" class="form-control border-dark py-n3 mt-n2" id="email" name="email"> 
-                 </td>
-                 <td>
-                   <div class="input-group mt-n2 ">
-                     <input type="text" class="form-control border border-dark py-0">
-                     <div class="input-group-append">
-                       <button class="btn btn-light border border-dark" type="submit"><i class="fas fa-search"></i></button>
-                     </div>
-                   </div>
+                  <div class="input-group">
+                    <input type="text" class="form-control border border-primary ">
+                    <div class="input-group-append">
+                        
+                      <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-calendar-alt"></i></button>
+                    </div>
+                  </div> 
                  </td>
                </tr>
+          
              </tbody>
            </table>
+           <div class="form-group d-flex flex-column text-nowrap">
+                <label for="email" class="mr-2 text-white">Lead Executive:</label>
+                <div class="input-group w-100">
+                <input type="text" class="form-control border border-primary ">
+                <div class="input-group-append">
+                    <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                </div>
+           </div>
          </div >
-         <div class="h-50"><br><br><br><br><br><br><br><br><br><br><br><br></div>
+         <div class="h-75"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
     </div>
-    <div class="col-9 shadow py-2 border border-bottom-0 border-left-0 border-right-0 border-dark">
+    <div class="col shadow py-2 border border-bottom-0 border-left-0 border-right-0 border-dark">
         
-        <form>
-           <div class="form-row bg-light ml-4 pb-4 shadow">
-            <h5 class="col-12 text-white text-center py-3 bg-primary px-2"><b>ITEM PRICE DETAILS</b></h5>
-            <div class="col-5 pl-3">
-                <h4>General Details</h4>
-                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                      <label for="email" class="mr-4">Code:</label>
-                      <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
-                  </div>
-                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                      <label for="email" class="mr-4">Name:</label>
-                      <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
-                  </div>
-                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="comment" class="mr-4">Description:</label>
-                    <textarea class="form-control  w-50 border border-primary" rows="2" id="comment"></textarea>
-                  </div>
-                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                      <label for="email" class="mr-4">Type:</label>
-                      <div class="input-group w-50">
-                        <input type="text" class="form-control border border-primary ">
-                        <div class="input-group-append">
-                          <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                        </div>
-                      </div>
-                  </div>
-                  <br><br><br><br><br><br>
+         <form >
+          <div class="form-row bg-light ml-4 pb-4 shadow">
+            <h5 class="col-12 text-white text-center py-3 bg-primary px-2"><b>EXECUTIVE DIARY</b></h5>
+            <div class="month">      
+                <ul>
+                  <li class="prev">&#10094;</li>
+                  <li class="next">&#10095;</li>
+                  <li>
+                    November<br>
+                    <span style="font-size:18px">2017</span>
+                  </li>
+                </ul>
               </div>
-              <div class="col "></div>
-              <div class="col "></div>
+              <div>
+               <div class="weekdays">
+
+                <li>Mo</li>
+                <li>Tu</li>
+                <li>We</li>
+                <li>Th</li>
+                <li>Fr</li>
+                <li>Sa</li>
+                <li>Su</li>
+                <li></li>
+               </div>
+              
+              <ul class="days">  
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                
+                <li>11</li>
+                <li><span class="active">10</span></li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li>20</li>
+                <li>21</li>
+                <li>22</li>
+                <li>23</li>
+                <li>24</li>
+                <li>25</li>
+                <li>26</li>
+                <li>27</li>
+                <li>28</li>
+                <li>29</li>
+                <li>30</li>
+                <li>31</li>
+              </ul>
+            </div>
+              
+          
         </div>
       </form>
 
@@ -208,60 +329,11 @@
 
 </section>
 
-
 <section>
   <div class="container-fluid bg-light shadow mt-2" id="sub_nav"> 
-          <button type="button" class="btn btn-primary " data-toggle="collapse" data-target="#menu1">Sale Price</button>
-          <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#menu2">Purchase Price</button>
-  
-          <div id="menu1" class="collapse">
-            <div class="container-fluid px-0">        
-              <table class="table table-primary table-bordered table-striped table-sm">
-                <thead>
-                  <tr>
-                    <th>Item Kit Code</th>
-                    <th>Item Kit Name</th>
-                    <th>UOM</th>
-                    <th>Quantity</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><input type="text" class=""></td>
-                    <td><input type="text" class=""></td>
-                    <td><input type="text" class=""></td>
-                    <td><input type="text" class=""></td>
-                    
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div id="menu2" class="collapse">
-            <div class="container-fluid px-0">        
-                <table class="table table-primary table-bordered table-striped table-sm">
-                    <thead>
-                        <tr>
-                          <th>Item Kit Code</th>
-                          <th>Item Kit Name</th>
-                          <th>UOM</th>
-                          <th>Quantity</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><input type="text" class=""></td>
-                          <td><input type="text" class=""></td>
-                          <td><input type="text" class=""></td>
-                          <td><input type="text" class=""></td>
-                          
-                        </tr>
-                      </tbody>
-                  </table>
-            </div>
-          </div>
-  
-	  </div>
+          <button type="button" class="btn btn-primary " data-toggle="collapse" data-target="#menu1">more settings</button>
+          <div id="menu1" class="collapse"></div>
+  </div>
 </section>
 
 <footer>

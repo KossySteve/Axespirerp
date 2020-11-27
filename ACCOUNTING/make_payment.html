@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+ 
+  <style>
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bolder;
+      
+    }
+  	#nav a {
+  		color: #242A33;
+      font-family: 'Russo One', sans-serif;
+      font-size: 15px;
+	  }
+
+      
+    #nav a:hover {
+      color: white;
+    }
+    
+    #more_settings button {
+		 font-size: 11px;     
+     }
+
+     #small_fonts {
+		 font-size: 13px;     
+     }
+
+    .more_settings table {
+		 font-size: 11px;
+     }
+
+    #sidebar {
+     background-color: #242A33;
+    }
+
+    #sub_nav a {
+     font-size: 13px;
+    }
+
+    #sub_nav button {
+     font-size: 15px;
+     font-weight: bolder;
+    }
+
+
+   
+  </style>
+</head>
+<body>
+  <nav class="container-fluid" id="nav">
+    <div class="container-fluid py-2">
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu1x">INVENTORY</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu2">PROCUREMENT</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu3">CRM</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5">SERVICE</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu4">FINANCE</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5">ACCOUNTING</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu6">SALES</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu7">ADMIN</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu4">PAYROLL</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5">TOOLS</a>
+          <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5">BI</a>
+          
+          <div id="menu1x" class="collapse">
+            <div class="d-flex flex-row" id="sub_nav">
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="item.html">Item</a>
+                <a class="btn rounded-0 text-primary small" href="item_kit.html">Item Kit</a>
+                <a class="btn rounded-0 text-primary small" href="item_group.html">Item group</a>
+                <a class="btn rounded-0 text-primary small" href="item_prices.html">Item prices</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="item_settings.html">Item Settings</a>
+                <a class="btn rounded-0 text-primary small" href="location.html">Location</a>
+                <a class="btn rounded-0 text-primary small" href="variant.html">Variant</a>
+                <a class="btn rounded-0 text-primary small" href="quick_search.html">Quick search</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="stock_count.html">Stock Count</a>
+                <a class="btn rounded-0 text-primary small" href="stock_counts.html">Stock Counts</a>
+                <a class="btn rounded-0 text-primary small" href="stock_transfer_inward.html">Stock Transfer inward</a>
+                <a class="btn rounded-0 text-primary small" href="stock_transfer_outward.html">Stock Transfer Outward</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="batch.html">Batch</a>
+                <a class="btn rounded-0 text-primary small" href="stock_opening.html">Stock Opening</a>
+                <a class="btn rounded-0 text-primary small" href="stock_adjustment.html">Stock Adjustment</a>
+                <a class="btn rounded-0 text-primary small" href="stock_confirmation.html">Stock Confirmation</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="stock_transfer.html">Stock Transfer</a>
+                <a class="btn rounded-0 text-primary small" href="stock_ageing.html">Stock Ageing</a>
+                <a class="btn rounded-0 text-primary small" href="stock_ledger.html">Stock Ledger</a>
+                <a class="btn rounded-0 text-primary small" href="stock_valuation.html">Stock Valuation</a>
+                
+              </div>
+          </div>
+          </div>
+          <div id="menu2" class="collapse">
+          
+          </div>
+          <div id="menu3" class="collapse">
+            <div class="d-flex flex-row" id="sub_nav">
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="contact.html">Contact</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="lead_contact.html">Lead contact</a>
+                
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="lead_recording.html">Lead recording</a>
+               
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                
+                <a class="btn rounded-0 text-primary small" href="quotation.html">Quotation</a>
+              </div>
+      
+              
+          </div>
+          </div>
+          <div id="menu4" class="collapse">
+          </div>
+          <div id="menu5" class="collapse">
+            <div class="d-flex flex-row" id="sub_nav">
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="account_types.html">account types</a>
+                <a class="btn rounded-0 text-primary small" href="accounts.html">accounts</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="budget.html">budget</a>
+                <a class="btn rounded-0 text-primary small" href="chart_of_acc.html">chart of account</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="make_payment.html">make payment</a>
+                <a class="btn rounded-0 text-primary small" href="receive_payment.html">receive payment</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+              <a class="btn rounded-0 text-primary small" href="customer.html">customer</a>
+                <a class="btn rounded-0 text-primary small" href="sales.html">sales</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="funds_transfer.html">funds transfer</a>
+                <a class="btn rounded-0 text-primary small" href="Inventory.html">inventory</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="purchase.html">purchase</a>
+                <a class="btn rounded-0 text-primary small" href="report.html">report</a>
+              </div>
+            </div>
+          </div>
+          <div id="menu6" class="collapse">
+            
+          </div>
+          <div id="menu7" class="collapse">
+              
+          </div>
+    </div>
+</nav>
+<section class="container-fluid ">
+  <div class="row">
+   
+    <div class="col shadow pt-2 border border-bottom-0 border-left-0 border-right-0 border-dark">
+        
+         <form>
+          <div class="form-row bg-light ml-4 pb-4 shadow">
+            <h5 class="col-12 text-white text-center py-3 bg-primary px-2"><b>MAKE PAYMENT</b></h5>
+            <div class="col pr-3 px-3">
+              <h4 class="text-primary">Contact Details</h4>
+                
+                <div class="row form-group ">
+                    <label for="email" class="col">Code:</label>
+                    <div class="col-7 input-group w-100 ">
+                      <input type="text" class=" form-control border border-primary" disabled>
+                    </div>
+                </div>
+              
+                <div class="row form-group ">
+                  <label for="email" class="col">Amount:</label>
+                  <div class="col-7 input-group w-100 ">
+                    <input type="text" class=" form-control border border-primary">
+                  </div>
+                </div>
+                
+              <div class="row form-group ">
+                <label for="email" class="col">Pay To:</label>
+                <div class="col-7 input-group w-100 ">
+                  <input type="text" class="form-control border border-primary" placeholder="enter supplier name">
+                  <div class="input-group-append">
+                    <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
+                  </div>
+                </div>
+             </div> 
+                
+            </div>
+            <div class="col">
+             <h4 class="text-primary">Transaction Details</h4>
+              
+            <div class="row form-group ">
+                <label for="email" class="col">Payment mode:</label>
+                <div class="col-7 dropdown  ">
+                  <button type="button" class="btn border-primary w-100  dropdown-toggle bg-white" data-toggle="dropdown">
+                    <span class="px-5"></span>
+                  </button>
+                  <div class="dropdown-menu border-primary">
+                    <a class="dropdown-item bg-light px-1" href="#" id="small_fonts"><b>Cash</b><input type="text" placeholder="enter acc name" class=" px-2 form-control-sm pl-2 border border-primary">  </a>
+                    <a class="dropdown-item bg-light px-1" href="#" id="small_fonts"><b>Credit</b></a>
+                    
+                  </div>
+                </div>
+              </div>
+            
+              <div class="row form-group ">
+                <label for="email" class="col">Balance:</label>
+                <div class="col-7 input-group w-100 ">
+                  <input type="text" class=" form-control border border-primary">
+                </div>
+              </div>
+            
+             <div class="row form-group">
+                <label for="email" class="col">As of:</label>
+                <div class="col-7 input-group w-100 ">
+                  <input type="text" class="form-control border border-primary ">
+                  <div class="input-group-append">
+                    <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-calendar-alt"></i></button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row form-group">
+                <label for="sel1" class="col">Currency: </label>
+                <div class="col-7">
+                    <select class="form-control  border border-primary " id="sel1">
+                        <option><b>NGN</b></option>
+                        <option><b>USD</b></option>
+                        <option><b>EURO</b></option>
+                        <option><b>GBP</b></option>
+                      </select>
+                </div>
+              </div>
+              <br>
+            
+               
+            </div>
+            <div class="col">
+                <div class="row form-group ">
+                  <div class="col-3"></div>
+                  <div class="col-9">
+                      <select class="form-control  border border-primary text-white bg-primary " id="sel1">
+                          
+                          <option><b>Accounts</b></option>
+                          <option><b>Account receiveable</b></option>
+                          <option><b>Account payable</b></option>
+                          <option><b>Sales</b></option>
+                        </select>
+                  </div>
+                </div>
+                <div class="row form-group mt-n4">
+                  <div class="col-3"></div>
+                  <div class="col-9 border border-left-0 border-right-0 border-white">
+                      <select class="form-control  border border-primary text-white bg-primary " id="sel1">
+                          
+                          <option><b>Account Info</b></option>
+                          <option><b>Income</b></option>
+                          <option><b>Expense</b></option>
+                          <option><b></b></option>
+                        </select>
+                  </div>
+                </div>
+                <div class="row form-group mt-n3">
+                  <div class="col-3"></div>
+                  <div class="col-9">
+                      <select class="form-control  border border-primary text-white bg-primary " id="sel1">
+                          
+                          <option><b>Summary</b></option>
+                          <option><b>Income</b></option>
+                          <option><b>Expense</b></option>
+                          <option><b></b></option>
+                        </select>
+                  </div>
+                </div>
+             </div>
+           
+        </div>
+      </form>
+      <div class="d-flex flex-row justify-content-center"><button type="button" class="btn btn-sm btn-primary px-5 mb-0 my-1 "><b>SUBMIT</b></button></div>
+     
+    </div>
+  </div>
+
+</section>
+
+<section>
+    <div class="container-fluid bg-light shadow py-1" id="sub_nav"> 
+            <button type="button" class="btn btn-primary py-0  px-5" data-toggle="collapse" data-target="#menu1">View All</button>
+            <div id="menu1" class="collapse">
+              <div class="container-fluid px-0">        
+                <table class="table table-primary table-bordered table-striped table-sm">
+                  <thead>
+                    <tr>
+                      <th class="text-center">Name</th>
+                      <th class="text-center">Currency</th>
+                      <th class="text-center">Account</th>
+                      <th class="text-center">Balance</th>
+                      <th class="text-center">Payment</th>
+                      <th class="text-center">Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="px-3 py-3"></td>
+                      <td class="px-3 py-3"></td>
+                      <td class="px-3 py-3"></td>
+                      <td class="px-3 py-3"></td>
+                      <td class="px-3 py-3"></td>
+                      <td class="px-3 py-3"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+    
+        </div>
+  </section>
+
+<footer>
+  <br><br><br>
+  
+</footer>
+
+
+</body>
+</html>
