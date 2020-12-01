@@ -1,6 +1,3 @@
-code, Name, Desc, Duration, Days allowed per Duration, InActive,  
-Max Encashed Days, Max Carry Forward Days, Is Paid,, Is Evidence required, Evidence desc, Prior Intimation days, Leave Maturity, enchash details
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -172,7 +169,7 @@ Max Encashed Days, Max Carry Forward Days, Is Paid,, Is Evidence required, Evide
        <div class="border border-right-0 border-left-0 border-bottom-0  more_settings">
           <h6 class="text-white border border-right-0 border-left-0  py-2">Record :</h6>
           <div class="input-group mt-3">
-            <!--------you can search a particular carrier saved before and when you click it, it fills all the field with details and then can be edited--------->
+            
             <input type="text" class="form-control-sm border border-primary" id="smallest_fonts" placeholder="search name or code">
             <div class="input-group-append">
               <button class="btn btn-sm btn-light border border-primary" ><i class="fas fa-search"></i></button>
@@ -186,117 +183,130 @@ Max Encashed Days, Max Carry Forward Days, Is Paid,, Is Evidence required, Evide
         
       <form id="hover_effect" >
        <div class="form-row bg-light ml-3 pb-4 shadow border border-dark">
-            <h5 class="col-12 text-center py-3 bg-primary px-2 border border-left-0 border-right-0 border-top-0 border-dark" ><b>LEAVE DETAILS</b></h5>
-              <div class="col px-5 mr-2">
-                <h6>General Details</h6>
-                    <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                        <!-------auto generated code for record---------->
-                        <label for="email" class="">Code:</label>
-                        <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email" disabled> 
+            <h5 class="col-12 text-center text-white py-3 bg-primary px-2 border border-left-0 border-right-0 border-top-0 border-dark" ><b>LEAVE DETAILS</b></h5>
+              <div class="col px-2 mr-2">
+                <!--------here diffrent kinds of leaves taken in the company can be created--------->
+                <h6 class="text-primary">General Details</h6>
+                  <div class="row form-group ">
+                       <!-------auto generated code for record---------->
+                    <label for="email" class="col">Code:</label>
+                    <div class="col-7 input-group w-100 ">
+                      <input type="text" class=" form-control border border-primary">
                     </div>
-                    <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                        <!-------Name of the logistics company the business uses for distribution, delivery or shipment---------->
-                        <label for="email" class="mr-2">Name:</label>
-                        <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                  </div>
+                  <div class="row form-group ">
+                      <!-------Name of the logistics company the business uses for distribution, delivery or shipment---------->
+                    <label for="email" class="col">Name:</label>
+                    <div class="col-7 input-group w-100 ">
+                      <input type="text" class=" form-control border border-primary">
                     </div>
-                   
-                    <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                        <!-------Name of the Tax involved if any---------->
-                        <label for="email" class="mr-2">Tax Authorities:</label>
-                        <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                  </div>
+                  <div class="row form-group ">
+                    <label for="email" class="col">Description:</label>
+                    <div class="col-7 input-group w-100 ">
+                        <textarea class="form-control  w-100 border border-primary"  rows="2" id="comment"></textarea>
                     </div>
-                    <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                      <!-------Bank Account Name of Carrier ---------->
-                        <label for="email" class="mr-2">Pay To:</label>
-                        <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
-                    </div>
-                    <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between ">
-                      <!-------logistics provider of the carrier---------->
-                     <label for="email" class="mr-2">Logistics Provider:</label>
-                     <div class="input-group w-50">
-                       <input type="text" class="form-control border border-primary ">
-                       <div class="input-group-append">
-                         <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                  </div>
+                   <div class="row form-group ">
+                    <div class="col">Duration</div>
+                        <div class="col-7">
+                            <select class="form-control  border border-primary  " id="sel1">
+                                <option><b>Yearly</b></option>
+                                <option><b>Monthly</b></option>
+                            </select>
+                        </div>
+                   </div> 
+                    <div class="row form-group ">
+                        <label for="email" class="col">Days allowed:</label>
+                        <div class="col-7 input-group w-100 ">
+                          <input type="text" class=" form-control border border-primary">
+                        </div>
+                      </div>
+                       
+              
+                      <div class="row form-group ">
+                        <label for="email" class="col text-nowrap">Deactivate:</label>
+                        <div class="col">
+                          <input type="checkbox" class=" form-control-sm border border-primary">
+                        </div>
+                        <!-----if it is a earned leave e.g annual leave it is ticked unlike maternity leave that is as a result of childbirth---->
+                        <label for="email" class="col text-nowrap">Earned leave:</label>
+                        <div class="col">
+                          <input type="checkbox" class=" form-control-sm border border-primary">
                        </div>
                      </div>
+              </div>
+              <div class="col px-2 mr-2">
+                <h6 class="text-primary">Other Details</h6>
+                  <div class="row form-group ">
+                       <!--------this is a limit of the number of days in the leave a can cash in his salary--------->
+                    <label for="email" class="col">Max Enchased Days:</label>
+                    <div class="col-7 input-group w-100 ">
+                      <input type="text" class=" form-control border border-primary">
                     </div>
-                    <div class="row">
-                      <div class="col-6"></div>
-                      <div class="col form-group form-check ">
-                         <!-------here by checking this box this carrier is made inactive and doesn't show up when searching for carriers---------->
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" name="remember" required> Inactive
-                        </label>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                      </div>
-                   </div>
+                  </div>
+                  <div class="row form-group ">
+                      <!------------------->
+                    <label for="email" class="col">Max Carry foward days:</label>
+                    <div class="col-7 input-group w-100 ">
+                      <input type="text" class=" form-control border border-primary">
+                    </div>
+                  </div>
+                  <div class="row form-group ">
+                    <label for="email" class="col text-nowrap">Is paid:</label>
+                    <div class="col">
+                      <input type="checkbox" class=" form-control-sm border border-primary">
+                    </div>
+                    <label for="email" class="col text-nowrap">Evidence required:</label>
+                    <div class="col">
+                      <input type="checkbox" class=" form-control-sm border border-primary">
+                    </div>
+                  </div>
+                  <div class="row form-group ">
+                    <label for="email" class="col">Evidence Desc:</label>
+                    <div class="col-7 input-group w-100 ">
+                        <textarea class="form-control  w-100 border border-primary"  rows="2" id="comment"></textarea>
+                    </div>
+                  </div>
+                   <div class="row form-group ">
+                    <div class="col">Duration</div>
+                        <div class="col-7">
+                            <select class="form-control  border border-primary  " id="sel1">
+                                <option><b>Yearly</b></option>
+                                <option><b>Monthly</b></option>
+                            </select>
+                        </div>
+                   </div> 
+                   
                     
-             </div>
-            <div class="col-1 row"></div>
-             <div class="col">
-              <h6>Txn History</h6>
-               <!-------This is data gotten from accounting about the monetary transactions done with this particular carrier, more about the data will come later---------->
-                <table class="table table-bordered border-dark table-sm table-hover">
-                  <thead class="bg-primary text-white">
-                    <tr class="text-nowrap">
-                      <td>Year</td>
-                      <td>Opening</td>
-                      <td>Debit</td>
-                      <td>Credit</td>
-                      <td>Closing</td>
-                      <td>Proj Bal</td>
-                      <td>Proj Closing</td>
-                    </tr>
-                  </thead>
-                  <tbody class="bg-white">
-                    <tr class="">
-                    <td>2018</td>
-                      <td>3,008,204</td>
-                      <td>Debit</td>
-                      <td>5,008,204</td>
-                      <td>3,008,204</td>
-                    <td>2,002,004</td>
-                      <td>3,008,204</td>
-                    </tr>
-                    <tr>
-                      <td>2019</td>
-                      <td>2,002,004</td>
-                      <td>3,008,204</td>
-                      <td>5,008,204</td>
-                      <td>3,008,204</td>
-                      <td>3,008,204</td>
-                      <td>3,008,204</td>
-                    </tr>
-                    <tr>
-                      <td>2020</td>
-                      <td>3,008,204</td>
-                      <td>3,008,204</td>
-                      <td>3,008,204</td>
-                      <td>2,002,004</td>
-                      <td>3,008,204</td>
-                      <td>5,008,204</td>
-                    </tr>
-                  </tbody>
-                </table> 
+              </div>
+              <div class="col px-2 mr-2">
+                <h6 class="pt-3"></h6>
+                  <div class="row form-group ">
+                       <!--------there should be a number of days of prior notice before taking a leave----------->
+                    <label for="email" class="col">Notice Days:</label>
+                    <div class="col-7 input-group w-100 ">
+                      <input type="text" class=" form-control border border-primary">
+                    </div>
+                  </div>
+                  <div class="row form-group ">
+                    <!-------if the leave is set to be taken after certain days of work---------->
+                    <label for="email" class="col">Leave Maturity(days):</label>
+                    <div class="col-7 input-group w-100 ">
+                        <input type="text" class=" form-control border border-primary">
+                    </div>
+                  </div>
               </div>
           </div>
             <div class="row mb-0 py-1">
                <!------clicking this saves all the details also after editing it is also saved here too----------->
-              <button class="btn px-5 py-0 text-dark mx-auto mb-0 bg-primary border border-dark"  ><b>SUBMIT</b></button>
+              <button class="btn px-5 py-0 text-white mx-auto mb-0 bg-primary border border-dark"  ><b>SUBMIT</b></button>
             </div>
 
           </form>
          </div> 
 
         </div>
-       
-      
-      
-
     </div>
   </div>
 
@@ -305,106 +315,34 @@ Max Encashed Days, Max Carry Forward Days, Is Paid,, Is Evidence required, Evide
      
 <section>
     <div class="container-fluid bg-light shadow my-1 border border-dark border-left-0 border-right-0 border-top-0" id="sub_nav">
-          <button type="button" class="btn btn-primary border border-primary " id="sidebar"  data-toggle="collapse" data-target="#menuI">Address</button>
+          <button type="button" class="btn btn-primary border border-primary " id="sidebar"  data-toggle="collapse" data-target="#menuI">Encash details</button>
+          <button type="button" class="btn btn-primary border border-primary " id="sidebar"  data-toggle="collapse" data-target="#menuII">Leave application</button>
+          <button type="button" class="btn btn-primary border border-primary " id="sidebar"  data-toggle="collapse" data-target="#menuIII">Leave Approval</button>
  
-          <button type="button" class="btn btn-primary border border-primary"  id="sidebar"data-toggle="collapse" data-target="#menuII">Taxes</button>
-      
-          <button type="button" class="btn btn-primary border border-primary"  id="sidebar"data-toggle="collapse" data-target="#menuIII">Bank & Term Details</button>
-        
          
-          
-          <div id="menuI" class="collapse row">
-            <div class="col-4 pr-3">
-               <!--------more details of the particular carrier above--------->
-              <h6 class="text-center text-primary my-2">Address Details</h6>
-              
-              <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between mt-3">
-                <label for="comment" class="">Address:</label>
-                <textarea class="form-control  w-50 border border-primary"  rows="2" id="comment"></textarea>
-              </div>
-                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">State:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
-                </div>
-                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Country:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
-                </div>
-              </div>
-              <div class="col-4 pr-3">
-                <h6 class="text-center text-primary my-2">Contact Details</h6>
-                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                  <label for="email" class="mr-2">Mobile no. 1:</label>
-                  <div class="input-group w-50">
-                    <input type="text" class="form-control border border-primary ">
-                    <div class="input-group-append">
-                      <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                    </div>
-                  </div>
-              </div>
-              <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                <label for="email" class="mr-2">Mobile no. 2:</label>
-                <div class="input-group w-50">
-                  <input type="text" class="form-control border border-primary ">
-                  <div class="input-group-append">
-                    <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                  </div>
-                </div>
-            </div>
-              <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                <label for="email" class="mr-2">Email:</label>
-                <div class="input-group w-50">
-                  <input type="text" class="form-control border border-primary ">
-                  <div class="input-group-append">
-                    <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                  </div>
-                </div>
-            </div>
-              <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                  <label for="email" class="mr-2">Website:</label>
-                  <div class="input-group w-50">
-                    <input type="text" class="form-control border border-primary ">
-                    <div class="input-group-append">
-                      <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div>
-         
-          <div id="menuII" class="collapse">
-             <!--------here from the different types of taxes already saved in Taxes submodule, you choose a particular tax that involves this carrier
-              Also you can create another table row to input another entry--------->
+          <div id="menuI" class="collapse">
+             <!----------------->
              <div class="container mt-3 smaller_fonts ">
               <table class="table table-bordered  table-sm table-hover">
                 <thead class="bg-primary text-white ">
                   <tr class="text-nowrap text-center">
-                    <td>Tax Type</td>
-                    <td>Description</td>
-                    <td>Effective from</td>
-                    <td>Effective To</td>
+                    <td>Effective From</td>
+                    <td>Effective Till</td>
+                    <!----here a certain formulae to calculate this will be give later------>
+                    <td>Encash formulae(per day)</td>
                     <td></td>
                   </tr>
                 </thead>
                 <tbody class="">
                   <tr class="py-2 px-1">
                     <td class="">
-                      <select class="form-control  border border-primary smaller_fonts " id="sel1">
-                        <!-------shows different taxes created in Tax submodule which you can choose from --------->
-                        <option><b>State Tax</b></option>
-                        <option><b>Land Tax</b></option>
-                      </select>
-                    </td>
-                    <td class="">
-                      <textarea class="form-control  border border-primary smaller_fonts"  rows="1" id="comment"></textarea>
-                    </td>
-                    <td class="">
-                     
                         <input type="text" class="form-control border border-primary" placeholder="yyyy-mm-dd">
-                        
                     </td>
                     <td class="">
                         <input type="text" class="form-control border border-primary" placeholder="yyyy-mm-dd">
+                    </td>
+                    <td class="">
+                        <input type="text" class="form-control border border-primary" placeholder="">
                     </td>
                     <td class="text-center">
                            <!--------deletes this row --------->
@@ -418,52 +356,132 @@ Max Encashed Days, Max Carry Forward Days, Is Paid,, Is Evidence required, Evide
 
              </div>
           </div>
-          <div id="menuIII" class="collapse row">
-            <div class="col-4 pr-3">
-              <h6 class="text-center text-primary my-2">Bank Details</h6>
-               <!-----Bank details of the carrier----->
-                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Bank:</label>
-                    <div class="input-group w-50">
-                      <input type="text" class="form-control border border-primary ">
-                      <div class="input-group-append">
-                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                      </div>
+          <div id="menuII" class="collapse">
+            <!-------->
+            <div class="container mt-3 smaller_fonts row">
+              <!--------->
+              <div class="col px-2 mr-2">
+                <h6 class="text-primary">General Details</h6>
+                  <div class="row form-group ">
+                       <!-------auto generated code for record---------->
+                    <label for="email" class="col">Code:</label>
+                    <div class="col-7 input-group w-100 ">
+                      <input type="text" class=" form-control border border-primary">
                     </div>
                   </div>
-                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Acc No:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
-                  </div>
-                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Acc Name:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
-                  </div>
-                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Swift Code:</label>
-                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
-                  </div>
-              </div>
-              <div class="col-4 pr-3">
-                <h6 class="text-center text-primary my-2">Terms Details</h6>
-               
-                  <!--------Terms & conditions of business with Carrier, so these terms are many & will be already saved in the Terms submodule here you choose as many of these saved terms as possible and it autofills in the textarea --------->
-             
-                <div class="row form-group ">
-                    <label for="email" class="col">Terms:</label>
-                    <div class="col-7 input-group">
-                        <div class="input-group w-100 mb-2">
-                            <input type="text" class="form-control-sm border border-primary" placeholder="">
-                            <div class="input-group-append">
-                              <button class="btn btn-sm btn-light border border-primary" ><i class="fas fa-search"></i></button>
-                            </div>
+                  <div class="row form-group ">
+                    <label for="email" class="col">Branch:</label>
+                    <div class="col-7 input-group w-100 ">
+                        <input type="text" class="form-control border border-primary" placeholder="">
+                        <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
                         </div>
-                        <br>
-                       <textarea class="form-control  w-75 border border-primary"  rows="4" id="comment"></textarea>
                     </div>
+                  </div>
+                  <div class="row form-group ">
+                    <label for="email" class="col">Leave type:</label>
+                    <div class="col-7 input-group w-100 ">
+                        <input type="text" class="form-control border border-primary" placeholder="">
+                        <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                  </div>
+                  
+                 
+                  
+              </div>
+              <div class="col mt-4">
+                <div class="row form-group ">
+                  <!---------------->
+                <label for="email" class="col">From:</label>
+                <div class="col-7 input-group w-100 ">
+                  <input type="text" class=" form-control border border-primary">
                 </div>
+              </div>
+              <div class="row form-group ">
+                <!----------------->
+                <label for="email" class="col">To:</label>
+                <div class="col-7 input-group w-100 ">
+                  <input type="text" class=" form-control border border-primary">
+                </div>
+              </div>
+
+                <div class="row form-group ">
+                  <label for="email" class="col">Purpose:</label>
+                  <div class="col-7 input-group w-100 ">
+                      <textarea class="form-control  w-100 border border-primary"  rows="2" id="comment"></textarea>
+                  </div>
+                </div>
+                <div class="row form-group ">
+                  <!--------auto generated date of the day it was filled and submitted--------->
+                <label for="email" class="col">Date:</label>
+                <div class="col-7 input-group w-100 ">
+                  <input type="text" class=" form-control border border-primary" disabled>
+                </div>
+              </div>
+              </div>
+              <div class="col"></div>
             </div>
+         </div>
+         <div id="menuIII" class="collapse">
+          <!----------------->
+          <div class="container mt-3 smaller_fonts ">
+           <table class="table table-bordered  table-sm table-hover">
+             <thead class="bg-primary text-white ">
+               <tr class="text-nowrap text-center">
+                 <td>Code</td>
+                 <td>Employee</td>
+                 <td>Leave Type</td>
+                 <!----here a superior colleague can approve leave------>
+                 <td>Approval</td>
+                 <td>Approved by</td>
+                 <td></td>
+               </tr>
+             </thead>
+             <tbody class="">
+               <tr class="py-2 px-1">
+                <td class="">
+                    <input type="text" class="form-control border border-primary" placeholder="">
+                </td>
+                 <td class="">
+                    <div class="col input-group w-100 ">
+                        <input type="text" class="form-control border border-primary" placeholder="">
+                        <div class="input-group-append">
+                          <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                 </td>
+                 <td class="">
+                  <div class="col input-group w-100 ">
+                      <input type="text" class="form-control border border-primary" placeholder="">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
+                      </div>
+                  </div>
+                 </td>
+                  
+                 <td class="">
+                  <input type="checkbox" class="form-control border border-primary" placeholder="">
+              </td>
+                 <td class="">
+                  <div class="col input-group w-100 ">
+                      <input type="text" class="form-control border border-primary" placeholder="">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
+                      </div>
+                  </div>
+               </td>
+                
+                 <td class="text-center text-nowrap">
+                       <button class="btn btn-sm btn-primary border border-dark smaller_fonts">Save</button>
+                 </td>
+               
+             </tbody>
+           </table> 
+
           </div>
+       </div>
 	    </div>
     </div>
 </section>

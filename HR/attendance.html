@@ -150,8 +150,10 @@
 <section class="container-fluid ">
   <div class="row">
     <div class="col-2 shadow  py-2" id="sidebar">
-      
-        <h5 class="text-white text-center pt-3">Find Staff</h5>
+      <!-----here after searching for a particular employee already saved in the employee submodule, 
+        it will autofill the employee name, dept, branch & the date of that day, then the employee can sign in & out by checking the box and it is saved, 
+        the system will automatically save the time in which the employee signed in and out once the box is checked ------>
+        <h5 class="text-white text-center pt-3">Find employee</h5>
        <div class="border border-right-0 border-left-0 border-bottom-0  more_settings">
         <div class="input-group my-3 ">
             <input type="text" class="form-control-sm border border-dark py-0" placeholder="employee name">
@@ -174,7 +176,7 @@
                    <table class="table table-bordered border-primary table-hover table-hover-primary my-3" id="small_fonts">
                      <thead >
                        <tr class="text-center border-primary">
-                         <th class="px-5">Staff</th>
+                         <th class="px-5">Employee</th>
                          <th class="px-3">Dept</th>
                          <th class="px-3">Branch</th>
                          <th class="px-3">Date</th>
@@ -188,60 +190,57 @@
                          <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                          <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                          <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                         <td class="px-0"><input type="checkbox" class="border border-0 w-100"></td>
+                         <td class="px-0"><input type="checkbox" class="border border-0 w-100"></td>
                        </tr>
                        <tr>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="checkbox" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="checkbox" class="border border-0 w-100"></td>
                       </tr>
                       <tr>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="checkbox" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="checkbox" class="border border-0 w-100"></td>
                       </tr>
                       <tr>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                      
+                        <td class="px-0"><input type="checkbox" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="checkbox" class="border border-0 w-100"></td>
                       </tr>
                       <tr>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        
+                        <td class="px-0"><input type="checkbox" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="checkbox" class="border border-0 w-100"></td>
                       </tr>
                       <tr>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td> 
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                     
+                        <td class="px-0"><input type="checkbox" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="checkbox" class="border border-0 w-100"></td>
                       </tr>
-                   
-                       
                      </tbody>
                    </table>
-                 
-   
+              </div>
             </div>
-            <br>
+            <div class="row mb-0 pt-1">
+              <!------clicking this saves all the details also after editing it is also saved here too----------->
+             <button class="btn px-5 py-0 text-white mx-auto mb-0 bg-primary border border-dark"  ><b>SUBMIT</b></button>
+            </div>
         </form>
         
     </div>
@@ -251,20 +250,29 @@
 
 
 <section>
-  <div class="container-fluid bg-light shadow " id="sub_nav">
-    <button type="button" class="btn btn-primary py-1 " data-toggle="collapse" data-target="#home">History</button>
-    
-    <div id="home" class="collapse">
+  <div class="container-fluid bg-light shadow smaller_fonts" id="sub_nav">
+    <button type="button" class="btn btn-primary border border-primary  px-4" id="sidebar"  data-toggle="collapse" data-target="#menuI">History</button>
+<!------here user can search for previous attendance of a particular branch and or employee at a particular date ---------->    
+    <div id="menuI" class="collapse">
       <div class="container-fluid px-0">
         <div class="row py-2 ">
           <br>
           <div class="col-3 text-center form-group d-flex flex-row text-nowrap align-items-center">
-            <label for="email" class="mx-3 pt-1">Date:</label>
+            <label for="email" class="mx-3 pt-1">From:</label>
             <div class="input-group input-group-sm w-50">
-              <input type="text" class="form-control border border-primary ">
-              <div class="input-group-append">
-                <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-calendar-alt"></i></button>
-              </div>
+              <input type="text" class="form-control border border-primary" placeholder="yyyy-mm-dd">
+            </div>
+          </div> 
+          <div class="col-3 text-center form-group d-flex flex-row text-nowrap align-items-center">
+            <label for="email" class="mx-3 pt-1">To:</label>
+            <div class="input-group input-group-sm w-50">
+              <input type="text" class="form-control border border-primary" placeholder="yyyy-mm-dd">
+            </div>
+          </div> 
+          <div class="col-3 text-center form-group d-flex flex-row text-nowrap align-items-center">
+            <label for="email" class="mx-3 pt-1">Branch:</label>
+            <div class="input-group input-group-sm w-50">
+              <input type="text" class="form-control border border-primary" placeholder="yyyy-mm-dd">
             </div>
           </div>  
           <div class="col-3 text-center form-group d-flex flex-row text-nowrap align-items-center">
@@ -275,12 +283,14 @@
                 <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
               </div>
             </div>
-          </div>   
+          </div>  
+            
         </div>
              
-        <table class="table table-primary table-bordered table-striped table-sm" id="small_fonts">
-          <thead>
-            <tr>
+          <table class="table table-bordered  table-sm table-hover">
+            <thead class="bg-primary text-white ">
+              <!-----here the results of your search of previous will show, make it possible see all employees in a branch or attendance of a particula employee over a certain period -------->
+            <tr class="text-nowrap text-center">
               <th class="py-0 px-0 text-center">Employee Name</th>
               <th class="py-0 px-0 text-center">Date</th>
               <th class="py-0 px-0 text-center">Branch</th>
@@ -293,19 +303,34 @@
               
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td class="py-3"></td>
-              <td class="py-3"></td>
-              <td class="py-3"></td>
-              <td class="py-3"></td>
-              <td class="py-3"></td>
-              <td class="py-3"></td>
-              <td class="py-3"></td>
-              <td class="py-3"></td>
-              <td class="py-3"></td>
-
-            </tr>
+          <tbody class="">
+            <tr class="py-2 px-1">
+              <td class="px-3 py-3">
+                  
+              </td>
+              <td class="px-3 py-3">
+                  
+              </td>
+              <td class="px-3 py-3">
+                  
+              </td>
+              <td class="px-3 py-3">
+                
+              </td>
+              <td class="px-3 py-3">
+                
+              </td>
+              <td class="px-3 py-3">
+                
+              </td>
+              <td class="px-3 py-3">
+                
+              </td>
+              <td class="px-3 py-3">
+                
+              </td>
+             
+            
           </tbody>
         </table>
       </div>

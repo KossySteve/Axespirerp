@@ -1,7 +1,4 @@
- 
-Leave;  Application (code, Date, employee, Branch, types, date interval, purpose ), 
-        Approval (Leave application details, Remarks, checkbox accept or reject), 
-        Encashment
+
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -189,7 +186,7 @@ Leave;  Application (code, Date, employee, Branch, types, date interval, purpose
                     <h5 class="col-12 text-center text-white pb-3 bg-primary px-2 border border-left-0 border-right-0 border-top-0 border-dark" ><b>CALENDER</b></h5>
                       <div class="col px-5 mr-2">
                         <h6 class="text-primary">Calender Details</h6>
-                          
+                          <!-----a calender covers the user office working schedule for a certain period usually a year, it contains the workings hours and days--->
                           <div class="row form-group ">
                               <label for="email" class="col">Code:</label>
                               <div class="col-7 input-group w-100 ">
@@ -210,24 +207,12 @@ Leave;  Application (code, Date, employee, Branch, types, date interval, purpose
                                 
                             </div>
                             <div class="row form-group ">
-                              <label for="email" class="col">Days allowed:</label>
+                              <label for="email" class="col">Branch:</label>
                               <div class="col-7 input-group w-100 ">
-                                <input type="text" class=" form-control border border-primary">
-                              </div>
-                            </div>
-                            <div class="row form-group ">
-                              <label for="email" class="col">Workings days:</label>
-                              <div class="col-7 input-group w-100 ">
-                                <input type="text" class=" form-control border border-primary">
-                              </div>
-                            </div>
-                            <div class="row form-group ">
-                              <div class="col">Duration</div>
-                              <div class="col-7">
-                                  <select class="form-control  border border-primary  " id="sel1">
-                                      <option><b>Yearly</b></option>
-                                      <option><b>Monthly</b></option>
-                                  </select>
+                                  <input type="text" class="form-control border border-primary" placeholder="">
+                                  <div class="input-group-append">
+                                  <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
+                                  </div>
                               </div>
                             </div> 
                     
@@ -282,6 +267,7 @@ Leave;  Application (code, Date, employee, Branch, types, date interval, purpose
                                       </select>
                                 </div>
                               </div>
+                              <!----let the time format be in hr:min e,g 12:54 ---->
                               <div class="row form-group ">
                                 <label for="email" class="col">Start Time:</label>
                                 <div class="col-7 input-group w-100 ">
@@ -299,6 +285,7 @@ Leave;  Application (code, Date, employee, Branch, types, date interval, purpose
                       </div>
                      <div class="col">
                         <div class="row form-group ">
+                          <!----This coulmn is meant to contain specific relevant summary data like total working hours per week, total active hours previous week, this we will request from them later for now ignore------>
                           <div class="col-3"></div>
                           <div class="col-9">
                               <select class="form-control  border border-primary text-white bg-primary " id="sel1">
@@ -349,8 +336,7 @@ Leave;  Application (code, Date, employee, Branch, types, date interval, purpose
             <button type="button" class="btn btn-primary border border-primary " id="sidebar"  data-toggle="collapse" data-target="#menuI">Add Holiday</button>
            
                   <div id="menuI" class="collapse">
-                    <!--------here from the different types of taxes already saved in Taxes submodule, you choose a particular tax that involves this carrier
-                     Also you can create another table row to input another entry--------->
+                    <!--------here user can add a particular holiday to a calender which will reflect as a free day in the particular calender--------->
                     <div class="container mt-3 smaller_fonts ">
                      <table class="table table-bordered  table-sm table-hover">
                        <thead class="bg-primary text-white ">

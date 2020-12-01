@@ -181,7 +181,7 @@
               <h5 class="col-12 text-white text-center py-3 bg-primary px-2"><b>NEW DEPARTMENT</b></h5>
               <div class="col pr-3 px-3">
                 <h4 class="text-primary">Department Details</h4>
-                  
+                  <!---here you can create and edit department in particular branch--->
                   <div class="row form-group ">
                       <label for="email" class="col">Code:</label>
                       <div class="col-7 input-group w-100 ">
@@ -198,14 +198,14 @@
                   <div class="row form-group ">
                       <label for="email" class="col">Branch:</label>
                       <div class="col-7 input-group w-100 ">
-                        <input type="text" class="form-control border border-primary" placeholder="enter customer name">
+                        <input type="text" class="form-control border border-primary" placeholder="">
                         <div class="input-group-append">
                           <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
                         </div>
                       </div>
                   </div>
                   <div class="row form-group">
-                    <label for="email" class="col">As of:</label>
+                    <label for="email" class="col">Date:</label>
                     <div class="col-7 input-group w-100 ">
                       <input type="text" class="form-control border border-primary ">
                       <div class="input-group-append">
@@ -218,16 +218,15 @@
               </div>
               <div class="col"> </div>
             <div class="col">
+              <!---This column it will contain summary data for client such as total employees in a department etc----->
                 <div class="row form-group ">
                   <div class="col-3"></div>
                   <div class="col-9">
+
                       <select class="form-control  border border-primary text-white bg-primary " id="sel1">
-                          
-                          <option><b>Shift</b></option>
-                          <option><b>Account receiveable</b></option>
-                          <option><b>Account payable</b></option>
-                          <option><b>Sales</b></option>
-                        </select>
+                          <option><b>Total Employee</b></option>
+                          <option><b>Total Monthly Salary</b></option>
+                      </select>
                   </div>
                 </div>
                 <div class="row form-group mt-n4">
@@ -235,25 +234,14 @@
                   <div class="col-9 border border-left-0 border-right-0 border-white">
                       <select class="form-control  border border-primary text-white bg-primary " id="sel1">
                           
-                          <option><b>Staff Info</b></option>
-                          <option><b>Income</b></option>
-                          <option><b>Expense</b></option>
+                          <option><b></b></option>
+                          <option><b></b></option>
+                          <option><b></b></option>
                           <option><b></b></option>
                         </select>
                   </div>
                 </div>
-                <div class="row form-group mt-n3">
-                  <div class="col-3"></div>
-                  <div class="col-9">
-                      <select class="form-control  border border-primary text-white bg-primary " id="sel1">
-                          
-                          <option><b>PayRoll Summary</b></option>
-                          <option><b>Income</b></option>
-                          <option><b>Expense</b></option>
-                          <option><b></b></option>
-                        </select>
-                  </div>
-                </div>
+               
              </div>
              
           </div>
@@ -267,77 +255,12 @@
 </section>
 
 
-    <section>
-  
-      <div class="container-fluid bg-light shadow mt-2" id="sub_nav"> 
-              <button type="button" class="btn btn-primary " data-toggle="collapse" data-target="#menu1">more settings</button>
-              
-      
-              <div id="menu1" class="collapse">
-                <div class="container-fluid px-0">        
-                  <table class="table table-primary table-bordered table-striped table-sm">
-                    <thead>
-                      <tr>
-                        <th>Item Kit Code</th>
-                        <th>Item Kit Name</th>
-                        <th>UOM</th>
-                        <th>Quantity</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><input type="text" class=""></td>
-                        <td><input type="text" class=""></td>
-                        <td><input type="text" class=""></td>
-                        <td><input type="text" class=""></td>
-                        
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div id="menu2" class="collapse">
-                <div class="container-fluid px-0">        
-                    <table class="table table-primary table-bordered table-striped table-sm">
-                        <thead>
-                            <tr>
-                              <th>Item Kit Code</th>
-                              <th>Item Kit Name</th>
-                              <th>UOM</th>
-                              <th>Quantity</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td><input type="text" class=""></td>
-                              <td><input type="text" class=""></td>
-                              <td><input type="text" class=""></td>
-                              <td><input type="text" class=""></td>
-                              
-                            </tr>
-                          </tbody>
-                      </table>
-                </div>
-              </div>
-      
-        </div>
-    </section>
+<section></section>
 
 
 <footer>
   <br><br><br>
   
 </footer>
-
-<script>
-    $(document).ready(function(){
-      $('.dropdown-submenu a.test').on("click", function(e){
-        $(this).next('ul').toggle();
-        e.stopPropagation();
-        e.preventDefault();
-      });
-    });
-</script>
-
 </body>
 </html>

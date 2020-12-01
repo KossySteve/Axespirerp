@@ -150,8 +150,8 @@
 <section class="container-fluid ">
   <div class="row">
     <div class="col-2 shadow  py-2" id="sidebar">
-      
-        <h5 class="text-white text-center pt-3">Find Staff</h5>
+      <!-----here user can search for all the employees in a branch or department, and it will autofill their details on the table----->
+        <h5 class="text-white text-center pt-3">Find Employees</h5>
        <div class="border border-right-0 border-left-0 border-bottom-0  more_settings">
         <div class="input-group my-3 ">
             <input type="text" class="form-control-sm border border-dark py-0" placeholder=" enter dept or branch">
@@ -217,6 +217,7 @@
                       </div>
                    </div>     
                    <table class="table table-bordered border-primary table-hover table-hover-primary my-3" id="small_fonts">
+                     <!-------if you edit any aspect of the pay e.g change allowance based on job category  from N10,000 to N20,000 it will stand--------->
                      <thead >
                        <tr class="text-center border-primary">
                          <th>Staff</th>
@@ -225,6 +226,7 @@
                          <th class="px-4">Allowance</th>
                          <th class="px-4">Commission</th>
                          <th class="px-4">Pension</th>
+                         <th class="px-4">Tax</th>
                          <th class="px-4">Loan/Salary Advance</th>
                          <th class="px-4">Other deductions</th>
                          <th class="px-4">Attendance</th>
@@ -247,24 +249,10 @@
                          <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                          <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                          <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                         
+                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                        </tr>
                        <tr>
-                         
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        
-                      </tr>
-                      <tr>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
@@ -290,6 +278,7 @@
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         
                       </tr>
                       <tr>
@@ -304,7 +293,22 @@
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                      </tr>
+                      <tr>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                       </tr>
                       <tr>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td> 
@@ -318,7 +322,7 @@
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                       </tr>
                       <tr>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
@@ -332,16 +336,18 @@
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                         <td class="px-0"><input type="text" class="border border-0 w-100"></td>
-                        
+                        <td class="px-0"><input type="text" class="border border-0 w-100"></td>
                       </tr>
                         
                        
                      </tbody>
                    </table>
-                 
-   
+              </div>
             </div>
-        
+            <div class="row mb-0 py-1">
+              <!------clicking this saves all the details also after editing it is also saved here too----------->
+               <button class="btn px-5 py-0 text-white mx-auto bg-primary border border-dark"  ><b>SUBMIT</b></button>
+            </div>
         </form>
 
     </div>
@@ -349,68 +355,6 @@
 
 </section>
 
-
-<section>
-  <div class="container-fluid bg-light shadow " id="sub_nav">
-    <button type="button" class="btn btn-primary py-1 " data-toggle="collapse" data-target="#home">Payment History</button>
-    
-    <div id="home" class="collapse">
-      <div class="container-fluid px-0">
-        <div class="row py-2 ">
-          <br>
-          <div class="col-3 text-center form-group d-flex flex-row text-nowrap align-items-center">
-            <label for="email" class="mx-3 pt-1">Date:</label>
-            <div class="input-group input-group-sm w-50">
-              <input type="text" class="form-control border border-primary ">
-              <div class="input-group-append">
-                <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-calendar-alt"></i></button>
-              </div>
-            </div>
-          </div>  
-          <div class="col-3 text-center form-group d-flex flex-row text-nowrap align-items-center">
-            <label for="email" class="mx-3 pt-1">Account Name:</label>
-            <div class="input-group input-group-sm w-50">
-              <input type="text" class="form-control border border-primary ">
-              <div class="input-group-append">
-                <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-              </div>
-            </div>
-          </div>   
-        </div>
-             
-        <table class="table table-primary table-bordered table-striped table-sm" id="small_fonts">
-          <thead>
-            <tr>
-              <th class="py-0 px-0 text-center">Date</th>
-              <th class="py-0 px-0 text-center">Code</th>
-              <th class="py-0 px-0 text-center">Staff name</th>
-              <th class="py-0 px-0 text-center">Staff name</th>
-              <th class="py-0 px-0 text-center">Branch</th>
-              <th class="py-0 px-0 text-center">Previous Monthly Pay</th>
-              <th class="py-0 px-0 text-center">Previous Annual Pay</th>
-              
-              <th class="py-0 px-0 text-center">Memo</th>
-              
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="py-3"></td>
-              <td class="py-3"></td>
-              <td class="py-3"></td>
-              <td class="py-3"></td>
-              <td class="py-3"></td>
-              <td class="py-3"></td>
-              <td class="py-3"></td>
-
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-</div>
-</section>
 
 <footer>
   <br><br><br>
