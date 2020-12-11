@@ -202,8 +202,6 @@
               </div>
               <div class="col">
                <h4 class="text-primary">Client/Booking Details</h4>
-                
-             
                <div class="row form-group ">
                 <label for="email" class="col">Contact Name:</label>
                     <div class="col-7 input-group w-100 ">
@@ -320,14 +318,45 @@
                             <th class="text-center">Service name</th>
                             <th class="text-center">Complainant Name</th>
                             <th class="text-center">Description</th>
+                            <th class="text-center"></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><input type="text" class="mr-3 border border-0 w-100"></td>
-                            <td><input type="text" class="mr-3 border border-0 w-100"></td>
-                            <td><input type="text" class="mr-3 border border-0 w-100"></td>
-                            <td><input type="text" class="mr-3 border border-0 w-100"></td>
+                          <td class="">
+                            <div class="input-group ">
+                              <!----------------->
+                              <input type="text" class="form-control border border-primary" id="smallest_fonts" placeholder="">
+                              <div class="input-group-append ">
+                                <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
+                              </div>
+                            </div>
+                        </td>
+                        <td class="">
+                          <div class="input-group ">
+                            <!----------------->
+                            <input type="text" class="form-control border border-primary" id="smallest_fonts" placeholder="">
+                            <div class="input-group-append ">
+                              <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
+                            </div>
+                          </div>
+                      </td>
+                      <td class="">
+                        <div class="input-group ">
+                          <!----------------->
+                          <input type="text" class="form-control border border-primary" id="smallest_fonts" placeholder="">
+                          <div class="input-group-append ">
+                            <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
+                          </div>
+                        </div>
+                     </td>
+                      <td><textarea class="form-control border border-primary" name="" id="" cols="30" rows="1"></textarea></td>
+                      <td class="text-center">
+                        <!--------deletes this row --------->
+                        <button class="btn btn-sm btn-danger border border-dark smaller_fonts">delete</button>
+                            <!--------creates new row --------->
+                        <button class="btn btn-sm btn-primary border border-dark smaller_fonts">new</button>
+                      </td>
                             
                         </tr>
                     </tbody>

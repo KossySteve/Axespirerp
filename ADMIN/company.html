@@ -1,6 +1,3 @@
-<!----Name, code, Desc, Complaint Type--->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,7 +63,6 @@
   </style>
 </head>
 <body>
-
   <nav class="container-fluid" id="nav">
     <div class="container-fluid py-2">
       <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu1x"><span><i class="fas fa-cubes"></i></span> INVENTORY</a>
@@ -138,11 +134,11 @@
   <div class="row border border-left-0 border-bottom-0 border-top-0 border-dark pr-1">
     <div class="col-2 shadow py-2" id="sidebar">
     
-        <h5 class=" text-white text-center pt-3" ><b>Complaint</b></h5>
-       <div class="border border-right-0 border-left-0 border-bottom-0  more_settings">
+        <h5 class=" text-white text-center pt-3"><b>Company</b></h5>
+       <div class="border border-right-0 border-left-0 border-bottom-0 more_settings">
           <h6 class="text-white border border-right-0 border-left-0  py-2">Record :</h6>
           <div class="input-group mt-3">
-            <!--------you can search a checklist saved before and when you click it, it fills all the field with details and then can be edited--------->
+            <!--------you can search a particular item saved before and when you click it, it fills all the field with details and then can be edited--------->
             <input type="text" class="form-control-sm border border-primary" id="smallest_fonts" placeholder="search name or code">
             <div class="input-group-append">
               <button class="btn btn-sm btn-light border border-primary" ><i class="fas fa-search"></i></button>
@@ -155,51 +151,147 @@
         
       <form id="hover_effect" >
        <div class="form-row bg-light ml-3 pb-4 shadow border border-dark">
-            <h5 class="col-12 text-center py-3 bg-primary px-2 border border-left-0 border-right-0 border-top-0 border-dark" ><b>Complaint</b></h5>
-              <div class="col-6 px-5 mr-2">
-                <h6 class="text-primary">General Details</h6>
-                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                      <label for="email" class="mr-2">Code:</label>
-                      <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+            <h5 class="col-12 text-center py-3 bg-primary px-2 border border-left-0 border-right-0 border-top-0 border-dark" ><b>COMPANY DETAILS</b></h5>
+              <div class="col px-5 mr-2">
+                <h6>General Details</h6>
+                <div class="row form-group ">
+                  <label for="email" class="col">Code:</label>
+                  <div class="col-7 input-group w-100 ">
+                    <input type="text" class=" form-control border border-primary">
                   </div>
-                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Name:</label>
+                </div>
+                <div class="row form-group ">
+                  <label for="email" class="col">Name:</label>
+                  <div class="col-7 input-group w-100 ">
+                    <input type="text" class=" form-control border border-primary">
+                  </div>
+                </div>
+                <div class="row form-group ">
+                  <label for="comment" class="col">Description:</label>
+                  <div class="col-7 input-group w-100 ">
+                      <textarea class="form-control  w-75 border border-primary"  rows="2" id="comment"></textarea>
+                  </div> 
+                </div>
+
+               
+                <!------CHOOSE FILE OF logo------->
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-5">Company Logo:</label>
+                    <div class="input-group w-75">
+                      <input type="text" class="form-control border border-primary ">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                </div>
+                <div class="row form-group ">
+                  <label for="email" class="col">Website:</label>
+                  <div class="col-7 input-group w-100 ">
+                    <input type="text" class=" form-control border border-primary">
+                  </div>
+                </div>
+                <div class="row form-group ">
+                  <label for="email" class="col">Deactivate:</label>
+                  <div class="col-7 input-group w-100 ">
+                    <input type="checkbox" class=" form-control border border-primary" >
+                  </div>
+                </div>
+                 
+                
+            </div>
+            
+           <div class="col">
+            
+            <h6>Financials Details</h6>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Inception Date:</label>
                     <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
                 </div>
-                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="comment" class="">Description:</label>
-                    <textarea class="form-control  w-50 border border-primary"  rows="4" id="comment"></textarea>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">From:</label>
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">To:</label>
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                </div>
+                <div class="row form-group">
+                  <label for="sel1" class="col">Currency: </label>
+                  <div class="col-7">
+                      <select class="form-control  border border-primary " id="sel1">
+                          <option><b>NGN</b></option>
+                          <option><b>USD</b></option>
+                          <option><b>EURO</b></option>
+                          <option><b>GBP</b></option>
+                        </select>
                   </div>
-                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <!----------->
-                      <label for="email" class="mr-2">Complaint Type:</label>        
-                      <div class="input-group w-50">
-                        <input type="text" class="form-control border border-primary ">
-                        <div class="input-group-append">
-                          <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                        </div>
-                      </div>
-                  </div>
-                
-              </div>
-              <div class="col"></div>
-              <div class="col"></div>
+                </div>
+            </div>
+            <div class="col"></div>
+            
         </div>
       </form>
       <div class="row mb-0 py-1">
         <!------clicking this saves all the details also after editing it is also saved here too----------->
-       <button class="btn px-5 py-0 text-dark mx-auto mb-0 bg-primary border border-dark"  ><b>SUBMIT</b></button>
-      </div>
+       <button class="btn px-5 py-0 text-dark mx-auto mb-0 bg-primary border border-dark" ><b>SUBMIT</b></button>
+     </div>
     </div>
   </div>
 
+</section>
+
+<!---------Service details >> Service reminder details(Reminder, Readings, UOM, Duration, ), 
+    Service Checklist, duration (based on customer or customer equipment)--------------->
+<section>
+    
+  <div class="container-fluid bg-light shadow my-1 border border-dark border-left-0 border-right-0 border-top-0" id="sub_nav">
+    <button type="button" class="btn btn-primary border border-primary" id="sidebar"  data-toggle="collapse" data-target="#menuI">Contact details</button>
+   
+          <!------------>
+          <div id="menuI" class="collapse">
+            <div class="form-row bg-light mt-3 ">
+                <div class="col-4 pr-3">
+                  <h6>more Details</h6>
+                  <div class="row form-group ">
+                    <label for="email" class="col">Phone No 1:</label>
+                    <div class="col-7 input-group w-100 ">
+                      <input type="text" class=" form-control border border-primary">
+                    </div>
+                  </div>
+                  <div class="row form-group ">
+                    <label for="email" class="col">Email:</label>
+                    <div class="col-7 input-group w-100 ">
+                      <input type="text" class=" form-control border border-primary">
+                    </div>
+                  </div>
+                    <div class="row form-group ">
+                      <label for="comment" class="col">Address:</label>
+                      <div class="col-7 input-group w-100 ">
+                          <textarea class="form-control  w-75 border border-primary"  rows="2" id="comment"></textarea>
+                      </div> 
+                    </div>
+                    <div class="row form-group ">
+                      <label for="email" class="col">Website:</label>
+                      <div class="col-7 input-group w-100 ">
+                        <input type="text" class=" form-control border border-primary">
+                      </div>
+                    </div>
+                     
+                
+                </div>
+                <div class="col-4 pr-3"></div>
+                <div class="col-4 pr-3 mt-5"></div>
+            </div>
+          </div>
+         
+
+	  </div>
 </section>
 
 <footer>
   <br><br><br>
   
 </footer>
-
 
 </body>
 </html>

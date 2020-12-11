@@ -19,19 +19,14 @@
     body {
       font-family: 'Montserrat', sans-serif;
       font-weight: bolder;
+      margin: 0;
       
     }
   	#nav a {
-  		color: #242A33;
+  		color: black;
       font-family: 'Russo One', sans-serif;
-      font-size: 15px;
 	  }
 
-      
-    #nav a:hover {
-      color: white;
-    }
-    
     #more_settings button {
 		 font-size: 11px;     
      }
@@ -51,12 +46,10 @@
     #sub_nav a {
      font-size: 13px;
     }
-
     #sub_nav button {
      font-size: 15px;
      font-weight: bolder;
     }
-
 
    
   </style>
@@ -165,189 +158,147 @@
 </nav>
 <section class="container-fluid ">
   <div class="row">
-    <div class="col-2 shadow  pt-2" id="sidebar">
-      
-        <h5 class="text-white text-center pt-3"><b>Item/Kit</b></h5>
+    <div class="col-2 shadow  py-2" id="sidebar">
+        <h5 class="text-white text-center pt-3"><b>Entry</b></h5>
        <div class="border border-right-0 border-left-0 border-bottom-0  more_settings">
-           <h6 class="text-white border border-right-0 border-left-0 border-bottom-0 pt-2">Find :</h6>
-           <table class="table table-bordered table-striped table-hover py-0">
-             <thead>
-               <tr>
-                 <th class="text-white"><b>Name</b></th> 
-               </tr>
-             </thead>
-             <tbody>
-               <tr>
-                 <td>
-                  <div class="input-group">
-                    <input type="text" class="form-control border border-primary " placeholder="enter customer name">
-                    <div class="input-group-append">
-                      <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                    </div>
-                  </div> 
-                 </td>
-               </tr>
-             </tbody>
-           </table>
-         </div >
-         <div></div>
-    </div>
-    <div class="col shadow pt-2 border border-bottom-0 border-left-0 border-right-0 border-dark">
-        
-         <form>
-          <div class="form-row bg-light ml-4 pb-4 shadow">
-            <h5 class="col-12 text-white text-center py-3 bg-primary px-2"><b>SALES TRANSACTION</b></h5>
-            <div class="col pr-3 px-3">
-              <h6 class="text-primary">Transaction Details</h6>
-                
-                <div class="row form-group ">
-                    <label for="email" class="col">Code:</label>
-                    <div class="col-7 input-group w-100 ">
-                      <input type="text" class=" form-control border border-primary">
-                    </div>
-                </div>
-                <div class="row form-group ">
-                    <label for="email" class="col">Item/Kit:</label>
-                    <div class="col-7 input-group w-100 ">
-                      <input type="text" class="form-control border border-primary">
-                      <div class="input-group-append">
-                        <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
-                      </div>
-                    </div>
-                </div>
-                <div class="row form-group ">
-                    <label for="email" class="col">Customer Name:</label>
-                    <div class="col-7 input-group w-100 ">
-                      <input type="text" class="form-control border border-primary">
-                      <div class="input-group-append">
-                        <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
-                      </div>
-                    </div>
-                </div>
-               
-                <div class="row form-group ">
-                  <label for="email" class="col">Quantity:</label>
-                  <div class="col-7 input-group w-100 ">
-                    <input type="text" class=" form-control border border-primary">
-                  </div>
-              </div>
-              <div class="row form-group ">
-                <label for="email" class="col">Price:</label>
-                <div class="col-7 input-group w-100 ">
-                  <input type="text" class=" form-control border border-primary">
-                </div>
-            </div>
-            <div class="row form-group">
-              <label for="sel1" class="col">Payment type: </label>
-              <div class="col-7">
-                  <select class="form-control  border border-primary " id="sel1">
-                      <option><b></b></option>
-                      <option><b>Credit</b></option>
-                      <option><b>Cash</b></option>
-                      <option><b>Cheque</b></option>
-                      <option><b>Bank Transfer</b></option>
-                      
-                    </select>
-              </div>
-            </div>
-             
-             
-                
-                                            
-                
-            </div>
-            <div class="col">
-             <h6 class="text-primary">more Details</h6>
-             <div class="row form-group ">
-              <label for="email" class="col">Discount:</label>
-              <div class="col-7 input-group w-100 ">
-                <input type="text" class=" form-control border border-primary">
-              </div>
-            </div>
-            <div class="row form-group ">
-              <label for="email" class="col">Discount Acc:</label>
-              <div class="col-7 input-group w-100 ">
-                <input type="text" class=" form-control border border-primary">
-              </div>
-            </div>
-             <div class="row form-group ">
-              <label for="email" class="col">Ammount Paid:</label>
-              <div class="col-7 input-group w-100 ">
-                <input type="text" class=" form-control border border-primary">
-              </div>
-          </div>
-             <div class="row form-group ">
-              <label for="email" class="col">Balance:</label>
-              <div class="col-7 input-group w-100 ">
-                <input type="text" class=" form-control border border-primary">
-              </div>
-            </div>
-            <div class="row form-group">
-              <label for="sel1" class="col">Currency: </label>
-              <div class="col-7">
-                  <select class="form-control  border border-primary " id="sel1">
-                      <option><b>NGN</b></option>
-                      <option><b>USD</b></option>
-                      <option><b>EURO</b></option>
-                      <option><b>GBP</b></option>
-                    </select>
-              </div>
-            </div>
-          
-             <div class="row form-group ">
-              <label for="email" class="col">Giver Acc:</label>
-              <div class="col-7 input-group w-100 ">
-                <input type="text" class="form-control border border-primary" placeholder="">
+           <h6 class="text-white border border-right-0 border-left-0 border-bottom-0 pt-2">Record :</h6>
+           <div class="input-group mt-n2 ">
+                <input type="text" class="form-control border border-dark py-0" placeholder="enter entry code">
                 <div class="input-group-append">
-                  <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
+                   <button class="btn btn-light border border-dark" type="submit"><i class="fas fa-search"></i></button>
                 </div>
-              </div>
-           </div>
-           <div class="row form-group ">
-            <label for="email" class="col">Receiver Acc:</label>
-            <div class="col-7 input-group w-100 ">
-              <input type="text" class="form-control border border-primary" placeholder="">
-              <div class="input-group-append">
-                <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
-              </div>
-            </div>
-           </div>
-              
-        
-              <br>
-            
-               
-            </div>
-           <div class="col"></div>
-           
-        </div>
-      </form>
-      <div class="d-flex flex-row justify-content-center">
-        <button type="button" class="btn btn-sm btn-primary px-5 mb-0 my-1 "><b>SUBMIT</b></button>
-      </div>
-     
+          </div>
+         </div >
+       
     </div>
-  </div>
-
+    <div class="col py-2 shadow border border-bottom-0 border-left-0 border-right-0 border-dark">
+            <h5 class="col-12 text-white text-center py-2 px-n5 bg-primary shadow"><b>JOURNAL ENTRY</b></h5>
+            <form>
+                
+                 <div class="container-fluid">
+                        <div class="row mx-3 d-flex justify-content-around">
+                         <div class="form-group d-flex flex-row text-nowrap align-items-center">
+                             <label for="sel1" class="mr-4">Currency:</label>
+                             <select class="form-control w-75 border border-primary ml-5" id="sel1">
+                               <option>NGN</option>
+                               <option>USD</option>
+                               <option>EURO</option>
+                               <option>GBP</option>
+                             </select>
+                         </div>
+                           <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                             <label for="email" class="mr-2"> Exchange Rate:</label>
+                             <input type="text" class="form-control w-25 border-primary py-n3" id="email" name="email"> 
+                         </div>
+                           <div class="mr-0">
+                             <div class=" text-center form-group d-flex flex-row text-nowrap align-items-center">
+                                 <label for="email" class="mx-3 pt-1">Date:</label>
+                                 <div class="input-group input-group-sm w-50">
+                                   <input type="text" class="form-control border border-primary ">
+                                   <div class="input-group-append">
+                                     <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-calendar-alt"></i></button>
+                                   </div>
+                                 </div>
+                               </div>
+                           </div>
+                        </div>     
+                        <table class="table table-bordered border-primary table-hover table-hover-primary my-3" id="small_fonts">
+                          <!-------if you edit any aspect of the pay e.g change allowance based on job category  from N10,000 to N20,000 it will stand--------->
+                          <thead>
+                            <tr class="text-center border-primary">
+                              <th class="px-3">Account</th>
+                              <th class="px-4">Debit</th>
+                              <th class="px-4">Credit</th>
+                              <th class="px-4">Narration</th>
+                            </tr>
+                          </thead>
+                          <tbody class="bg-white">
+                            <tr>
+                              <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                              <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                              <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                              <td class="px-0"><textarea name="" class="border border-0 w-100" rows="1"></textarea></td>
+                            </tr>
+                            <tr>
+                             <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                             <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                             <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                             <td class="px-0"><textarea name="" class="border border-0 w-100" rows="1"></textarea></td>
+                           </tr>
+                         
+                           <tr>
+                             <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                             <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                             <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                             <td class="px-0"><textarea name="" class="border border-0 w-100" rows="1"></textarea></td>
+                           </tr>
+                           <tr>
+                             <td class="px-0"><input type="text" class="border border-0 w-100"></td> 
+                             <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                             <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                             <td class="px-0"><textarea name="" class="border border-0 w-100" rows="1"></textarea></td>
+                             
+                           </tr>
+                           <tr>
+                             <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                             <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                             <td class="px-0"><input type="text" class="border border-0 w-100"></td>
+                             <td class="px-0"><textarea name="" class="border border-0 w-100" rows="1"></textarea></td>
+                           </tr>
+                          </tbody>
+                        </table>
+                        <br>
+                        <div>
+                           <h5><b>Total</b></h5>
+                           <hr>
+                        </div>
+                   </div>
+                 
+                 <div class="row mb-0 py-1">
+                   <!------clicking this saves all the details also after editing it is also saved here too----------->
+                    <button class="btn px-5 py-0 text-white mx-auto bg-primary border border-dark"  ><b>SUBMIT</b></button>
+                 </div>
+             </form>
+    </div>
 </section>
 
 <section>
-    <div class="container-fluid bg-light shadow py-1" id="sub_nav"> 
+    <div class="container-fluid shadow py-1" id="sub_nav"> 
             <button type="button" class="btn btn-primary py-0  px-5" data-toggle="collapse" data-target="#menu1">View All</button>
-            <button type="button" class="btn btn-primary py-0  px-5" data-toggle="collapse" data-target="#menuII">Invoice</button>
+            
             <div id="menu1" class="collapse">
-              <div class="container-fluid px-0">        
-                <table class="table table-primary table-bordered table-striped table-sm">
+              <div class="container-fluid px-0">
+                <div class="row p-3">
+                    <div class=" text-center form-group d-flex flex-row text-nowrap align-items-center">
+                        <label for="email" class="mx-3 pt-1">From:</label>
+                        <div class="input-group input-group-sm w-50">
+                          <input type="text" class="form-control border border-primary " placeholder="yyyy-mm-dd">
+                          <div class="input-group-append">
+                            <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-calendar-alt"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                    <div class=" text-center form-group d-flex flex-row text-nowrap align-items-center">
+                        <label for="email" class="mx-3 pt-1">To:</label>
+                        <div class="input-group input-group-sm w-50">
+                          <input type="text" class="form-control border border-primary " placeholder="yyyy-mm-dd">
+                          <div class="input-group-append">
+                            <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-calendar-alt"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                </div>        
+                <table class="table table-bordered table-sm px-3">
                   <thead>
-                    <tr>
-                      <th class="text-center">Name</th>
-                      <th class="text-center">Item/Service</th>
-                      <th class="text-center">Price</th>
-                      <th class="text-center">Paid</th>
-                      <th class="text-center">Discount</th>
-                      <th class="text-center">Balance</th>
-                      <th class="text-center">Payment Mode</th>
-                      <th class="text-center">Date</th>
+                    <tr class="bg-light">
+                      <th class="text-center">Date/Time</th>
+                      <th class="text-center">Entry No</th>
+                      <th class="text-center">Employee</th>
+                      <th class="text-center">Credit Account</th>
+                      <th class="text-center">Debit Account</th>
+                      <th class="text-center">Amount</th>
+                      <th class="text-center">Narration</th>
+                      
                       <th></th>
                     </tr>
                   </thead>
@@ -360,11 +311,12 @@
                       <td class="px-3 py-3"></td>
                       <td class="px-3 py-3"></td>
                       <td class="px-3 py-3"></td>
-                      <td class="px-3 py-3"></td>
                       <td class="text-center">
                         <!--------deletes this row --------->
-                        <button class="btn btn-sm btn-danger border border-dark smaller_fonts">delete</button>
                         <button class="btn btn-sm btn-primary border border-dark smaller_fonts">edit</button>
+                        <button class="btn btn-sm btn-danger border border-dark smaller_fonts">delete</button>
+                        
+                        
                      </td>
                     </tr>
                   </tbody>
@@ -375,10 +327,12 @@
         </div>
   </section>
 
+
 <footer>
   <br><br><br>
   
 </footer>
+
 
 
 </body>

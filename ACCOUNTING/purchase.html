@@ -115,25 +115,7 @@
           
           </div>
           <div id="menu3" class="collapse">
-            <div class="d-flex flex-row" id="sub_nav">
-              <div class="dropdown-item d-flex flex-column px-0">
-                <a class="btn rounded-0 text-primary small" href="contact.html">Contact</a>
-              </div>
-              <div class="dropdown-item d-flex flex-column px-0">
-                <a class="btn rounded-0 text-primary small" href="lead_contact.html">Lead contact</a>
-                
-              </div>
-              <div class="dropdown-item d-flex flex-column px-0">
-                <a class="btn rounded-0 text-primary small" href="lead_recording.html">Lead recording</a>
-               
-              </div>
-              <div class="dropdown-item d-flex flex-column px-0">
-                
-                <a class="btn rounded-0 text-primary small" href="quotation.html">Quotation</a>
-              </div>
-      
-              
-          </div>
+            
           </div>
           <div id="menu4" class="collapse">
           </div>
@@ -162,6 +144,14 @@
               <div class="dropdown-item d-flex flex-column px-0">
                 <a class="btn rounded-0 text-primary small" href="purchase.html">purchase</a>
                 <a class="btn rounded-0 text-primary small" href="report.html">report</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="debts.html">debts</a>
+                <a class="btn rounded-0 text-primary small" href="financial_report.html">financials</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="fixed_assets.html">fixed assets</a>
+                <a class="btn rounded-0 text-primary small" href="journal_entry.html">journal entry</a>
               </div>
             </div>
           </div>
@@ -217,7 +207,7 @@
                     </div>
                 </div>
                 <div class="row form-group ">
-                    <label for="email" class="col">Item/Kit:</label>
+                    <label for="email" class="col">Item:</label>
                     <div class="col-7 input-group w-100 ">
                       <input type="text" class="form-control border border-primary">
                       <div class="input-group-append">
@@ -239,50 +229,56 @@
                   <div class="col-7 input-group w-100 ">
                     <input type="text" class=" form-control border border-primary">
                   </div>
-              </div> 
+              </div>
+                 
+            <div class="row form-group ">
+              <label for="email" class="col">Cost Price:</label>
+              <div class="col-7 input-group w-100 ">
+                <input type="text" class=" form-control border border-primary">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label for="sel1" class="col">Payment mode: </label>
+              <div class="col-7">
+                  <select class="form-control  border border-primary " id="sel1">
+                      <option><b></b></option>
+                      <option><b>Cheque</b></option>
+                      <option><b>Bank Transfer</b></option>
+                      <option><b>Cash</b></option>
+                      <option><b>Credit</b></option>
+                    </select>
+              </div>
+            </div>
+         
                 
             </div>
             <div class="col">
              <h4 class="text-primary">Transaction Details</h4>
-              
-            
-            <div class="row form-group ">
-                <label for="email" class="col">Price:</label>
+             
+              <div class="row form-group ">
+                <label for="email" class="col">Giver Acc:</label>
                 <div class="col-7 input-group w-100 ">
-                  <input type="text" class=" form-control border border-primary">
+                  <input type="text" class="form-control border border-primary" placeholder="">
+                  <div class="input-group-append">
+                    <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
+                  </div>
                 </div>
             </div>
             <div class="row form-group ">
-                <label for="email" class="col">Pay mode:</label>
-                <div class="col-7 dropdown  ">
-                  <button type="button" class="btn border-primary w-100  dropdown-toggle bg-white" data-toggle="dropdown">
-                    <span class="px-5"></span>
-                  </button>
-                  <div class="dropdown-menu border-primary">
-                    <a class="dropdown-item bg-light px-1" href="#" id="small_fonts"><b>Cash</b><input type="text" placeholder="enter acc name" class=" px-2 form-control-sm pl-2 border border-primary">  </a>
-                    <a class="dropdown-item bg-light px-1" href="#" id="small_fonts"><b>Credit</b></a>
-                    
-                  </div>
+              <label for="email" class="col">Receiver Acc:</label>
+              <div class="col-7 input-group w-100 ">
+                <input type="text" class="form-control border border-primary" placeholder="">
+                <div class="input-group-append">
+                  <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
                 </div>
               </div>
-            
+            </div>
               <div class="row form-group ">
                 <label for="email" class="col">Balance:</label>
                 <div class="col-7 input-group w-100 ">
                   <input type="text" class=" form-control border border-primary">
                 </div>
               </div>
-            
-             <div class="row form-group">
-                <label for="email" class="col">As of:</label>
-                <div class="col-7 input-group w-100 ">
-                  <input type="text" class="form-control border border-primary ">
-                  <div class="input-group-append">
-                    <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-calendar-alt"></i></button>
-                  </div>
-                </div>
-              </div>
-              
               <div class="row form-group">
                 <label for="sel1" class="col">Currency: </label>
                 <div class="col-7">
@@ -294,6 +290,9 @@
                       </select>
                 </div>
               </div>
+         
+              
+              
               <br>
             
                
@@ -339,7 +338,9 @@
            
         </div>
       </form>
-      <div class="d-flex flex-row justify-content-center"><button type="button" class="btn btn-sm btn-primary px-5 mb-0 my-1 "><b>SUBMIT</b></button></div>
+      <div class="d-flex flex-row justify-content-center">
+         <button type="button" class="btn btn-sm btn-primary px-5 mb-0 my-1 "><b>SUBMIT</b></button>
+      </div>
      
     </div>
   </div>
@@ -347,37 +348,57 @@
 </section>
 
 <section>
-    <div class="container-fluid bg-light shadow py-1" id="sub_nav"> 
-            <button type="button" class="btn btn-primary py-0  px-5" data-toggle="collapse" data-target="#menu1">View All</button>
-            <div id="menu1" class="collapse">
-              <div class="container-fluid px-0">        
-                <table class="table table-primary table-bordered table-striped table-sm">
-                  <thead>
-                    <tr>
-                      <th class="text-center">Name</th>
-                      <th class="text-center">Currency</th>
-                      <th class="text-center">Account</th>
-                      <th class="text-center">Balance</th>
-                      <th class="text-center">Payment</th>
-                      <th class="text-center">Date</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="px-3 py-3"></td>
-                      <td class="px-3 py-3"></td>
-                      <td class="px-3 py-3"></td>
-                      <td class="px-3 py-3"></td>
-                      <td class="px-3 py-3"></td>
-                      <td class="px-3 py-3"></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-    
+  <div class="container-fluid bg-light shadow py-1" id="sub_nav"> 
+          <button type="button" class="btn btn-primary py-0  px-5" data-toggle="collapse" data-target="#menuIII">Add Inventory</button>
+          <button type="button" class="btn btn-primary py-0  px-5" data-toggle="collapse" data-target="#menuII">Invoice</button>
+          
+         
+      
+        <div id="menuIII" class="collapse">
+          <div class="container-fluid px-3 mt-3 smaller_fonts ">
+            <table class="table table-bordered  table-sm table-hover">
+               <!--------------->
+              <thead class="bg-primary text-white ">
+                <tr class="text-nowrap text-center">
+                  <td>Item</td>
+                  <!--------Item name --------->
+                  <td>Group</td>
+                  <td>Supplier</td>
+                  <td>Qty</td>
+                  <!--------please also apply Sales rate and Mark up relationship algorithm you created in Inventory module here --------->
+                  <td>Sale Rate</td>
+                  <td>Purchase Rate</td>
+                  <td>Standard Cost</td>
+                  <td>Mark up</td>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody class="">
+                <tr class="py-2 px-1">
+                  <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
+                  <td class=""><input type="text" class="form-control border border-primary" placeholder=""></td>
+                  <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
+                  <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
+                  <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
+                  <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
+                  <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
+                  <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
+                  <td class="text-center text-nowrap">
+                    <!--------deletes this row --------->
+                    <button class="btn btn-sm btn-danger border border-dark smaller_fonts">delete</button>
+                        <!--------creates new row --------->
+                    <button class="btn btn-sm btn-primary border border-dark smaller_fonts">new</button>
+                  </td>
+                </tr>
+                  
+              </tbody>
+            </table> 
+
+           </div>
         </div>
-  </section>
+      </div>
+</section>
+
 
 <footer>
   <br><br><br>

@@ -134,7 +134,7 @@
   <div class="row border border-left-0 border-bottom-0 border-top-0 border-dark pr-1">
     <div class="col-2 shadow py-2" id="sidebar">
     
-        <h5 class=" text-white text-center pt-3"><b>Service</b></h5>
+        <h5 class=" text-white text-center pt-3"><b>Branches</b></h5>
        <div class="border border-right-0 border-left-0 border-bottom-0 more_settings">
           <h6 class="text-white border border-right-0 border-left-0  py-2">Record :</h6>
           <div class="input-group mt-3">
@@ -151,84 +151,98 @@
         
       <form id="hover_effect" >
        <div class="form-row bg-light ml-3 pb-4 shadow border border-dark">
-            <h5 class="col-12 text-center py-3 bg-primary px-2 border border-left-0 border-right-0 border-top-0 border-dark" ><b>SERVICE DETAILS</b></h5>
+            <h5 class="col-12 text-center py-3 bg-primary px-2 border border-left-0 border-right-0 border-top-0 border-dark"><b>BRANCH DETAILS</b></h5>
               <div class="col px-5 mr-2">
-                <h6>General Details</h6>
-              <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Code:</label>
-                    <input type="text" class="form-control w-75 border-primary py-n3" id="email" name="email" disabled> 
-                </div>
-                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Name:</label>
-                    <input type="text" class="form-control w-75 border-primary py-n3" id="email" name="email" placeholder=""> 
-                </div>
-                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                  <label for="comment" class="">Description:</label>
-                  <textarea class="form-control  w-75 border border-primary"  rows="2" id="comment"></textarea>
-                </div>
-               
-                <!------------->
-                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Group:</label>
-                    <div class="input-group w-75">
-                      <input type="text" class="form-control border border-primary ">
-                      <div class="input-group-append">
-                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                      </div>
-                    </div>
-                </div>
-                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Category:</label>
-                    <div class="input-group w-75">
-                      <input type="text" class="form-control border border-primary ">
-                      <div class="input-group-append">
-                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                      </div>
-                    </div>
-                </div>
-                 <!-----the expertise here should count when assigning service----->
-                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Expertise:</label>
-                    <div class="input-group w-75">
-                      <input type="text" class="form-control border border-primary ">
-                      <div class="input-group-append">
-                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                      </div>
-                    </div>
-                </div>
-                <div class="row">
-                  <div class="col-3 mr-1"></div>
-                  <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="remember" required> Outsource
-                    </label>
+                <h6 class="text-primary">General Details</h6>
+                <div class="row form-group ">
+                  <label for="email" class="col">Code:</label>
+                  <div class="col-7 input-group w-100 ">
+                    <input type="text" class=" form-control border border-primary">
                   </div>
                 </div>
-                <div class="row">
-                    <div class="col-3 mr-1"></div>
-                    <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
-                      <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" name="remember" required> Deactivate
-                      </label>
+                <div class="row form-group ">
+                  <label for="email" class="col">Name:</label>
+                  <div class="col-7 input-group w-100 ">
+                    <input type="text" class=" form-control border border-primary">
+                  </div>
+                </div>
+                <div class="row form-group ">
+                  <label for="comment" class="col">Description:</label>
+                  <div class="col-7 input-group w-100 ">
+                      <textarea class="form-control  w-75 border border-primary"  rows="2" id="comment"></textarea>
+                  </div> 
+                </div>
+
+               
+                <!------CHOOSE FILE OF logo------->
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-5">Branch Logo:</label>
+                    <div class="input-group w-75 ml-4">
+                      <input type="text" class="form-control border border-primary ">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                      </div>
                     </div>
                 </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-5">Company:</label>
+                    <div class="input-group w-75 ml-5">
+                      <input type="text" class="form-control border border-primary ">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                </div>
+                <div class="row form-group ">
+                  <label for="email" class="col">Website:</label>
+                  <div class="col-7 input-group w-100 ">
+                    <input type="text" class=" form-control border border-primary">
+                  </div>
+                </div>
+                <div class="row form-group ">
+                  <label for="email" class="col">Deactivate:</label>
+                  <div class="col-7 input-group w-100 ">
+                    <input type="checkbox" class=" form-control border border-primary" >
+                  </div>
+                </div>
+                 
                 
             </div>
             
            <div class="col">
             
-            <h6>Price Details</h6>
+            <h6 class="text-primary">Financial Details</h6>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Standard Cost:</label>
+                    <label for="email" class="mr-2">Inception Date:</label>
                     <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Sale Rate:</label>
+                    <label for="email" class="mr-2">From:</label>
                     <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                    <label for="email" class="mr-2">Mark Up:</label>
+                    <label for="email" class="mr-2">To:</label>
                     <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                </div>
+                <div class="row form-group">
+                  <label for="sel1" class="col">Currency: </label>
+                  <div class="col-6">
+                      <select class="form-control  border border-primary " id="sel1">
+                          <option><b>NGN</b></option>
+                          <option><b>USD</b></option>
+                          <option><b>EURO</b></option>
+                          <option><b>GBP</b></option>
+                        </select>
+                  </div>
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-5">Branch Executive:</label>
+                    <div class="input-group w-75 ml-3">
+                      <input type="text" class="form-control border border-primary ">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
                 </div>
             </div>
             <div class="col"></div>
@@ -249,48 +263,40 @@
 <section>
     
   <div class="container-fluid bg-light shadow my-1 border border-dark border-left-0 border-right-0 border-top-0" id="sub_nav">
-    <button type="button" class="btn btn-primary border border-primary " id="sidebar"  data-toggle="collapse" data-target="#menuI">Service Reminder</button>
-    <button type="button" class="btn btn-primary border border-primary " id="sidebar"  data-toggle="collapse" data-target="#menuII">Service Checklist</button>
-    <button type="button" class="btn btn-primary border border-primary " id="sidebar"  data-toggle="collapse" data-target="#menuIII">Service Duration</button>
+    <button type="button" class="btn btn-primary border border-primary" id="sidebar"  data-toggle="collapse" data-target="#menuI">Contact details</button>
+    <button type="button" class="btn btn-primary border border-primary" id="sidebar"  data-toggle="collapse" data-target="#menuII">Tax details</button>
+    <button type="button" class="btn btn-primary border border-primary" id="sidebar"  data-toggle="collapse" data-target="#menuIII">Negative Stock</button>
+    <button type="button" class="btn btn-primary border border-primary" id="sidebar"  data-toggle="collapse" data-target="#menuIV">Code Config</button>
+   
           <!------------>
           <div id="menuI" class="collapse">
             <div class="form-row bg-light mt-3 ">
                 <div class="col-4 pr-3">
                   <h6>more Details</h6>
                   <div class="row form-group ">
-                    <label for="email" class="col">Reminder:</label>
-                        <div class="col-7 input-group w-100 ">
-                            <input type="text" class="form-control border border-primary" placeholder="">
-                            <div class="input-group-append">
-                            <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
-                            </div>
-                        </div>
+                    <label for="email" class="col">Phone No 1:</label>
+                    <div class="col-7 input-group w-100 ">
+                      <input type="text" class=" form-control border border-primary">
                     </div>
-                    
+                  </div>
+                  <div class="row form-group ">
+                    <label for="email" class="col">Email:</label>
+                    <div class="col-7 input-group w-100 ">
+                      <input type="text" class=" form-control border border-primary">
+                    </div>
+                  </div>
                     <div class="row form-group ">
-                        <label for="email" class="col">Visit Interval :</label>
-                        <div class="col-7 row pl-0">
-                          <div class="col-7 input-group w-100 px-0  ">
-                              <input type="text" class="form-control border border-primary ">
-                             
-                          </div>
-                          <div class="col">
-                            <input type="text" class="  form-control border border-primary" placeholder=""> UOM 
-                          </div>
-                        </div>
+                      <label for="comment" class="col">Address:</label>
+                      <div class="col-7 input-group w-100 ">
+                          <textarea class="form-control  w-75 border border-primary"  rows="2" id="comment"></textarea>
+                      </div> 
+                    </div>
+                    <div class="row form-group ">
+                      <label for="email" class="col">Website:</label>
+                      <div class="col-7 input-group w-100 ">
+                        <input type="text" class=" form-control border border-primary">
                       </div>
-                      <div class="row form-group ">
-                        <label for="email" class="col"> Usage Reading Interval :</label>
-                        <div class="col-7 row pl-0">
-                          <div class="col-7 input-group w-100 px-0  ">
-                              <input type="text" class="form-control border border-primary ">
-                             
-                          </div>
-                          <div class="col">
-                             <input type="text" class="  form-control border border-primary" placeholder="">UOM
-                          </div>
-                        </div>
-                      </div>
+                    </div>
                      
                 
                 </div>
@@ -298,81 +304,97 @@
                 <div class="col-4 pr-3 mt-5"></div>
             </div>
           </div>
-          <div id="menuII" class="collapse">
-               <!----------------->
-               <div class="container mt-3 smaller_fonts ">
-                <table class="table table-bordered  table-sm table-hover">
-                   <!---------->
-                  <thead class="bg-primary text-white ">
-                    <tr class="text-nowrap text-center">
-                      
-                      <td>Checklist</td>
-                      <td></td>
-                    </tr>
-                  </thead>
-                  <tbody class="">
-                    <tr class="py-2 px-1">
-                 
-                    <td class="">
-                        <div class="input-group ">
-                          <!--------you can see and choose from previously recorded branches --------->
-                          <input type="text" class="form-control border border-primary" id="smallest_fonts" placeholder="name or code">
-                          <div class="input-group-append ">
-                            <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
-                          </div>
-                        </div>
-                    </td>
-                    
-                      <td class="text-center">
-                        <!--------deletes this row --------->
-                        <button class="btn btn-sm btn-danger border border-dark smaller_fonts">delete</button>
-                            <!--------creates new row --------->
-                        <button class="btn btn-sm btn-primary border border-dark smaller_fonts">new</button>
-                      </td>
-                  </tbody>
-                </table> 
-  
-               </div>
-          </div>
-                  <!------------>
-                  <div id="menuIII" class="collapse">
+           
+        <div id="menuII" class="collapse">
+            <div class="container px-3 mt-3 smaller_fonts ">
+              <table class="table table-bordered  table-sm table-hover">
+                 <!--------------->
+                <thead class="bg-primary text-white ">
+                  <tr class="text-nowrap text-center">
+                    <td>Tax Type</td>
+                    <td>Effective From</td>
+                    <td>Effective To</td>
+                    <td></td>
                     <!----------------->
-                    <div class="container mt-3 smaller_fonts ">
-                     <table class="table table-bordered  table-sm table-hover">
-                        <!---------->
-                       <thead class="bg-primary text-white ">
-                         <tr class="text-nowrap text-center">
-                           <td>Model</td>
-                           <td>Duration</td>
-                           <td></td>
-                         </tr>
-                       </thead>
-                       <tbody class="">
-                         <tr class="py-2 px-1">
-                            <td class="">
-                                <div class="input-group ">
-                                  <!--------you can see and choose from previously recorded branches --------->
-                                  <input type="text" class="form-control border border-primary" id="smallest_fonts" placeholder="name or code">
-                                  <div class="input-group-append ">
-                                    <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
-                                  </div>
-                                </div>
-                            </td>
-                           
-                           <!----TIME WILL BE EXPRESSED IN MIN:hrs E.G 1hr:30mins ----->
-                           <td class=""><input type="text" class="form-control border border-primary" placeholder=""></td>
-                         
-                           <td class="text-center">
-                             <!--------deletes this row --------->
-                             <button class="btn btn-sm btn-danger border border-dark smaller_fonts">delete</button>
-                                 <!--------creates new row --------->
-                             <button class="btn btn-sm btn-primary border border-dark smaller_fonts">new</button>
-                           </td>
-                       </tbody>
-                     </table> 
-        
+                    
+                  </tr>
+                </thead>
+                <tbody class="">
+                  <tr class="py-2 px-1">
+                    <td class="">
+                        <div class="input-group">
+                            <input type="text" class="form-control border border-primary ">
+                            <div class="input-group-append">
+                              <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+                          </div>
+                    </td>
+                    <td class=""><input type="text" class="form-control border border-primary" placeholder=""></td>
+                    <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
+                    <td class="text-center text-nowrap">
+                      <!--------deletes this row --------->
+                      <button class="btn btn-sm btn-danger border border-dark smaller_fonts">delete</button>
+                          <!--------creates new row --------->
+                      <button class="btn btn-sm btn-primary border border-dark smaller_fonts">new</button>
+                    </td>
+                  </tr>
+                    
+                </tbody>
+              </table> 
+  
+             </div>
+          </div>
+          <div id="menuIII" class="collapse">
+            <div class="container px-3 mt-3  ">
+                <div class="row form-group ">
+                    <label for="email" class="col-2 text-nowrap">Allow Negative stock:</label>
+                    <div class="col-2 input-group w-75 ">
+                      <input type="checkbox" class=" form-control border border-primary" >
                     </div>
-                  </div>
+                    <div class="col"></div>
+                </div>
+              <table class="table table-bordered  table-sm table-hover smaller_fonts">
+                 <!--------------->
+                <thead class="bg-primary text-white ">
+                  <tr class="text-nowrap text-center">
+                    <td>Item</td>
+                    <td>Quantity</td>
+                    <td>Effective From</td>
+                    <td>Effective To</td>
+                    <td></td>
+                    <!----------------->
+                    
+                  </tr>
+                </thead>
+                <tbody class="">
+                  <tr class="py-2 px-1">
+                    <td class="">
+                        <div class="input-group">
+                            <input type="text" class="form-control border border-primary ">
+                            <div class="input-group-append">
+                              <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+                          </div>
+                    </td>
+                    <td class=""> <input type="text" class="form-control border border-primary" placeholder="yyyy-mm-dd"></td>
+                    <td class=""><input type="text" class="form-control border border-primary" placeholder="yyyy-mm-dd"></td>
+                    <td class=""> <input type="text" class="form-control border border-primary" placeholder="yyyy-mm-dd"></td>
+                    <td class="text-center text-nowrap">
+                      <!--------deletes this row --------->
+                      <button class="btn btn-sm btn-danger border border-dark smaller_fonts">delete</button>
+                          <!--------creates new row --------->
+                      <button class="btn btn-sm btn-primary border border-dark smaller_fonts">new</button>
+                    </td>
+                  </tr>
+                    
+                </tbody>
+              </table> 
+  
+             </div>
+          </div>
+         
+         
+
 	  </div>
 </section>
 
