@@ -1,5 +1,3 @@
-node_modules
-.env-cmdrc.json
-yarn.lock
-.idea
-dist
+dist_electron/
+node_modules/
+dist/

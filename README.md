@@ -1,27 +1,24 @@
-# Axespirerp
+# ui-vue
 
-A world class ERP for AXespire consulting Ltd
+## Project setup
+```
+yarn install
+```
 
-# Instructions
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
 
-* to run the app type `npm run start`
+### Compiles and minifies for production
+```
+yarn build
+```
 
-* to build type `npm run build`
+### Lints and fixes files
+```
+yarn lint
+```
 
-# Releases
-
-## 1.3
-
-[download app 1.3](https://drive.google.com/file/d/1l52MePI8nApAi0CqAfEIIpJGtj2MMdiy/view?usp=sharing)
-
-## 1.3 changelog
-
-* ported the procurement frontend files and converted them to work in the app
-
-* can create and save data for all procurement submodules
-
-* auto generation working for the relevant fields 
-
-* search by name implemented for the relevant fields 
-
-* search by code implemented for the relevant fields
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
