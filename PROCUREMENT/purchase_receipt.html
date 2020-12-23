@@ -275,18 +275,20 @@
                           </div>
                           <div class="row" >
                             <div class="col"></div>
-                            <div class="col mr-3">
+                            <div class="col mx-0">
                               <div class="form-check">
-                             <!-----Header charges will be autofilled from purchase invoice----->
-                                <label class="form-check-label" for="myCheck">Header charges
+            <!-----when Header charges are check input field to enter the amount & purpose for the charge; header charge is usually extra-charges asides the normal cost of goods you want purchase from supplier------>
+                                <label class="form-check-label" for="myCheck">
+                                  <input type="checkbox" class="form-check-input" id="myCheck" onclick="check()" value="">Header charges
                                 </label>
                               </div>
-                              <div id="text"  class="row">
+                              <div id="text" style="display:none" class="row">
                                 <input type="text" class="col border border-primary" placeholder="amount">
                                 <textarea name="" class="border border-primary" cols="30" rows="2" placeholder="purpose"></textarea>
                               </div>
                             </div>
-                          </div> 
+                           
+                          </div>  
                           
                          
                       </div>

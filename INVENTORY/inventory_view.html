@@ -80,11 +80,11 @@
                   <div class="dropdown-item d-flex flex-column px-0">
                     <a class="btn rounded-0 text-primary small" href="item.html">Item</a>
                     <a class="btn rounded-0 text-primary small" href="item_kit.html">Item Kit</a>
+                    <a class="btn rounded-0 text-primary small" href="inventory_view.html">Inventory view</a>
                     <a class="btn rounded-0 text-primary small" href="item_group.html">Item group</a>
-                    <a class="btn rounded-0 text-primary small" href="item_prices.html">Item prices</a>
                   </div>
                   <div class="dropdown-item d-flex flex-column px-0">
-                    <a class="btn rounded-0 text-primary small" href="item_settings.html">Item Settings</a>
+                    <a class="btn rounded-0 text-primary small" href="item360.html">Item 360</a>
                     <a class="btn rounded-0 text-primary small" href="location.html">Location</a>
                     <a class="btn rounded-0 text-primary small" href="variant.html">Variant</a>
                     <a class="btn rounded-0 text-primary small" href="quick_search.html">Quick search</a>
@@ -137,9 +137,10 @@
                        	<div class="form-row mt-3"> 
                            <div class="col">
                            <h6 class="text-white">Filters</h6>
+                           <!--------here user can check current details of all items in stock -------------->
                            <hr>
                            <div class="form-group d-flex flex-column text-nowrap">
-                                <label for="email" class="mr-2 text-white">Date Range:</label>
+                                <label for="email" class="mr-2 text-white">Item:</label>
                                 <div class="input-group w-75">
                                 <input type="text" class="form-control border border-primary ">
                                 <div class="input-group-append">
@@ -148,36 +149,16 @@
                                 </div>
                             </div>
                             <div class="form-group d-flex flex-column text-nowrap">
-                                <label for="email" class="mr-2 text-white">From Date :</label>
-                                <div class="input-group w-75">
-                                <input type="text" class="form-control border border-primary ">
-                                <div class="input-group-append">
-                                    <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                                </div>
-                                </div>
-                            </div> 
-                            <div class="form-group d-flex flex-column text-nowrap">
-                                <label for="email" class="mr-2 text-white">To Date:</label>
-                                <div class="input-group w-75">
-                                <input type="text" class="form-control border border-primary ">
-                                <div class="input-group-append">
-                                    <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
-                                </div>
-                                </div>
+                              <label for="email" class="mr-2 text-white">Date:</label>
+                              <div class="input-group w-75">
+                                 <input type="text" class="form-control border border-primary" placeholder="yyyy-mm-dd">
+                              </div>
                             </div>
-                            <div class="form-group d-flex flex-column text-nowrap">
-                                <label for="email" class="mr-2 text-white">Transaction :</label>
-                                <div class="input-group w-75">
-                                  <input type="text" class="form-control border border-primary ">
-                                  <div class="input-group-append">
-                                    <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown"></button>
-                                  </div>
-                                </div>
+                            <br><br><br><br><br><br><br><br><br><br><br>
+                            <div>
+                              <button type="button" class="btn btn-outline-primary btn-sm w-100 mx-auto text-white">Get data</button>
                             </div>
-                            <div class="form-group d-flex flex-column text-nowrap">
-                                <label for="email" class="mr-2 text-white text-wrap">Transaction Name</label>
-                                <input type="text" class="form-control w-75 border-primary py-n3" id="email" name="email"> 
-                            </div>  
+                           
                          </div>
                        </div>           
                   
@@ -185,20 +166,21 @@
       </div>
          
     </div>
-    <div class="col-9 shadow py-2 border border-bottom-0 border-left-0 border-right-0 border-dark">
-          <div class="form-row bg-light ml-4 pb-4 shadow border">
-            <h5 class="col-12 text-white text-center py-3 bg-primary px-2"><b>Inventory View</b></h5>
-           <div class="col-12">
-               <div class="ml-auto">
-                <a class="btn btn-outline-primary" href="#print" >Charts</a>
+    <div class="col shadow border border-bottom-0 border-left-0 border-right-0 border-dark">
+      <div class="form-row bg-light ml-4 pb-4 shadow border">
+        <!----here all details of all the items is shown, details such as item name, code, group, cost, price, quantity, UOM, Supplier in a table------>
+        <h5 class="col-12 text-white text-center py-3 bg-primary px-2 mb-n2"><b>Inventory details</b></h5>
+        <div class="col-12">
+            <div class="mt-5 border border-info border-lg bg-white" id="print">
+              <br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br>
+            </div>
+            <div class="row my-2">
+              <div class="mx-auto">
                 <a class="btn btn-outline-primary" href="#print">Print</a>
-                <a class="btn btn-outline-primary" href="#print">Data</a>
-               </div>
-               <div class="mt-5 border border-info border-lg bg-white" id="print">
-                <br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br> <br><br><br>
-               </div>
-           </div>
-          </div>
+              </div>
+            </div>
+        </div>
+      </div>
     </div>
   </div>
 

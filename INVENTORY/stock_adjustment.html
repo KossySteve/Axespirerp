@@ -166,7 +166,7 @@
             <h5 class="col-12 text-center text-white py-3 bg-primary px-2 border border-left-0 border-right-0 border-top-0 border-dark" ><b>STOCK ADJUSTMENT</b></h5>
               <div class="col px-5 mr-2">
                       <h6 class="text-primary">Transaction Details</h6>
-                      <!-----here after stock taking the user tries to reconcile the system amount with the actual amount in stock and calculates the value of the deficit or surplus------->
+                      <!-----here after stock counting the user tries to reconcile the system amount with the actual amount in stock and calculates the value of the deficit or surplus------->
                      <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                          <label for="email" class="">Code:</label>
                          <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email" > 
@@ -186,7 +186,8 @@
                           </div>
                       </div>
                       <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                          <label for="email" class="mr-2">Purchase Req:</label>
+                        <!----the particular stock count that warranted the adjustment----->
+                          <label for="email" class="mr-2">Stock count code:</label>
                           <div class="input-group w-50">
                             <input type="text" class="form-control border border-primary">
                             <div class="input-group-append">
@@ -206,6 +207,10 @@
                           <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
                         </div>
                       </div>
+                    </div>
+                    <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                      <label for="email" class="">Paascode:</label>
+                      <input type="text" class="form-control w-50 border-primary" id="email" name="email"> 
                     </div>
                     <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
                       <label for="comment" class="">Remarks:</label>
@@ -234,13 +239,14 @@
                   <!---------->
                  <thead class="bg-primary text-white ">
                    <tr class="text-nowrap text-center">
-                    <th class="text-center px-5">Date</th>
-                    <th class="text-center px-5">Item code</th>
-                    <th class="text-center">Item Name</th>
+                   
+                    <th class="text-center px-5">Item</th>
+                    <th class="text-center px-5">Variant</th>
                     <th class="text-center">Serial/Batch No.</th>
                     <th class="text-center">Cost</th>
-                    <th class="text-center">System Quantity</th>
-                    <th class="text-center">Actual Quantity</th>
+                    
+                    <th class="text-center">Initial Quantity</th>
+                    <th class="text-center">Adjusted Quantity</th>
                     <th class="text-center">Difference</th>
                     <th class="text-center">Reason</th>
                     <!---Difference = Actual qty - system qty, amount = cost x difference----->
@@ -250,8 +256,8 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="text-center text-nowrap px-2"> <input type="text" class="form-control border border-primary" placeholder="yyyy-mm-dd"></td>
-                    <td class="text-center text-nowrap"><input type="text" class="form-control border border-primary" placeholder=""></td>
+                    <td class="text-center text-nowrap "><input type="text" class="form-control border border-primary" placeholder=""></td>
+                    <td class="text-center text-nowrap"> <input type="text" class="form-control-sm border border-primary" placeholder=""></td>
                     <td class="text-center text-nowrap"> <input type="text" class="form-control-sm border border-primary" placeholder=""></td>
                     <td class="text-center text-nowrap"> <input type="text" class="form-control-sm border border-primary" placeholder=""></td>
                     <td class="text-center text-nowrap"> <input type="text" class="form-control-sm border border-primary" placeholder=""></td>

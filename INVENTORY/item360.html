@@ -181,33 +181,29 @@
                                 <label for="email" class="mr-2 text-white">Item name:</label>
                                 <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
                             </div>
-                            <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
-                                <label for="email" class="mr-2 text-white">Batch No</label>
-                                <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
-                            </div>  
+                             
                          </div>
                        </div>           
                     <div class="form-row mt-3"> 
                         <div class="col btn-group-vertical">
                             <!----here user should be able to check the folllowing details below about any transaction which involves a particular item at a point in time---->
                             <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View Stock Info</button>
-                            <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View Prices</button>
+                            <!----stock info should reveal the item name, code, group, cost, price preferably in a tabular form ------>
                             <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View UOM</button>
+                            <!----stock info should reveal the item name, code, group, cost, price preferably in a tabular form ------>
                             <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View Variations</button>
-                            <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View Item Groups</button>
+                            
                             <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View Locations</button>
-                            <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View Stock Levels</button>
-                            <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View Stock Category</button>
+                           
                             <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white text-nowrap">View Kit</button>
                             <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View Barcode</button>
-                            <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View Cost</button>
-                            <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View Stock Levels</button>
-                            <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View Stock Info</button>
+                           
+                        
                             <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View Alternate Items</button>
                             <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View Monthly Stats</button>
                             <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View Sale Trans</button>
                             <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View Purchase Trans</button>
-                            <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View Job Order</button>
+          
                             <button type="button" class="btn btn-outline-primary btn-sm w-75 mx-auto text-white">View Service Invoice</button>
                           
                        </div>
@@ -216,19 +212,19 @@
       </div>
          
     </div>
-    <div class="col-9 shadow py-2 border border-bottom-0 border-left-0 border-right-0 border-dark">
+    <div class="col shadow border border-bottom-0 border-left-0 border-right-0 border-dark">
           <div class="form-row bg-light ml-4 pb-4 shadow border">
-            <h5 class="col-12 text-white text-center py-3 bg-primary px-2"><b>Item Search Results</b></h5>
-           <div class="col-12">
-               <div class="ml-auto">
-                <a class="btn btn-outline-primary" href="#print" >Charts</a>
-                <a class="btn btn-outline-primary" href="#print">Print</a>
-                <a class="btn btn-outline-primary" href="#print">Data</a>
-               </div>
-               <div class="mt-5 border border-info border-lg bg-white" id="print">
-                <br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br>
-               </div>
-           </div>
+            <h5 class="col-12 text-white text-center py-3 bg-primary px-2 mb-n2"><b>Item Search Results</b></h5>
+            <div class="col-12">
+                <div class="mt-5 border border-info border-lg bg-white" id="print">
+                  <br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+                <div class="row my-2">
+                  <div class="mx-auto">
+                    <a class="btn btn-outline-primary" href="#print">Print</a>
+                  </div>
+                </div>
+            </div>
           </div>
     </div>
   </div>

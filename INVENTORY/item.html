@@ -85,32 +85,31 @@
                 <a class="btn rounded-0 text-primary small" href="item.html">Item</a>
                 <a class="btn rounded-0 text-primary small" href="item_kit.html">Item Kit</a>
                 <a class="btn rounded-0 text-primary small" href="item_group.html">Item group</a>
-                <a class="btn rounded-0 text-primary small" href="item_prices.html">Item prices</a>
+              
               </div>
               <div class="dropdown-item d-flex flex-column px-0">
-                <a class="btn rounded-0 text-primary small" href="item_settings.html">Item Settings</a>
+                
                 <a class="btn rounded-0 text-primary small" href="location.html">Location</a>
-                <a class="btn rounded-0 text-primary small" href="variant.html">Variant</a>
-                <a class="btn rounded-0 text-primary small" href="quick_search.html">Quick search</a>
+                <a class="btn rounded-0 text-primary small" href="stock_count.html">Stock Count</a>
               </div>
               <div class="dropdown-item d-flex flex-column px-0">
-                <a class="btn rounded-0 text-primary small" href="stock_count.html">Stock Count</a>
-                <a class="btn rounded-0 text-primary small" href="stock_counts.html">Stock Counts</a>
+                <a class="btn rounded-0 text-primary small" href="stock_confirmation.html">Stock Confirmation</a>
                 <a class="btn rounded-0 text-primary small" href="stock_transfer_inward.html">Stock Transfer inward</a>
                 <a class="btn rounded-0 text-primary small" href="stock_transfer_outward.html">Stock Transfer Outward</a>
               </div>
               <div class="dropdown-item d-flex flex-column px-0">
-                <a class="btn rounded-0 text-primary small" href="batch.html">Batch</a>
                 <a class="btn rounded-0 text-primary small" href="stock_opening.html">Stock Opening</a>
                 <a class="btn rounded-0 text-primary small" href="stock_adjustment.html">Stock Adjustment</a>
-                <a class="btn rounded-0 text-primary small" href="stock_confirmation.html">Stock Confirmation</a>
+                <a class="btn rounded-0 text-primary small" href="stock_ageing.html">Stock Ageing</a>
               </div>
               <div class="dropdown-item d-flex flex-column px-0">
-                <a class="btn rounded-0 text-primary small" href="stock_transfer.html">Stock Transfer</a>
-                <a class="btn rounded-0 text-primary small" href="stock_ageing.html">Stock Ageing</a>
-                <a class="btn rounded-0 text-primary small" href="stock_ledger.html">Stock Ledger</a>
-                <a class="btn rounded-0 text-primary small" href="stock_valuation.html">Stock Valuation</a>
-                
+                <a class="btn rounded-0 text-primary small" href="stock_count_reports.html">Stock Counts report</a>
+                <a class="btn rounded-0 text-primary small" href="stock_transfer_report.html">Stock transfer report</a>
+                <a class="btn rounded-0 text-primary small" href="stock_location-report.html">location report</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="item360.html">Item 360</a>
+                <a class="btn rounded-0 text-primary small" href="inventory_view.html">Inventory view</a>
               </div>
           </div>
           </div>
@@ -176,7 +175,7 @@
                       <option><b>Serialized</b></option>
                       <option><b>Non-serialized</b></option>
                       <option><b>Non-stock</b></option>
-                      >  
+                    
                   </select>
                 </div>
                 <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
@@ -369,7 +368,8 @@
                     <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
                     <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
                     <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
-                    <td class="text-center">
+                    <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
+                    <td class="text-center text-nowrap">
                       <!--------deletes this row --------->
                       <button class="btn btn-sm btn-danger border border-dark smaller_fonts">delete</button>
                           <!--------creates new row --------->
@@ -501,7 +501,8 @@
                     <td>Max Stock</td>
                     <td>Batch/Serial No</td>
                      <!--------you can enter Batch or serial No here,
-                          if the Type above is Non serialized then it should not have a batch num while if Type chosen is serialized it must have a serial No and or batch no
+                          if the Type above is Non serialized then it should not have a batch num while 
+                          if Type chosen is serialized it must have a serial No and or batch no
                           From either the Serial num or batch num you will auto generate a barcode or allow them to input their own barcode,
                           items with similar serial num e.g Two iphoneXs with serial nos 23456i1 and 23456i2 must have similar or same barcode,
                           items with the same batch No must have same barcode,
@@ -547,17 +548,5 @@
   
 </footer>
 
-<script>
-  function sideBarDisplay() { document.getElementById('sidebar').style.display='block' };
-  function check() {
-  var checkBox = document.getElementById("myCheck");
-  var text = document.getElementById("text");
-  if (checkBox.checked == true){
-    text.style.display = "block";
-  } else {
-     text.style.display = "none";
-  }
-}
-</script>
 </body>
 </html>
