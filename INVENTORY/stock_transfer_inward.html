@@ -55,7 +55,10 @@
      border: #242A33;
      border-style: solid;
    }
-   
+   #hover_effect .form-control input:hover {
+     border: #242A33;
+     border-style: solid;
+   }
    #darkfont {
      color: #242A33;
    }
@@ -63,100 +66,71 @@
   </style>
 </head>
 <body>
-
   <nav class="container-fluid" id="nav">
     <div class="container-fluid py-2">
-       <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu1x"><span><i class="fas fa-cubes"></i></span> INVENTORY</a>
-       <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu2"><span><i class="fas fa-truck-moving"></i></span> PROCUREMENT</a>
-       <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu3"><span><i class="fas fa-user-friends"></i></span> CRM</a>
-       <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5"><span><i class="fas fa-hand-holding"></i></span> SERVICE</a>
-       <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5"><span><i class="fas fa-calculator"></i></span> ACCOUNTING</a>
-       <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu6"><span><i class="fas fa-coins"></i></span> SALES</a>
-       <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu7"><span><i class="fas fa-user-cog"></i></span> ADMIN</a>
-       <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu4"><span><i class="fas fa-user-circle"></i></span> HR</a>
-       <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5"><span><i class="fas fa-tools"></i></span> TOOLS</a>
-       <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5"><span><i class="fas fa-chart-bar"></i></span> BI</a>
-       
-       <div id="menu1x" class="collapse">
-         <div class="d-flex flex-row" id="sub_nav">
-           <div class="dropdown-item d-flex flex-column px-0">
-             <a class="btn rounded-0 text-primary small" href="item.html">Item</a>
-             <a class="btn rounded-0 text-primary small" href="item_kit.html">Item Kit</a>
-             <a class="btn rounded-0 text-primary small" href="item_group.html">Item group</a>
-             <a class="btn rounded-0 text-primary small" href="item_prices.html">Item prices</a>
-           </div>
-           <div class="dropdown-item d-flex flex-column px-0">
-             <a class="btn rounded-0 text-primary small" href="item_settings.html">Item Settings</a>
-             <a class="btn rounded-0 text-primary small" href="location.html">Location</a>
-             <a class="btn rounded-0 text-primary small" href="variant.html">Variant</a>
-             <a class="btn rounded-0 text-primary small" href="quick_search.html">Quick search</a>
-           </div>
-           <div class="dropdown-item d-flex flex-column px-0">
-             <a class="btn rounded-0 text-primary small" href="stock_count.html">Stock Count</a>
-             <a class="btn rounded-0 text-primary small" href="stock_counts.html">Stock Counts</a>
-             <a class="btn rounded-0 text-primary small" href="stock_transfer_inward.html">Stock Transfer inward</a>
-             <a class="btn rounded-0 text-primary small" href="stock_transfer_outward.html">Stock Transfer Outward</a>
-           </div>
-           <div class="dropdown-item d-flex flex-column px-0">
-             <a class="btn rounded-0 text-primary small" href="batch.html">Batch</a>
-             <a class="btn rounded-0 text-primary small" href="stock_opening.html">Stock Opening</a>
-             <a class="btn rounded-0 text-primary small" href="stock_adjustment.html">Stock Adjustment</a>
-             <a class="btn rounded-0 text-primary small" href="stock_confirmation.html">Stock Confirmation</a>
-           </div>
-           <div class="dropdown-item d-flex flex-column px-0">
-             <a class="btn rounded-0 text-primary small" href="stock_transfer.html">Stock Transfer</a>
-             <a class="btn rounded-0 text-primary small" href="stock_ageing.html">Stock Ageing</a>
-             <a class="btn rounded-0 text-primary small" href="stock_ledger.html">Stock Ledger</a>
-             <a class="btn rounded-0 text-primary small" href="stock_valuation.html">Stock Valuation</a>
-             
-           </div>
-       </div>
-       </div>
-       <div id="menu2" class="collapse">
-         <div class="d-flex flex-row" id="sub_nav">
-           <div class="dropdown-item d-flex flex-column px-0">
-             <a class="btn rounded-0 text-primary small" href="carriers.html">Carrier</a>
-             <a class="btn rounded-0 text-primary small" href="supplier.html">Supplier</a>
-             <a class="btn rounded-0 text-primary small" href="purchase_receipt.html">Purchase Receipt</a>
-           </div>
-           <div class="dropdown-item d-flex flex-column px-0">
-            <a class="btn rounded-0 text-primary small" href="purchase_order.html">Purchase Order</a>
-             <a class="btn rounded-0 text-primary small" href="purchase_requisition.html">Purchase Requisition</a>
-             <a class="btn rounded-0 text-primary small" href="purchase_invoice.html">Purchase Invoice</a>
-           </div>
-           <div class="dropdown-item d-flex flex-column px-0">
-             
-             <a class="btn rounded-0 text-primary small" href="purchase_return.html">Purchase Return</a>
-             <a class="btn rounded-0 text-primary small" href="purchase_return_request.html">Purchase Return Request</a>
-           </div>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu1x"><span><i class="fas fa-cubes"></i></span> INVENTORY</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu2"><span><i class="fas fa-truck-moving"></i></span> PROCUREMENT</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu3"><span><i class="fas fa-user-friends"></i></span> CRM</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5"><span><i class="fas fa-hand-holding"></i></span> SERVICE</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5"><span><i class="fas fa-calculator"></i></span> ACCOUNTING</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu6"><span><i class="fas fa-coins"></i></span> SALES</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu7"><span><i class="fas fa-user-cog"></i></span> ADMIN</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu4"><span><i class="fas fa-user-circle"></i></span> HR</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5"><span><i class="fas fa-tools"></i></span> TOOLS</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5"><span><i class="fas fa-chart-bar"></i></span> BI</a>
           
-           <div class="dropdown-item d-flex flex-column px-0">
-             <a class="btn rounded-0 text-primary small" href="requisition_statements.html">Requisition Statements</a>
-             <a class="btn rounded-0 text-primary small" href="order_statement.html">Order Statements</a>
-             <a class="btn rounded-0 text-primary small" href="invoice_statements.html">Invoice Statements</a>
-           </div>
-           <div class="dropdown-item d-flex flex-column px-0">
-            <a class="btn rounded-0 text-primary small" href="receipt_statements.html">Receipt Statements</a>
-            <a class="btn rounded-0 text-primary small" href="purchase_summary.html">Purchase Summary</a>
-            <a class="btn rounded-0 text-primary small" href="other_statements.html">Other Statements</a>
+          <div id="menu1x" class="collapse">
+            <div class="d-flex flex-row" id="sub_nav">
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="item.html">Item</a>
+                <a class="btn rounded-0 text-primary small" href="item_kit.html">Item Kit</a>
+                <a class="btn rounded-0 text-primary small" href="item_group.html">Item group</a>
+              
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                
+                <a class="btn rounded-0 text-primary small" href="location.html">Location</a>
+                <a class="btn rounded-0 text-primary small" href="stock_count.html">Stock Count</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="stock_confirmation.html">Stock Confirmation</a>
+                <a class="btn rounded-0 text-primary small" href="stock_transfer_inward.html">Stock Transfer inward</a>
+                <a class="btn rounded-0 text-primary small" href="stock_transfer_outward.html">Stock Transfer Outward</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="stock_opening.html">Stock Opening</a>
+                <a class="btn rounded-0 text-primary small" href="stock_adjustment.html">Stock Adjustment</a>
+                <a class="btn rounded-0 text-primary small" href="stock_ageing.html">Stock Ageing</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="stock_count_reports.html">Stock Counts report</a>
+                <a class="btn rounded-0 text-primary small" href="stock_transfer_report.html">Stock transfer report</a>
+                <a class="btn rounded-0 text-primary small" href="stock_location-report.html">location report</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="item360.html">Item 360</a>
+                <a class="btn rounded-0 text-primary small" href="inventory_view.html">Inventory view</a>
+              </div>
           </div>
-       </div>
-       </div>
-       <div id="menu3" class="collapse">
-         
-       </div>
-       <div id="menu4" class="collapse">
-       </div>
-       <div id="menu5" class="collapse">
-         
-       </div>
-       <div id="menu6" class="collapse">
-         
-       </div>
-       <div id="menu7" class="collapse">
-           
-       </div>
- </div>
+          </div>
+          <div id="menu2" class="collapse">
+          
+          </div>
+          <div id="menu3" class="collapse">
+            
+          </div>
+          <div id="menu4" class="collapse">
+          </div>
+          <div id="menu5" class="collapse">
+            
+          </div>
+          <div id="menu6" class="collapse">
+            
+          </div>
+          <div id="menu7" class="collapse">
+              
+          </div>
+    </div>
 </nav>
 <section class="container-fluid ">
   <div class="row border border-left-0 border-bottom-0 border-top-0 border-dark pr-1">
