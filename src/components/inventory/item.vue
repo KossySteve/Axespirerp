@@ -30,41 +30,99 @@
                   </template>
                 </v-textarea>
 
-                <v-text-field color="blue" label="Type" :append-icon="'mdi-magnify'" outlined class=""></v-text-field>
-                <v-text-field color="blue" label="Group" :append-icon="'mdi-magnify'" outlined></v-text-field>
-                <v-checkbox
-                label="Is Group"
-                color="blue"
-                >
-
-                </v-checkbox>
-                
+                <v-text-field
+                  color="blue"
+                  label="Type"
+                  :append-icon="'mdi-magnify'"
+                  outlined
+                  class=""
+                ></v-text-field>
+                <v-text-field
+                  color="blue"
+                  label="Group"
+                  :append-icon="'mdi-magnify'"
+                  outlined
+                ></v-text-field>
+                <v-checkbox label="Is Group" color="blue"> </v-checkbox>
               </v-col>
 
               <v-col cols="3" class="ma-1">
                 <span class="title blue--text d-flex justify-center pb-5">
                   Price Details
                 </span>
-                <v-text-field color="blue" label="Brand" :append-icon="'mdi-magnify'" outlined class=""></v-text-field>
+                <v-text-field
+                  color="blue"
+                  label="Brand"
+                  :append-icon="'mdi-magnify'"
+                  outlined
+                  class=""
+                ></v-text-field>
 
-                <v-text-field color="blue" label="Model" :append-icon="'mdi-magnify'" outlined class=""></v-text-field>
+                <v-text-field
+                  color="blue"
+                  label="Model"
+                  :append-icon="'mdi-magnify'"
+                  outlined
+                  class=""
+                ></v-text-field>
 
-                <v-text-field color="blue" label="Base UOM" :append-icon="'mdi-magnify'" outlined class=""></v-text-field>
-
+                <v-text-field
+                  color="blue"
+                  label="Base UOM"
+                  :append-icon="'mdi-magnify'"
+                  outlined
+                  class=""
+                ></v-text-field>
               </v-col>
 
               <v-col cols="3" class="rounded-xl ma-1">
                 <span class="title blue--text d-flex justify-center pb-5">
                   Additional Details
                 </span>
-                <v-text-field color="blue" label="Standard Cost" outlined class=""></v-text-field>
-                <v-text-field color="blue" label="Sale Rate"  outlined class=""></v-text-field>
-                <v-text-field color="blue" label="Purchase Rate"  outlined class=""></v-text-field>
-                <v-text-field color="blue" label="Min Rate"  outlined class=""></v-text-field>
-                <v-text-field color="blue" label="Max Rate"  outlined class=""></v-text-field>
-                <v-text-field color="blue" label="Mark up"  outlined class=""></v-text-field>
+                <v-text-field
+                  color="blue"
+                  label="Standard Cost"
+                  outlined
+                  class=""
+                ></v-text-field>
+                <v-text-field
+                  color="blue"
+                  label="Sale Rate"
+                  outlined
+                  class=""
+                ></v-text-field>
+                <v-text-field
+                  color="blue"
+                  label="Purchase Rate"
+                  outlined
+                  class=""
+                ></v-text-field>
+                <v-text-field
+                  color="blue"
+                  label="Min Rate"
+                  outlined
+                  class=""
+                ></v-text-field>
+                <v-text-field
+                  color="blue"
+                  label="Max Rate"
+                  outlined
+                  class=""
+                ></v-text-field>
+                <v-text-field
+                  color="blue"
+                  label="Mark up"
+                  outlined
+                  class=""
+                ></v-text-field>
 
-                <v-text-field color="blue" label="Account" :append-icon="'mdi-magnify'" outlined class=""></v-text-field>
+                <v-text-field
+                  color="blue"
+                  label="Account"
+                  :append-icon="'mdi-magnify'"
+                  outlined
+                  class=""
+                ></v-text-field>
               </v-col>
             </v-row>
           </v-col>
@@ -76,6 +134,12 @@
 
 <script>
 import sidebar from "../partials/sidebar";
+import {ipcRenderer} from 'electron';
+import { notifications } from '../../main_process/constants/'
+
+// test model save event
+ipcRenderer.send(notifications.MODEL_SAVE, {hey: "The main"})
+
 
 export default {
   name: "item",
@@ -89,7 +153,20 @@ export default {
       },
     };
   },
-  methods: {},
+  mounted(){
+    document.addEventListener("keydown", this.save);
+  },
+  beforeDestroy(){
+    document.removeEventListener("keydown", this.save);
+  },
+  methods: {
+    save(evt){
+      if(!(evt.keyCode == 83 && evt.ctrlKey)){
+        return
+      }
+      ipcRenderer.send(notifications.MODEL_SAVE, {model: this.module.name, fields: {}})
+    }
+  },
 };
 </script>
 

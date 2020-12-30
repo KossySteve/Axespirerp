@@ -1,6 +1,6 @@
 !<template>
   <div class="fill-height" color="red">
-    <sub-module-form :fields="fields" :title="title" :footer="footerFields"> </sub-module-form>
+    <sub-module-form :options="options" :fields="fields" :title="title" :footer="footerFields"> </sub-module-form>
   </div>
 </template>
 
@@ -14,25 +14,29 @@ export default {
   data: function () {
     return {
       title: "Item Kit",
+      options: {
+        sidebar: true,
+        layout: "form",
+      },
       fields: [
         {
           name: "General details",
           fields: [
-            { label: "Code", type: "text" },
-            { label: "Code", type: "text" },
-            { label: "Description", type: "textarea" },
-            { label: "Type", type: "text" },
-            { label: "Company", type: "text" },
+            { label: "Code", type: "text", model:"code" },
+            { label: "Code1", type: "text", model:"code1" },
+            { label: "Description", type: "textarea", model:"description" },
+            { label: "Type", type: "text", model:"type" },
+            { label: "Company", type: "text", model:"company" },
           ],
         },
 
         {
           name: "",
           fields: [
-            { label: "Kit Pricing Method", type: "text" },
-            { label: "Min Add-on Count", type: "text" },
-            { label: "Min Component Count", type: "text" },
-            { label: "Is Kit", type: "checkbox" },
+            { label: "Kit Pricing Method", type: "text", model:"kitPricingMethod" },
+            { label: "Min Add-on Count", type: "text", model:"minAddOnCount" },
+            { label: "Min Component Count", type: "text", model:"minComponentCount" },
+            { label: "Is Kit", type: "checkbox", model:"isKit" },
           ],
         },
       ],
@@ -41,21 +45,21 @@ export default {
         {
           name: "Item Kit Items",
           fields: [
-            { name: "Applicable UOM", type: "text"},
-            { name: "Conversion Rate", type: "text"},
-            { name: "Select", type: "checkbox"},
-            { name: "Default purchase", type: "checkbox"},
-            { name: "Default sale", type: "checkbox"},
+            { name: "Applicable UOM", type: "text", model:"applicableUOM1"},
+            { name: "Conversion Rate", type: "text", model:"conversionType"},
+            { name: "Select", type: "checkbox", model:"select1"},
+            { name: "Default purchase", type: "checkbox", model:"defaultPurchase1"},
+            { name: "Default sale", type: "checkbox", model:"defaultSale"},
           ],
         },
         {
           name: "Add on",
           fields: [
-            { name: "Applicable UOM", type: "text"},
-            { name: "Conversion Rate", type: "text"},
-            { name: "Select", type: "checkbox"},
-            { name: "Default purchase", type: "checkbox"},
-            { name: "Default sale", type: "checkbox"},
+            { name: "Applicable UOM", type: "text", model:"applicableUOM2"},
+            { name: "Conversion Rate", type: "text", model:"conversionRate"},
+            { name: "Select", type: "checkbox", model:"select2"},
+            { name: "Default purchase", type: "checkbox", model:"defaultPurchase2"},
+            { name: "Default sale", type: "checkbox", model:"defaultSale2"},
           ],
         },
       ],

@@ -1,11 +1,11 @@
 <template>
   <v-container fluid fill-height class="grey lighten-3">
     <v-row style="height: 100%">
-      <v-col cols="2" class="">
-        <sidebar></sidebar>
+      <v-col v-if="options.sidebar" cols="2" class="">
+        <sidebar :sidebarFields="sidebarFields" :title="title" :name="name"></sidebar>
       </v-col>
 
-      <v-col cols="10" class="pa-5">
+      <v-col cols="" class="pa-5">
         <v-row class="white rounded-xl">
           <v-col cols="12" class="d-flex justify-center mt-4">
             <span class="display-2 font-weight-black blue--text">
@@ -13,7 +13,8 @@
             </span>
           </v-col>
 
-          <v-col cols="12">
+          <!-- form layout -->
+            <v-col cols="12" v-if="options.layout == 'form'">
             <v-row class="d-flex justify-space-around mb-4">
               <v-col
                 cols="3"
@@ -21,18 +22,42 @@
                 v-for="(field, index) in fields"
                 :key="index"
               >
-                <sub-section :fields="field"></sub-section>
+                <sub-section @createData="createData" @updateData="updateData" :fields="field"></sub-section>
               </v-col>
             </v-row>
           </v-col>
-        </v-row>
 
-        <v-row>
-          <v-col cols="12">
-            <footer-component :footer="footer"></footer-component>
+          <!-- chart layout -->
+          <v-col cols="12" v-if="options.layout == 'chart'">
+            <div v-for="(field, index) in fields" :key="index">
+              <v-btn 
+              v-for="(item, index) in field.fields" 
+              :key="index" 
+              class="blue outline mx-2 white--text">{{item.label}}</v-btn>
+            </div>
+
+            <div class="mt-4">
+                <v-textarea color="blue" class="" height="500" outlined>
+                  
+                </v-textarea>
+            </div>
+          </v-col>
+
+          <!-- submit button -->
+          <v-col v-if="options.layout == 'form'" cols="12" class="d-flex justify-center">
+              <v-btn class="blue white--text" large width="300" @click="saveModel">
+                Submit
+              </v-btn>
           </v-col>
         </v-row>
-      </v-col>
+
+        <v-row v-if="options.layout == 'form'" class="mt-10">
+          <v-col cols="12">
+            <footer-component @updateData="updateData" @createData="createData" :footer="footer"></footer-component>
+        </v-col>
+      </v-row>
+    </v-col>
+
     </v-row>
   </v-container>
 </template>
@@ -48,11 +73,26 @@ export default {
     "sub-section": submoduleSection,
     "footer-component": footerComponent,
   },
-  data: function () {
-    return {};
+  data() {
+    return {
+      name: "tobecci",
+      data: {},
+    };
   },
-  props: ["fields", "title", "footer"],
-  methods: {},
+  props: ["fields", "title", "footer", "options", "sidebarFields"],
+  methods: {
+    saveModel() {
+      console.log("hello world", this.data, JSON.stringify(this.options));
+    },
+    createData(item) {
+      console.log("create an entry field: " + item);
+      this.data[item.model] = "";
+    },
+    updateData(item) {
+      console.log("**received item data**" + JSON.stringify(item));
+      this.data[item.model] = item.value;
+    },
+  },
 };
 </script>
 
