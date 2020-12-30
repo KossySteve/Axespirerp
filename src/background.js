@@ -12,9 +12,10 @@ protocol.registerSchemesAsPrivileged([
   { scheme: 'app', privileges: { secure: true, standard: true } }
 ])
 
+let win
 async function createWindow() {
   // Create the browser window.
-  const win = new BrowserWindow({
+   win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
@@ -44,10 +45,10 @@ app.on('window-all-closed', () => {
   }
 })
 
-app.on('activate', () => {
+app.on('activate', async () => {
   // On macOS it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.
-  if (BrowserWindow.getAllWindows().length === 0) createWindow()
+  if (BrowserWindow.getAllWindows().length === 0) await createWindow()
 })
 
 // This method will be called when Electron has finished
@@ -55,7 +56,7 @@ app.on('activate', () => {
 // Some APIs can only be used after this event occurs.
 app.on('ready', async () => {
   // load in the required functionalities
-  await loaders.start(ipcMain);
+ 
 
   if (isDevelopment && !process.env.IS_TEST) {
     // Install Vue Devtools
@@ -65,7 +66,8 @@ app.on('ready', async () => {
       console.error('Vue Devtools failed to install:', e.toString())
     }
   }
-  createWindow()
+  await createWindow()
+  await loaders.start(ipcMain, win);
 })
 
 // Exit cleanly on request from parent process in development mode.

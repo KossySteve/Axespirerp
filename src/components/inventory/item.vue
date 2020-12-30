@@ -138,7 +138,7 @@ import {ipcRenderer} from 'electron';
 import { notifications } from '../../main_process/constants/'
 
 // test model save event
-ipcRenderer.send(notifications.MODEL_SAVE, {hey: "The main"})
+// ipcRenderer.send(notifications.MODEL_SAVE, {hey: "The main"})
 
 
 export default {
@@ -164,6 +164,7 @@ export default {
       if(!(evt.keyCode == 83 && evt.ctrlKey)){
         return
       }
+      console.log("ctrl + s")
       ipcRenderer.send(notifications.MODEL_SAVE, {model: this.module.name, fields: {}})
     }
   },

@@ -41,6 +41,9 @@ export default{
     },
     methods: {
       createModels(item){
+        console.log("list item")
+        console.log(item)
+        console.log("list item")
         // console.log(item.type);
         this.data[item.model] = "";
         // console.log(this.data)

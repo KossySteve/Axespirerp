@@ -66,6 +66,12 @@
 import sidebar from "./sidebar";
 import submoduleSection from "./submoduleSection";
 import footerComponent from "./footerComponent";
+
+import {ipcRenderer} from 'electron';
+import { notifications } from '../../main_process/constants'
+
+
+
 export default {
   name: "submoduleForm",
   components: {
@@ -76,23 +82,40 @@ export default {
   data() {
     return {
       name: "tobecci",
-      data: {},
+      data: {model_name: this.submodule_name, field_data:{}},
     };
   },
-  props: ["fields", "title", "footer", "options", "sidebarFields"],
+  props: ["fields", "title", "footer", "options", "sidebarFields", "submodule_name"],
   methods: {
     saveModel() {
       console.log("hello world", this.data, JSON.stringify(this.options));
+      // test model save event
+      // this.$swal("Hello world")
+      ipcRenderer.send(notifications.MODEL_SAVE, this.data)
     },
     createData(item) {
       console.log("create an entry field: " + item);
-      this.data[item.model] = "";
+      this.data.field_data[item.model] = "";
     },
     updateData(item) {
       console.log("**received item data**" + JSON.stringify(item));
-      this.data[item.model] = item.value;
+      this.data.field_data[item.model] = item.value;
+
+      console.log("This is the current data")
+      console.log(this.data);
+      console.log(this.options) 
+      console.log("End current data")
     },
   },
+  mounted(){
+    ipcRenderer.on('DATA_ENTRY_SUCCESS',(evt, detail)=> {
+        this.$swal(detail);
+    })
+
+    ipcRenderer.on('DATA_ENTRY_FAILED', (evt, detail)=> {
+        this.$swal(detail);
+    })
+  }
 };
 </script>
 

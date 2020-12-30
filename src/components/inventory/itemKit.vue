@@ -1,6 +1,6 @@
 !<template>
   <div class="fill-height" color="red">
-    <sub-module-form :options="options" :fields="fields" :title="title" :footer="footerFields"> </sub-module-form>
+    <sub-module-form :submodule_name="submodule_name" :options="options" :fields="fields" :title="title" :footer="footerFields"> </sub-module-form>
   </div>
 </template>
 
@@ -14,6 +14,7 @@ export default {
   data: function () {
     return {
       title: "Item Kit",
+      submodule_name:"ItemKit",
       options: {
         sidebar: true,
         layout: "form",
