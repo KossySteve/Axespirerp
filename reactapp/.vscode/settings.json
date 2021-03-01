@@ -1,0 +1,8 @@
+{
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "html.format.indentHandlebars": true,
+    "javascript.format.insertSpaceAfterConstructor": true,
+    "git.ignoreLimitWarning": true
+}

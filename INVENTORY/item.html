@@ -18,15 +18,18 @@
     
     body {
       font-family: 'Montserrat', sans-serif;
-      font-weight: bolder;
-      
+      font-weight: bolder; 
     }
   	#nav a {
   		color: black;
       font-family: 'Russo One', sans-serif;
 	  }
 
-  
+    #hover_effect div {
+      -webkit-transform: scale(0.95);
+       -moz-transform: scale(0.95);
+            transform: scale(0.95);
+    }
 
     .more_settings button {
 		 font-size: 11px;     
@@ -62,6 +65,7 @@
    #darkfont {
      color: #242A33;
    }
+
    
   </style>
 </head>
@@ -153,7 +157,7 @@
         
       <form id="hover_effect" >
        <div class="form-row bg-light ml-3 pb-4 shadow border border-dark">
-            <h5 class="col-12 text-center py-3 bg-primary px-2 border border-left-0 border-right-0 border-top-0 border-dark" ><b>ITEM DETAILS</b></h5>
+            <h5 class="col-12 text-center text-white py-3 bg-primary px-2 border border-left-0 border-right-0 border-top-0 border-dark" ><b>ITEM DETAILS</b></h5>
               <div class="col px-5 mr-2">
                 <h6>General Details</h6>
               <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
@@ -547,6 +551,8 @@
   <br><br><br>
   
 </footer>
+<script>
 
+</script>
 </body>
 </html>
