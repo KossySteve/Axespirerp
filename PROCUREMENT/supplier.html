@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+ 
+  <style>
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bolder;
+      
+    }
+  	#nav a {
+  		color: black;
+      font-family: 'Russo One', sans-serif;
+	  }
+
+  
+
+    .more_settings button {
+		 font-size: 11px;     
+     }
+
+    .smaller_fonts {
+		 font-size: 14px;
+     }
+
+     .smallest_fonts {
+		 font-size: 11px;
+     }
+
+    #sidebar {
+     background-color: #242A33;
+    }
+
+    #sub_nav a {
+     font-size: 13px;
+    }
+    #sub_nav button {
+     font-size: 15px;
+     font-weight: bolder;
+    }
+   #hover_effect input:hover {
+     border: #242A33;
+     border-style: solid;
+   }
+   #hover_effect .form-control input:hover {
+     border: #242A33;
+     border-style: solid;
+   }
+   #darkfont {
+     color: #242A33;
+   }
+   
+  </style>
+</head>
+<body>
+
+  <nav class="container-fluid" id="nav">
+    <div class="container-fluid py-2">
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu1x"><span><i class="fas fa-cubes"></i></span> INVENTORY</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu2"><span><i class="fas fa-truck-moving"></i></span> PROCUREMENT</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu3"><span><i class="fas fa-user-friends"></i></span> CRM</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5"><span><i class="fas fa-hand-holding"></i></span> SERVICE</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5"><span><i class="fas fa-calculator"></i></span> ACCOUNTING</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu6"><span><i class="fas fa-coins"></i></span> SALES</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu7"><span><i class="fas fa-user-cog"></i></span> ADMIN</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu4"><span><i class="fas fa-user-circle"></i></span> HR</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5"><span><i class="fas fa-tools"></i></span> TOOLS</a>
+      <a class="btn btn-outline-primary rounded-0 border border-0" data-toggle="collapse" data-target="#menu5"><span><i class="fas fa-chart-bar"></i></span> BI</a>
+          
+          <div id="menu1x" class="collapse">
+            <div class="d-flex flex-row" id="sub_nav">
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="item.html">Item</a>
+                <a class="btn rounded-0 text-primary small" href="item_kit.html">Item Kit</a>
+                <a class="btn rounded-0 text-primary small" href="item_group.html">Item group</a>
+                <a class="btn rounded-0 text-primary small" href="item_prices.html">Item prices</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="item_settings.html">Item Settings</a>
+                <a class="btn rounded-0 text-primary small" href="location.html">Location</a>
+                <a class="btn rounded-0 text-primary small" href="variant.html">Variant</a>
+                <a class="btn rounded-0 text-primary small" href="quick_search.html">Quick search</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="stock_count.html">Stock Count</a>
+                <a class="btn rounded-0 text-primary small" href="stock_counts.html">Stock Counts</a>
+                <a class="btn rounded-0 text-primary small" href="stock_transfer_inward.html">Stock Transfer inward</a>
+                <a class="btn rounded-0 text-primary small" href="stock_transfer_outward.html">Stock Transfer Outward</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="batch.html">Batch</a>
+                <a class="btn rounded-0 text-primary small" href="stock_opening.html">Stock Opening</a>
+                <a class="btn rounded-0 text-primary small" href="stock_adjustment.html">Stock Adjustment</a>
+                <a class="btn rounded-0 text-primary small" href="stock_confirmation.html">Stock Confirmation</a>
+              </div>
+              <div class="dropdown-item d-flex flex-column px-0">
+                <a class="btn rounded-0 text-primary small" href="stock_transfer.html">Stock Transfer</a>
+                <a class="btn rounded-0 text-primary small" href="stock_ageing.html">Stock Ageing</a>
+                <a class="btn rounded-0 text-primary small" href="stock_ledger.html">Stock Ledger</a>
+                <a class="btn rounded-0 text-primary small" href="stock_valuation.html">Stock Valuation</a>
+                
+              </div>
+          </div>
+          </div>
+          <div id="menu2" class="collapse">
+          
+          </div>
+          <div id="menu3" class="collapse">
+            
+          </div>
+          <div id="menu4" class="collapse">
+          </div>
+          <div id="menu5" class="collapse">
+            
+          </div>
+          <div id="menu6" class="collapse">
+            
+          </div>
+          <div id="menu7" class="collapse">
+              
+          </div>
+    </div>
+</nav>
+<section class="container-fluid ">
+  <div class="row border border-left-0 border-bottom-0 border-top-0 border-dark pr-1">
+    <div class="col-2 shadow py-2" id="sidebar">
+    
+        <h5 class=" text-white text-center pt-3" ><b>Supplier</b></h5>
+       <div class="border border-right-0 border-left-0 border-bottom-0  more_settings">
+          <h6 class="text-white border border-right-0 border-left-0  py-2">Record :</h6>
+          <div class="input-group mt-3">
+            <!--------you can search a particular supplier saved before and when you click it, it fills all the field with details and then can be edited--------->
+            <input type="text" class="form-control-sm border border-primary" id="smallest_fonts" placeholder="search name or code">
+            <div class="input-group-append">
+              <button class="btn btn-sm btn-light border border-primary" ><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+       </div>
+         
+    </div>
+    <div class="col shadow pt-2 border  border-left-0 border-right-0 border-dark">
+        
+      <form id="hover_effect" >
+       <div class="form-row bg-light ml-3 pb-4 shadow border border-dark">
+            <h5 class="col-12 text-center py-3 bg-primary px-2 border border-left-0 border-right-0 border-top-0 border-dark" ><b>SUPPLIER DETAILS</b></h5>
+              <div class="col px-5 mr-2">
+                <h6 class="text-primary">General Details</h6>
+              <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="">Code:</label>
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email" disabled> 
+                </div>
+                
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Supplier Name:</label>
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                  <label for="comment" class="">Address:</label>
+                  <textarea class="form-control  w-50 border border-primary" rows="3" id="comment"></textarea>
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                  <label for="email" class="mr-2">State:</label>
+                  <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                </div>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                  <label for="email" class="mr-2">Country:</label>
+                  <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                </div>
+                
+  
+            </div>
+            <div class="col row">
+              <div class="d-flex flex-column pr-4">
+                <div class="col ">
+                    <h6 class="text-center text-primary pt-2">Additional Details</h6>
+                <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Branch:</label>
+                    <div class="input-group w-50">
+                      <input type="text" class="form-control border border-primary ">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                </div>
+              
+                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                     <!------ can enter currency or choose from former currencies saved for transaction with this supplier--->
+                    <label for="email" class="mr-2">Currency:</label>
+                    <div class="input-group w-50">
+                      <input type="text" class="form-control border border-primary ">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col">
+                <!------this executive means the company's employee that interacts with supplier, hence can show pre-saved employees from the staff submodule in HR-------->
+                    <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Default Executive:</label>
+                    <div class="input-group w-50">
+                      <input type="text" class="form-control border border-primary ">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                      <!------person payment is made to from this supplier's company concerning a supply -------->
+                    <label for="email" class="mr-2">Pay To:</label>
+                    <div class="input-group w-50">
+                      <input type="text" class="form-control border border-primary ">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                    </div>
+                  <div class="d-flex flex-row">
+                    <!----Inactive (means if you have stopped using this supplier hence may not show up during search for suppliers)
+                          Is credit allowed (means can you owe this supplier I.e create a Purchase invoice without credit his bank account)
+                          Is SMS or email allowed this depends on which one the supplier prefers to be contacted with, 
+                          this will later reflect in sending purchase order to the supplier & CRM module where you program interaction with Suppliers------->
+                    <div class="row ">
+                      <div class="col-3 mr-1"></div>
+                      <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
+                        <label class="form-check-label small">
+                            <input class="form-check-input" type="checkbox" name="remember" required> Inactive.
+                        </label>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-3 mr-1"></div>
+                      <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
+                        <label class="form-check-label small">
+                            <input class="form-check-input" type="checkbox" name="remember" required> Is Credit allowed
+                        </label>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-3 mr-1"></div>
+                      <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
+                        <label class="form-check-label small">
+                            <input class="form-check-input" type="checkbox" name="remember" required> Is SMS allowed.
+                        </label>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-3 mr-1"></div>
+                      <div class="col-3 form-group form-check d-flex flex-row text-nowrap ">
+                        <label class="form-check-label small">
+                            <input class="form-check-input" type="checkbox" name="remember" required> Is E-mail allowed
+                        </label>
+                      </div>
+                  </div>
+                  </div>
+                </div> 
+                <div>
+                  <div class="col">
+                    <h6>Txn History</h6>
+                     <!-------This is data gotten from accounting about the monetary transactions done with this particular carrier, more about the data will come later when we see accounting module ---------->
+                      <table class="table table-bordered border-dark table-sm table-hover">
+                        <thead class="bg-primary text-white">
+                          <tr class="text-nowrap">
+                            <td>Year</td>
+                            <td>Opening</td>
+                            <td>Debit</td>
+                            <td>Credit</td>
+                            <td>Closing</td>
+                            <td>Proj Bal</td>
+                            <td>Proj Closing</td>
+                          </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                          <tr class="">
+                          <td>2018</td>
+                            <td>3,008,204</td>
+                            <td>Debit</td>
+                            <td>5,008,204</td>
+                            <td>3,008,204</td>
+                          <td>2,002,004</td>
+                            <td>3,008,204</td>
+                          </tr>
+                          <tr>
+                            <td>2019</td>
+                            <td>2,002,004</td>
+                            <td>3,008,204</td>
+                            <td>5,008,204</td>
+                            <td>3,008,204</td>
+                            <td>3,008,204</td>
+                            <td>3,008,204</td>
+                          </tr>
+                          <tr>
+                            <td>2020</td>
+                            <td>3,008,204</td>
+                            <td>3,008,204</td>
+                            <td>3,008,204</td>
+                            <td>2,002,004</td>
+                            <td>3,008,204</td>
+                            <td>5,008,204</td>
+                          </tr>
+                        </tbody>
+                      </table> 
+                    </div>
+                </div>
+           
+            </div>
+          </div>
+          
+        </div>
+      </form>
+      <div class="row mb-0 py-1">
+        <!------clicking this saves all the details also after editing it is also saved here too----------->
+       <button class="btn px-5 py-0 text-dark mx-auto mb-0 bg-primary border border-dark"  ><b>SUBMIT</b></button>
+     </div>
+    </div>
+  </div>
+
+</section>
+
+     
+<section>
+  <div class="container-fluid bg-light shadow my-1 border border-dark border-left-0 border-right-0 border-top-0" id="sub_nav">
+
+          <button type="button" class="btn btn-primary border border-primary " id="sidebar"  data-toggle="collapse" data-target="#menuI">Credit Limit</button>
+          <button type="button" class="btn btn-primary border border-primary " id="sidebar"  data-toggle="collapse" data-target="#menuII">Taxes</button>
+          <button type="button" class="btn btn-primary border border-primary " id="sidebar"  data-toggle="collapse" data-target="#menuIII">Supplier Items</button>
+          <button type="button" class="btn btn-primary border border-primary " id="sidebar"  data-toggle="collapse" data-target="#menuIV">Supplier Identities</button>
+          <button type="button" class="btn btn-primary border border-primary " id="sidebar"  data-toggle="collapse" data-target="#menuV">Bank details</button>
+          
+          
+          <div id="menuI" class="collapse">
+            <div class="container mt-3 smaller_fonts ">
+              <table class="table table-bordered  table-sm table-hover">
+                <thead class="bg-primary">
+                <tr class="text-nowrap text-center">
+          <!-----In this credit limit table you monitor your what you owe and make sure it doesnt exceed set up limits for a particular supplier, so that it sets reminder for you and stops you when your ( credit amt, days or bill count) numbers are at or a
+                 For example if my credit amount reaches N200,000 for SupplierX dont allow more purchase orders,
+                            if I owe supplier X after equal or more than 20 days (credit days), no more purchases from him,
+                            if I have not paid like 10 purchase orders (Bill count)------>
+                    <td>Branch</td>
+                    <td>Credit Amount</td>
+                    <td>Credit Days</td>
+                    <td>Bill count</td>
+                    <td></td>
+                  </tr>
+                </thead>
+                <tbody class="">
+                  <tr class="py-2 px-1">
+                    <td class="">
+                      <div class="input-group ">
+                        <!--------you can see and choose from previously recorded branches --------->
+                        <input type="text" class="form-control border border-primary" id="smallest_fonts" placeholder="name or code">
+                        <div class="input-group-append ">
+                          <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
+                        </div>
+                      </div>
+                    </td>
+                    <td class=""><input type="text" class="form-control border border-primary" placeholder=""></td>
+                    <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
+                    <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
+                    <td class="text-center">
+                      <!--------deletes this row --------->
+                      <button class="btn btn-sm btn-danger border border-dark smaller_fonts">delete</button>
+                    </td>
+                  </tr>
+                   
+                    
+                </tbody>
+              </table> 
+             </div>
+           </div>
+          
+           <div id="menuII" class="collapse">
+            <!--------here from the different types of taxes already saved in Taxes submodule, you choose a particular tax that involves this carrier
+             Also you can create another table row to input another entry--------->
+            <div class="container mt-3 smaller_fonts ">
+             <table class="table table-bordered  table-sm table-hover">
+               <thead class="bg-primary text-white ">
+                 <tr class="text-nowrap text-center">
+                   <td>Tax Type</td>
+                   <td>Description</td>
+                   <td>Effective from</td>
+                   <td>Effective To</td>
+                   <td></td>
+                 </tr>
+               </thead>
+               <tbody class="">
+                 <tr class="py-2 px-1">
+                   <td class="">
+                     <select class="form-control  border border-primary smaller_fonts " id="sel1">
+                       <!-------shows different taxes created in Tax submodule which you can choose from the commodity tax and Land tax here are just examples not the real thing--------->
+                       <option><b> Commodity Tax</b></option>
+                       <option><b>Land Tax</b></option>
+                     </select>
+                   </td>
+                   <td class="">
+                     <textarea class="form-control  border border-primary smaller_fonts"  rows="1" id="comment"></textarea>
+                   </td>
+                   <td class="">
+                    
+                       <input type="text" class="form-control border border-primary" placeholder="yyyy-mm-dd">
+                       
+                   </td>
+                   <td class="">
+                       <input type="text" class="form-control border border-primary" placeholder="yyyy-mm-dd">
+                   </td>
+                   <td class="text-center">
+                          <!--------deletes this row --------->
+                          <button class="btn btn-sm btn-danger border border-dark smaller_fonts">delete</button>
+                          <!--------creates new row --------->
+                         <button class="btn btn-sm btn-primary border border-dark smaller_fonts">new</button>
+                   </td>
+                 
+               </tbody>
+             </table> 
+
+            </div>
+          </div>
+
+  
+            
+          <div id="menuIII" class="collapse">
+            <!-----here to you allow them to choose from item database and link it to a particular supplier--------->
+              <div class="container mt-3 smaller_fonts ">
+                <table class="table table-bordered  table-sm table-hover">
+                  <thead class="bg-primary text-white ">
+                    <tr class="text-nowrap text-center">
+                      <td>Branch</td>
+                      <td>Item Code</td>
+                      <td>Item name</td>
+                      <td>Lead Time</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody class="">
+                    <tr class="py-2 px-1">
+                      <td class="">
+                        <div class="input-group ">
+                          <!--------you can see and choose from previously item code --------->
+                          <input type="text" class="form-control border border-primary" id="smallest_fonts" placeholder="">
+                          <div class="input-group-append ">
+                            <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="">
+                        <div class="input-group ">
+                          <!--------you can see and choose from previously recorded item name --------->
+                          <input type="text" class="form-control border border-primary" id="smallest_fonts" placeholder="">
+                          <div class="input-group-append ">
+                            <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="">
+                         <!--------you can enter text to describe item --------->
+                            <input  class="form-control border border-primary">
+                      </td>
+                      <td class="text-center">
+                             <!--------deletes this row --------->
+                             <button class="btn btn-sm btn-danger border border-dark smaller_fonts">delete</button>
+                             <!--------creates new row --------->
+                            <button class="btn btn-sm btn-primary border border-dark smaller_fonts">new</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table> 
+  
+               </div>
+          </div>
+                  
+          <div id="menuIV" class="collapse">
+            <div class="container mt-3 smaller_fonts ">
+              <table class="table table-bordered  table-sm table-hover">
+                <thead class="bg-primary">
+                <tr class="text-nowrap text-center">
+                   <!----------->
+                    <td>Identity Type</td>
+                    <td>Identity No</td>
+                    <td>Issuing Country</td>
+                    <td>Issue Date</td>
+                    <td>Expiry Date</td>
+                    <td>File Name</td>
+                    
+                     <!----------------->
+                   
+                    <td></td>
+                  </tr>
+                </thead>
+                <tbody class="">
+                  <tr class="py-2 px-1">
+                   
+                    <td class=""><input type="text" class="form-control border border-primary" placeholder=""></td>
+                    <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
+                    <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
+                    <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
+                    <td class=""> <input type="text" class="form-control border border-primary" placeholder=""></td>
+                    <td class="">
+                      <div class="input-group ">
+                        <!--------you can see and choose files from your laptop --------->
+                        <input type="text" class="form-control border border-primary" id="smallest_fonts" placeholder="">
+                        <div class="input-group-append ">
+                          <button class="btn btn-light border border-primary" ><i class="fas fa-search"></i></button>
+                        </div>
+                      </div>
+                    </td>
+                    
+                    <td class="text-center">
+                      <!--------deletes this row --------->
+                      <button class="btn btn-sm btn-danger border border-dark smaller_fonts">delete</button>
+                      <button class="btn btn-sm btn-primary border border-dark smaller_fonts">New</button>
+                    </td>
+                  </tr>
+                   
+                    
+                </tbody>
+              </table> 
+             </div>
+           </div>
+           <div id="menuV" class="collapse row">
+            <div class="col-4 pr-3">
+              <h6 class="text-center text-primary my-2">Bank Details</h6>
+               <!-----Bank details of the supplier----->
+                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Bank:</label>
+                    <div class="input-group w-50">
+                      <input type="text" class="form-control border border-primary ">
+                      <div class="input-group-append">
+                        <button class="btn btn-light border border-primary" type="submit"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Acc No:</label>
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                  </div>
+                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Acc Name:</label>
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                  </div>
+                  <div class="form-group d-flex flex-row text-nowrap align-items-center justify-content-between">
+                    <label for="email" class="mr-2">Swift Code:</label>
+                    <input type="text" class="form-control w-50 border-primary py-n3" id="email" name="email"> 
+                  </div>
+              </div>
+              <div class="col-4 pr-3">
+                <h6 class="text-center text-primary my-2">Terms Details</h6>
+               
+                  <!--------Terms & conditions of business with Carrier, so these terms are many & will be already saved in the Terms submodule here you choose as many of these saved terms as possible and it autofills in the textarea --------->
+             
+                <div class="row form-group ">
+                    <label for="email" class="col">Terms:</label>
+                    <div class="col-7 input-group">
+                        <div class="input-group w-100 mb-2">
+                            <input type="text" class="form-control-sm border border-primary" placeholder="">
+                            <div class="input-group-append">
+                              <button class="btn btn-sm btn-light border border-primary" ><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        <br>
+                       <textarea class="form-control  w-75 border border-primary"  rows="4" id="comment"></textarea>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+</section>
+
+<footer>
+  <br><br><br>
+  
+</footer>
+
+
+</body>
+</html>
